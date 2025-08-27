@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mika-s-Kitchen
+Mika's Kitchen HP
 
-## Getting Started
+# 概要
+”美加の台所”という自然食品を扱う、古民家を利用した飲食店のHP
 
-First, run the development server:
+# 参考
+https://green-dish.com/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 技術要素
+フロント：Next.js
+UIコンポーネントライブラリ：Chakra UI + Motion
+デプロイ先：Vercel
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# メニュー
+-ヘッダー
+-基本情報
+ |-基本情報
+ |-グローバルナビ
+-イメージ画像(5枚程度)
+-お知らせ
+-イベントカレンダー
+-アクセス
+-メール・お問い合わせ
+-管理ページへのリンク
+-フッター
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# メニュー詳細
+・ヘッダー
+　店のロゴ（中央寄せ）
+　インスタグラムアイコン（右寄せ）（リンク：https://www.instagram.com/mikanodaidokoro/）
+・基本情報
+　基本情報には、お店を開店した店主の思い等を記載
+・グローバルナビ
+　押すと下記の各メニューに飛ぶようにして欲しい
+　・腸活教室
+　・アスリートお料理教室
+　・子供お料理教室
+　・パン販売
+　・シフォン販売
+　・腸活弁当、のっけ弁当
+　・お庭ランチ
+・イメージ画像
+　右と左に矢印ボタンをおいて、画像のページ送りができる様にして
+・お知らせ
+　お知らせはカード形式で表示
+　管理画面から編集できる様にして欲しい
+・イベントカレンダー
+　カレンダー形式で表示
+　管理画面から編集できる様にして欲しい
+・アクセス
+　・グーグルマップのリンク（https://www.google.com/maps/place/テイクアウトカフェ+美加の台所/data=!4m2!3m1!1s0x0:0x86a87182887366cd?sa=X&ved=1t:2428&ictx=111）
+　・住所：千葉県千葉市稲毛区園生町887-4
+　・最寄駅：千葉都市モノレール　穴川駅
+　・電話番号：090-1792-2130
+・メール・お問い合わせ
+　xxxxxxxx@xxxxx.com
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 作成指示
+①上記#概要と#参考のURLのデザインを参考にしながら、HPを作成して。
+②構成は#メニューと#メニュー詳細を参考にしてください。
+③利用するライブラリ等は#技術要素を参考にして。
+④画像部分は仮置きで適当なものを置いておいて。
+⑤スマホ版とPC版のUI構成は分けて。

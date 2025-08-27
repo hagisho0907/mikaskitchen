@@ -6,8 +6,7 @@ import {
   Heading, 
   Text, 
   VStack, 
-  useBreakpointValue,
-  Image 
+  useBreakpointValue
 } from '@chakra-ui/react';
 
 export default function HeroSection() {
@@ -28,9 +27,9 @@ export default function HeroSection() {
         left="0"
         right="0"
         bottom="0"
-        bgImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-        bgSize="cover"
-        bgPosition="center"
+        backgroundImage="url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+        backgroundSize="cover"
+        backgroundPosition="center"
         opacity="0.3"
       />
       

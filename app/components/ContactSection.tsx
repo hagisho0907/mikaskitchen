@@ -57,7 +57,7 @@ export default function ContactSection() {
             お問い合わせ・ご連絡
           </Heading>
 
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={12} w="full" alignItems="start">
+          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={12} w="full" alignItems="start">
             {/* 左側：連絡方法 */}
             <VStack gap={8} align="stretch">
               <Text fontSize="lg" color="gray.700" textAlign="center" fontWeight="medium">

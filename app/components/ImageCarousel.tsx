@@ -5,7 +5,6 @@ import {
   Container, 
   IconButton, 
   Flex, 
-  Image,
   useBreakpointValue,
   Heading
 } from '@chakra-ui/react';
@@ -69,13 +68,15 @@ export default function ImageCarousel() {
             borderRadius="lg"
             shadow="xl"
           >
-            <Image
+            <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
-              objectFit="cover"
-              w="full"
-              h="full"
-              transition="all 0.3s ease"
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                transition: "all 0.3s ease"
+              }}
             />
           </Box>
 

@@ -49,7 +49,7 @@ export default function AccessSection() {
             アクセス
           </Heading>
 
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} w="full" alignItems="start">
+          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={10} w="full" alignItems="start">
             {/* 左側：アクセス情報 */}
             <VStack gap={8} align="stretch">
               {accessInfo.map((info, index) => (
@@ -135,9 +135,9 @@ export default function AccessSection() {
                   left="0"
                   right="0"
                   bottom="0"
-                  bgImage="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                  bgSize="cover"
-                  bgPosition="center"
+                  backgroundImage="url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+                  backgroundSize="cover"
+                  backgroundPosition="center"
                   opacity="0.7"
                 />
                 <Box
@@ -173,7 +173,7 @@ export default function AccessSection() {
               <Heading size="md" color="green.700">
                 営業情報
               </Heading>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} w="full">
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="full">
                 <VStack align="start" gap={2}>
                   <Text fontWeight="bold" color="gray.700">営業時間</Text>
                   <Text color="gray.600">平日: 10:00 - 17:00</Text>

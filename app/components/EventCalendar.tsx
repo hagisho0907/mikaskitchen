@@ -105,7 +105,7 @@ export default function EventCalendar() {
             イベントカレンダー
           </Heading>
 
-          <SimpleGrid columns={columns} spacing={6} w="full">
+          <SimpleGrid columns={columns} gap={6} w="full">
             {events.map((event) => (
               <Card 
                 key={event.id}

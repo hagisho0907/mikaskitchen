@@ -44,7 +44,7 @@ export default function Footer() {
           {/* メインフッターコンテンツ */}
           <SimpleGrid 
             columns={{ base: 1, md: 2, lg: 4 }} 
-            spacing={8} 
+            gap={8} 
             w="full"
           >
             {/* 店舗情報 */}

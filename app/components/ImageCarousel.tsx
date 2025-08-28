@@ -12,24 +12,32 @@ import { useState, useEffect } from 'react';
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    alt: "美加の台所の外観"
+    src: "/images/Image1.jpg",
+    alt: "美加の台所の様子1"
   },
   {
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", 
-    alt: "手作り料理"
+    src: "/images/Image2.jpg",
+    alt: "美加の台所の様子2"
   },
   {
-    src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    alt: "料理教室の様子"
+    src: "/images/Image3.jpg",
+    alt: "美加の台所の様子3"
   },
   {
-    src: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    alt: "手作りパン"
+    src: "/images/Image4.jpg",
+    alt: "美加の台所の様子4"
   },
   {
-    src: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    alt: "お庭ランチ"
+    src: "/images/Image5.jpg",
+    alt: "美加の台所の様子5"
+  },
+  {
+    src: "/images/Image6.jpg",
+    alt: "美加の台所の様子6"
+  },
+  {
+    src: "/images/Image7.jpg",
+    alt: "美加の台所の様子7"
   }
 ];
 

@@ -27,7 +27,7 @@ export default function HeroSection() {
         left="0"
         right="0"
         bottom="0"
-        backgroundImage="url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+        backgroundImage="url('/images/Image1.jpg')"
         backgroundSize="cover"
         backgroundPosition="center"
         opacity="0.3"

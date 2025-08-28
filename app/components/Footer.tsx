@@ -15,22 +15,22 @@ import {
 import { FaInstagram, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const quickLinks = [
-  { name: 'トップページ', href: '#top' },
-  { name: '美加の台所について', href: '#about' },
-  { name: 'お知らせ', href: '#news' },
-  { name: 'イベントカレンダー', href: '#calendar' },
-  { name: 'アクセス', href: '#access' },
-  { name: 'お問い合わせ', href: '#contact' },
+  { name: 'トップページ', href: '/' },
+  { name: '美加の台所について', href: '/#about' },
+  { name: 'お知らせ', href: '/#news' },
+  { name: 'イベントカレンダー', href: '/#calendar' },
+  { name: 'アクセス', href: '/#access' },
+  { name: 'お問い合わせ', href: '/contact' },
 ];
 
 const menuLinks = [
-  { name: '腸活教室', href: '#chokatsu' },
-  { name: 'アスリートお料理教室', href: '#athlete' },
-  { name: '子供お料理教室', href: '#kids' },
-  { name: 'パン販売', href: '#bread' },
-  { name: 'シフォン販売', href: '#chiffon' },
-  { name: '腸活弁当・のっけ弁当', href: '#bento' },
-  { name: 'お庭ランチ', href: '#garden' },
+  { name: '腸活教室', href: '/chokatsu' },
+  { name: 'アスリートお料理教室', href: '/athlete' },
+  { name: '子供お料理教室', href: '/kids' },
+  { name: 'パン販売', href: '/bread' },
+  { name: 'シフォン販売', href: '/chiffon' },
+  { name: '腸活弁当・のっけ弁当', href: '/bento' },
+  { name: 'お庭ランチ', href: '/garden' },
 ];
 
 export default function Footer() {

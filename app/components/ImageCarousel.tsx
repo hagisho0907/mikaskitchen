@@ -5,8 +5,7 @@ import {
   Container, 
   IconButton, 
   Flex, 
-  useBreakpointValue,
-  Heading
+  useBreakpointValue
 } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
@@ -49,15 +48,6 @@ export default function ImageCarousel() {
   return (
     <Box py={16} bg="gray.50">
       <Container maxW="1200px">
-        <Heading 
-          size="lg" 
-          color="green.700" 
-          textAlign="center" 
-          mb={10}
-          fontWeight="bold"
-        >
-          お店の様子
-        </Heading>
 
         <Box position="relative" maxW="800px" mx="auto">
           {/* 画像表示 */}

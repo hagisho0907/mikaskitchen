@@ -175,9 +175,6 @@ export default function Footer() {
             <Text fontSize="xs" color="green.400">
               © {currentYear} 美加の台所 (MIKA NO DAIDOKORO). All rights reserved.
             </Text>
-            <Text fontSize="xs" color="green.500">
-              Built with Next.js & Chakra UI
-            </Text>
           </VStack>
         </VStack>
       </Container>

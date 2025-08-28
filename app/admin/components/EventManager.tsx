@@ -279,11 +279,17 @@ export default function EventManager() {
 
               <FormControl>
                 <FormLabel>参加状況</FormLabel>
-                <Input
+                <Select
                   value={currentEvent.participants}
                   onChange={(e) => setCurrentEvent({...currentEvent, participants: e.target.value})}
-                  placeholder="予約受付中"
-                />
+                >
+                  <option value="予約受付中">予約受付中</option>
+                  <option value="空きあり">空きあり</option>
+                  <option value="残りわずか">残りわずか</option>
+                  <option value="満席">満席</option>
+                  <option value="キャンセル待ち">キャンセル待ち</option>
+                  <option value="開催終了">開催終了</option>
+                </Select>
               </FormControl>
             </VStack>
           </ModalBody>

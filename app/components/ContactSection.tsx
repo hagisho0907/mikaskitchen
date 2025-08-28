@@ -23,8 +23,8 @@ const contactMethods = [
   {
     icon: FaPhone,
     label: '電話でのお問い合わせ',
-    value: '090-1792-2130',
-    link: 'tel:090-1792-2130',
+    value: '080-6011-7498',
+    link: 'tel:080-6011-7498',
     description: '受付時間：10:00-17:00',
     color: 'green.500'
   },
@@ -123,10 +123,11 @@ export default function ContactSection() {
                   </Text>
                 </HStack>
                 <VStack align="start" gap={1} pl={9}>
-                  <Text color="gray.700">平日: 10:00 - 17:00</Text>
-                  <Text color="gray.700">土日祝: 10:00 - 16:00</Text>
+                  <Text color="gray.700">木曜日: 11:00 - 16:00</Text>
+                  <Text color="gray.700">金曜日: 11:00 - 完売まで</Text>
+                  <Text color="gray.700">土曜日: 7:00 - 完売まで</Text>
                   <Text fontSize="sm" color="gray.600" mt={2}>
-                    ※ 教室やイベント開催時は変更となる場合があります
+                    ※ 時期によって異なるため、詳細はお問い合わせください
                   </Text>
                 </VStack>
               </Box>

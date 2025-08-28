@@ -32,8 +32,8 @@ const accessInfo = [
   {
     icon: FaPhone,
     label: '電話番号',
-    value: '090-1792-2130',
-    link: 'tel:090-1792-2130',
+    value: '080-6011-7498',
+    link: 'tel:080-6011-7498',
     color: 'green.500'
   }
 ];
@@ -176,8 +176,12 @@ export default function AccessSection() {
               <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="full">
                 <VStack align="start" gap={2}>
                   <Text fontWeight="bold" color="gray.700">営業時間</Text>
-                  <Text color="gray.600">平日: 10:00 - 17:00</Text>
-                  <Text color="gray.600">土日祝: 10:00 - 16:00</Text>
+                  <Text color="gray.600">木曜日: 11:00 - 16:00</Text>
+                  <Text color="gray.600">金曜日: 11:00 - 完売まで</Text>
+                  <Text color="gray.600">土曜日: 7:00 - 完売まで</Text>
+                  <Text fontSize="sm" color="gray.500" mt={1}>
+                    ※時期によって異なるため、詳細はお問い合わせください
+                  </Text>
                 </VStack>
                 <VStack align="start" gap={2}>
                   <Text fontWeight="bold" color="gray.700">定休日</Text>

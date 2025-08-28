@@ -237,7 +237,7 @@ export default function DetailPageLayout({
                   </Button>
                 </Link>
                 <Text fontSize="sm" color="gray.600">
-                  電話：090-1792-2130 / メール：xxxxxxxx@xxxxx.com
+                  電話：080-6011-7498 / メール：xxxxxxxx@xxxxx.com
                 </Text>
               </VStack>
             </VStack>

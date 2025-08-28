@@ -102,7 +102,6 @@ export default function EventCalendar() {
           </SimpleGrid>
 
           <Text fontSize="sm" color="gray.500" textAlign="center">
-            ※ 管理画面から編集可能です<br />
             イベントの詳細・お申し込みはお電話またはメールでお問い合わせください
           </Text>
         </VStack>

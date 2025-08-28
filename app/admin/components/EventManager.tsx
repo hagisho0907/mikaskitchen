@@ -53,6 +53,14 @@ const emptyEvent: Omit<Event, 'id'> = {
   participants: '予約受付中'
 };
 
+// 日付から曜日を取得する関数
+const getDayFromDate = (dateString: string): string => {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  const days = ['日', '月', '火', '水', '木', '金', '土'];
+  return days[date.getDay()];
+};
+
 export default function EventManager() {
   const { events, addEvent, updateEvent, deleteEvent } = useData();
   const [currentEvent, setCurrentEvent] = useState<Omit<Event, 'id'>>(emptyEvent);
@@ -220,7 +228,11 @@ export default function EventManager() {
                   <Input
                     type="date"
                     value={currentEvent.date}
-                    onChange={(e) => setCurrentEvent({...currentEvent, date: e.target.value})}
+                    onChange={(e) => {
+                      const newDate = e.target.value;
+                      const newDay = getDayFromDate(newDate);
+                      setCurrentEvent({...currentEvent, date: newDate, day: newDay});
+                    }}
                   />
                 </FormControl>
                 <FormControl>

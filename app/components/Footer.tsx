@@ -62,12 +62,12 @@ export default function Footer() {
                 <HStack gap={2}>
                   <Icon as={FaPhone} color="green.300" w={4} h={4} />
                   <Link 
-                    href="tel:090-1792-2130" 
+                    href="tel:080-6011-7498" 
                     fontSize="sm" 
                     color="green.200"
                     _hover={{ color: "green.100" }}
                   >
-                    090-1792-2130
+                    080-6011-7498
                   </Link>
                 </HStack>
                 <HStack gap={2}>
@@ -135,10 +135,16 @@ export default function Footer() {
               </Text>
               <VStack align="start" gap={1}>
                 <Text fontSize="sm" color="green.200">
-                  平日：10:00 - 17:00
+                  木曜日：11:00 - 16:00
                 </Text>
                 <Text fontSize="sm" color="green.200">
-                  土日祝：10:00 - 16:00
+                  金曜日：11:00 - 完売まで
+                </Text>
+                <Text fontSize="sm" color="green.200">
+                  土曜日：7:00 - 完売まで
+                </Text>
+                <Text fontSize="xs" color="green.300" mt={1}>
+                  ※時期によって異なるため、詳細はお問い合わせください
                 </Text>
                 <Text fontSize="xs" color="green.300" mt={2}>
                   定休日：不定休<br />

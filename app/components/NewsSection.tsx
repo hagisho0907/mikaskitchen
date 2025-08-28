@@ -77,9 +77,6 @@ export default function NewsSection() {
             </VStack>
           </Box>
 
-          <Text fontSize="sm" color="gray.500" textAlign="center">
-            ※ 管理画面から編集可能です
-          </Text>
         </VStack>
       </Container>
     </Box>

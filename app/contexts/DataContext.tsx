@@ -149,61 +149,131 @@ export const DataProvider = ({ children }: DataProviderProps) => {
   const [events, setEvents] = useState<Event[]>([]);
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
 
+  // 初回データ読み込み
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedEvents = localStorage.getItem('mikaskitchen-events');
-      const savedNews = localStorage.getItem('mikaskitchen-news');
-      
-      if (savedEvents) {
-        setEvents(JSON.parse(savedEvents));
+    loadData();
+  }, []);
+
+  // GitHub APIからデータを読み込む関数
+  const loadData = async () => {
+    try {
+      // イベントデータの読み込み
+      const eventsResponse = await fetch('/api/data/events');
+      if (eventsResponse.ok) {
+        const { events: loadedEvents } = await eventsResponse.json();
+        setEvents(loadedEvents.length > 0 ? loadedEvents : initialEvents);
+      } else {
+        // GitHub API失敗時はlocalStorageから読み込み
+        if (typeof window !== 'undefined') {
+          const savedEvents = localStorage.getItem('mikaskitchen-events');
+          setEvents(savedEvents ? JSON.parse(savedEvents) : initialEvents);
+        } else {
+          setEvents(initialEvents);
+        }
+      }
+
+      // お知らせデータの読み込み
+      const newsResponse = await fetch('/api/data/news');
+      if (newsResponse.ok) {
+        const { news: loadedNews } = await newsResponse.json();
+        setNewsItems(loadedNews.length > 0 ? loadedNews : initialNews);
+      } else {
+        // GitHub API失敗時はlocalStorageから読み込み
+        if (typeof window !== 'undefined') {
+          const savedNews = localStorage.getItem('mikaskitchen-news');
+          setNewsItems(savedNews ? JSON.parse(savedNews) : initialNews);
+        } else {
+          setNewsItems(initialNews);
+        }
+      }
+    } catch (error) {
+      console.error('データ読み込みエラー:', error);
+      // エラー時はlocalStorageから読み込み
+      if (typeof window !== 'undefined') {
+        const savedEvents = localStorage.getItem('mikaskitchen-events');
+        const savedNews = localStorage.getItem('mikaskitchen-news');
+        setEvents(savedEvents ? JSON.parse(savedEvents) : initialEvents);
+        setNewsItems(savedNews ? JSON.parse(savedNews) : initialNews);
       } else {
         setEvents(initialEvents);
-      }
-      
-      if (savedNews) {
-        setNewsItems(JSON.parse(savedNews));
-      } else {
         setNewsItems(initialNews);
       }
     }
-  }, []);
+  };
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && events.length > 0) {
-      localStorage.setItem('mikaskitchen-events', JSON.stringify(events));
+  // データをGitHubとlocalStorageの両方に保存
+  const saveEventsData = async (eventsToSave: Event[]) => {
+    // localStorageに即座に保存
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('mikaskitchen-events', JSON.stringify(eventsToSave));
     }
-  }, [events]);
+    
+    // GitHub APIに非同期で保存
+    try {
+      await fetch('/api/data/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ events: eventsToSave }),
+      });
+    } catch (error) {
+      console.error('GitHub保存エラー:', error);
+    }
+  };
 
-  useEffect(() => {
-    if (typeof window !== 'undefined' && newsItems.length > 0) {
-      localStorage.setItem('mikaskitchen-news', JSON.stringify(newsItems));
+  const saveNewsData = async (newsToSave: NewsItem[]) => {
+    // localStorageに即座に保存
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('mikaskitchen-news', JSON.stringify(newsToSave));
     }
-  }, [newsItems]);
+    
+    // GitHub APIに非同期で保存
+    try {
+      await fetch('/api/data/news', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ news: newsToSave }),
+      });
+    } catch (error) {
+      console.error('GitHub保存エラー:', error);
+    }
+  };
 
   const addEvent = (event: Omit<Event, 'id'>) => {
     const newId = Math.max(...events.map(e => e.id), 0) + 1;
-    setEvents([...events, { ...event, id: newId }]);
+    const newEvents = [...events, { ...event, id: newId }];
+    setEvents(newEvents);
+    saveEventsData(newEvents);
   };
 
   const updateEvent = (id: number, event: Omit<Event, 'id'>) => {
-    setEvents(events.map(e => e.id === id ? { ...event, id } : e));
+    const updatedEvents = events.map(e => e.id === id ? { ...event, id } : e);
+    setEvents(updatedEvents);
+    saveEventsData(updatedEvents);
   };
 
   const deleteEvent = (id: number) => {
-    setEvents(events.filter(e => e.id !== id));
+    const filteredEvents = events.filter(e => e.id !== id);
+    setEvents(filteredEvents);
+    saveEventsData(filteredEvents);
   };
 
   const addNewsItem = (newsItem: Omit<NewsItem, 'id'>) => {
     const newId = Math.max(...newsItems.map(n => n.id), 0) + 1;
-    setNewsItems([{ ...newsItem, id: newId }, ...newsItems]);
+    const newNewsItems = [{ ...newsItem, id: newId }, ...newsItems];
+    setNewsItems(newNewsItems);
+    saveNewsData(newNewsItems);
   };
 
   const updateNewsItem = (id: number, newsItem: Omit<NewsItem, 'id'>) => {
-    setNewsItems(newsItems.map(n => n.id === id ? { ...newsItem, id } : n));
+    const updatedNewsItems = newsItems.map(n => n.id === id ? { ...newsItem, id } : n);
+    setNewsItems(updatedNewsItems);
+    saveNewsData(updatedNewsItems);
   };
 
   const deleteNewsItem = (id: number) => {
-    setNewsItems(newsItems.filter(n => n.id !== id));
+    const filteredNewsItems = newsItems.filter(n => n.id !== id);
+    setNewsItems(filteredNewsItems);
+    saveNewsData(filteredNewsItems);
   };
 
   const value: DataContextType = {

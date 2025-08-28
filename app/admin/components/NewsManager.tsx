@@ -32,50 +32,8 @@ import {
 } from '@chakra-ui/react';
 import { AddIcon, EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { useData, NewsItem } from '../../contexts/DataContext';
 
-interface NewsItem {
-  id: number;
-  date: string;
-  category: string;
-  title: string;
-  content: string;
-  isNew: boolean;
-}
-
-const initialNews: NewsItem[] = [
-  {
-    id: 1,
-    date: '2024-01-15',
-    category: '教室',
-    title: '新春腸活教室開催のお知らせ',
-    content: '新年最初の腸活教室を1月20日(土)に開催いたします。発酵食品を使った体に優しいメニューをご紹介します。',
-    isNew: true
-  },
-  {
-    id: 2,
-    date: '2024-01-10', 
-    category: '販売',
-    title: 'バレンタイン限定シフォンケーキ予約開始',
-    content: 'チョコレートとココアを使った特別なシフォンケーキの予約を開始しました。数量限定となります。',
-    isNew: true
-  },
-  {
-    id: 3,
-    date: '2024-01-05',
-    category: 'イベント',
-    title: '1月のお庭ランチメニュー更新',
-    content: '冬野菜をふんだんに使った温かいメニューをご用意しました。古民家のお庭で心温まるひとときをお過ごしください。',
-    isNew: false
-  },
-  {
-    id: 4,
-    date: '2023-12-28',
-    category: 'お知らせ',
-    title: '年末年始営業のご案内',
-    content: '12月29日〜1月3日まで年末年始のお休みをいただきます。新年は1月4日から通常営業いたします。',
-    isNew: false
-  }
-];
 
 const newsCategories = [
   { value: '教室', label: '教室', color: 'green' },
@@ -93,7 +51,7 @@ const emptyNews: Omit<NewsItem, 'id'> = {
 };
 
 export default function NewsManager() {
-  const [newsItems, setNewsItems] = useState<NewsItem[]>(initialNews);
+  const { newsItems, addNewsItem, updateNewsItem, deleteNewsItem } = useData();
   const [currentNews, setCurrentNews] = useState<Omit<NewsItem, 'id'>>(emptyNews);
   const [editingId, setEditingId] = useState<number | null>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -111,19 +69,14 @@ export default function NewsManager() {
     }
 
     if (editingId) {
-      setNewsItems(newsItems.map(news => 
-        news.id === editingId 
-          ? { ...currentNews, id: editingId }
-          : news
-      ));
+      updateNewsItem(editingId, currentNews);
       toast({
         title: 'お知らせを更新しました',
         status: 'success',
         duration: 3000,
       });
     } else {
-      const newId = Math.max(...newsItems.map(n => n.id)) + 1;
-      setNewsItems([{ ...currentNews, id: newId }, ...newsItems]);
+      addNewsItem(currentNews);
       toast({
         title: 'お知らせを追加しました',
         status: 'success',
@@ -148,7 +101,7 @@ export default function NewsManager() {
 
   const handleDelete = (id: number) => {
     if (window.confirm('このお知らせを削除しますか？')) {
-      setNewsItems(newsItems.filter(news => news.id !== id));
+      deleteNewsItem(id);
       toast({
         title: 'お知らせを削除しました',
         status: 'info',

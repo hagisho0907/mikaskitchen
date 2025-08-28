@@ -31,80 +31,8 @@ import {
 } from '@chakra-ui/react';
 import { AddIcon, EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
+import { useData, Event } from '../../contexts/DataContext';
 
-interface Event {
-  id: number;
-  date: string;
-  day: string;
-  title: string;
-  time: string;
-  description: string;
-  type: string;
-  participants: string;
-}
-
-const initialEvents: Event[] = [
-  {
-    id: 1,
-    date: '2024-01-20',
-    day: '土',
-    title: '腸活教室',
-    time: '10:00-12:00',
-    description: '発酵食品を使った健康レシピをご紹介',
-    type: 'class',
-    participants: '残り3名'
-  },
-  {
-    id: 2,
-    date: '2024-01-25',
-    day: '木',
-    title: '子供お料理教室',
-    time: '15:00-17:00', 
-    description: '親子で楽しむ手作りパン教室',
-    type: 'kids',
-    participants: '満員'
-  },
-  {
-    id: 3,
-    date: '2024-01-28',
-    day: '日',
-    title: 'お庭ランチ',
-    time: '11:30-14:00',
-    description: '季節の野菜を使った特別ランチ',
-    type: 'lunch',
-    participants: '予約受付中'
-  },
-  {
-    id: 4,
-    date: '2024-02-03',
-    day: '土',
-    title: 'アスリート料理教室',
-    time: '13:00-15:30',
-    description: 'スポーツ栄養学に基づいた食事法',
-    type: 'athlete',
-    participants: '残り2名'
-  },
-  {
-    id: 5,
-    date: '2024-02-10',
-    day: '土',
-    title: 'パン作り体験',
-    time: '09:30-12:00',
-    description: '天然酵母を使った本格パン作り',
-    type: 'bread',
-    participants: '残り4名'
-  },
-  {
-    id: 6,
-    date: '2024-02-14',
-    day: '水',
-    title: 'バレンタイン特別教室',
-    time: '14:00-16:30',
-    description: '手作りチョコレートスイーツ',
-    type: 'special',
-    participants: '予約受付中'
-  }
-];
 
 const eventTypes = [
   { value: 'class', label: '教室', color: 'green' },
@@ -126,7 +54,7 @@ const emptyEvent: Omit<Event, 'id'> = {
 };
 
 export default function EventManager() {
-  const [events, setEvents] = useState<Event[]>(initialEvents);
+  const { events, addEvent, updateEvent, deleteEvent } = useData();
   const [currentEvent, setCurrentEvent] = useState<Omit<Event, 'id'>>(emptyEvent);
   const [editingId, setEditingId] = useState<number | null>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -144,19 +72,14 @@ export default function EventManager() {
     }
 
     if (editingId) {
-      setEvents(events.map(event => 
-        event.id === editingId 
-          ? { ...currentEvent, id: editingId }
-          : event
-      ));
+      updateEvent(editingId, currentEvent);
       toast({
         title: 'イベントを更新しました',
         status: 'success',
         duration: 3000,
       });
     } else {
-      const newId = Math.max(...events.map(e => e.id)) + 1;
-      setEvents([...events, { ...currentEvent, id: newId }]);
+      addEvent(currentEvent);
       toast({
         title: 'イベントを追加しました',
         status: 'success',
@@ -183,7 +106,7 @@ export default function EventManager() {
 
   const handleDelete = (id: number) => {
     if (window.confirm('このイベントを削除しますか？')) {
-      setEvents(events.filter(event => event.id !== id));
+      deleteEvent(id);
       toast({
         title: 'イベントを削除しました',
         status: 'info',

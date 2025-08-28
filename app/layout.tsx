@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "美加の台所 - Mika's Kitchen",
+  title: "美加の台所 - MIKA NO DAIDOKORO",
   description: "千葉県千葉市稲毛区園生町の古民家を利用した自然食品を扱う飲食店",
 };
 

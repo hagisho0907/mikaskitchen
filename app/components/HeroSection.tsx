@@ -67,7 +67,7 @@ export default function HeroSection() {
             fontWeight="medium"
             textShadow="1px 1px 2px rgba(0,0,0,0.5)"
           >
-            Mika's Kitchen
+            MIKA NO DAIDOKORO
           </Text>
           
           <Text 

@@ -28,7 +28,7 @@ export default function Header() {
             >
               美加の台所
               <Box fontSize="sm" color="gray.600" fontWeight="normal">
-                Mika's Kitchen
+                MIKA NO DAIDOKORO
               </Box>
             </Box>
           </Link>

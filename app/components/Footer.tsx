@@ -173,7 +173,7 @@ export default function Footer() {
               古民家を利用した心と体に優しい自然食品の飲食店
             </Text>
             <Text fontSize="xs" color="green.400">
-              © {currentYear} 美加の台所 (Mika's Kitchen). All rights reserved.
+              © {currentYear} 美加の台所 (MIKA NO DAIDOKORO). All rights reserved.
             </Text>
             <Text fontSize="xs" color="green.500">
               Built with Next.js & Chakra UI

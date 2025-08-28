@@ -16,15 +16,49 @@ import {
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import EventManager from './components/EventManager';
 import NewsManager from './components/NewsManager';
+import LoginForm from './components/LoginForm';
 
 export default function AdminPage() {
   const router = useRouter();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // ローカルストレージからログイン状態をチェック
+    const loggedIn = localStorage.getItem('adminLoggedIn') === 'true';
+    setIsLoggedIn(loggedIn);
+    setIsLoading(false);
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('adminLoggedIn');
+    setIsLoggedIn(false);
+  };
 
   const handleBackToMain = () => {
     router.push('/');
   };
+
+  // ロード中の表示
+  if (isLoading) {
+    return (
+      <Box minH="100vh" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
+        <Text>読み込み中...</Text>
+      </Box>
+    );
+  }
+
+  // ログインしていない場合はログイン画面を表示
+  if (!isLoggedIn) {
+    return <LoginForm onLogin={handleLogin} />;
+  }
 
   return (
     <Box py={8} bg="gray.50" minH="100vh">
@@ -44,7 +78,13 @@ export default function AdminPage() {
               管理画面
             </Heading>
             
-            <Box w="150px" /> {/* スペーサー */}
+            <Button
+              colorScheme="red"
+              variant="outline"
+              onClick={handleLogout}
+            >
+              ログアウト
+            </Button>
           </HStack>
           
           <Text color="gray.600" textAlign="center">

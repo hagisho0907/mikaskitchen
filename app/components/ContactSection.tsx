@@ -31,8 +31,8 @@ const contactMethods = [
   {
     icon: FaEnvelope,
     label: 'メールでのお問い合わせ',
-    value: 'xxxxxxxx@xxxxx.com',
-    link: 'mailto:xxxxxxxx@xxxxx.com',
+    value: 'senka08760102@gmail.com',
+    link: 'mailto:senka08760102@gmail.com',
     description: '24時間受付（返信は営業時間内）',
     color: 'blue.500'
   },

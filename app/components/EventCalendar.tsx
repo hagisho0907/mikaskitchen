@@ -27,9 +27,22 @@ const getTypeColor = (type: string) => {
 };
 
 const getStatusColor = (participants: string) => {
-  if (participants === '満員') return 'red';
-  if (participants.includes('残り')) return 'orange';
-  return 'green';
+  switch (participants) {
+    case '予約受付中':
+      return 'blue';
+    case '空きあり':
+      return 'green';
+    case '残りわずか':
+      return 'orange';
+    case '満席':
+      return 'red';
+    case 'キャンセル待ち':
+      return 'purple';
+    case '開催終了':
+      return 'gray';
+    default:
+      return 'gray';
+  }
 };
 
 export default function EventCalendar() {

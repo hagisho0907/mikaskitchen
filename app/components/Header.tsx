@@ -20,17 +20,14 @@ export default function Header() {
         {/* Logo - 中央寄せ */}
         <Flex flex="1" justify="center">
           <Link href="/" _hover={{ textDecoration: 'none' }}>
-            <Box
-              fontSize={isMobile ? "xl" : "2xl"}
-              fontWeight="bold"
-              color="green.600"
-              textAlign="center"
-            >
-              美加の台所
-              <Box fontSize="sm" color="gray.600" fontWeight="normal">
-                MIKA NO DAIDOKORO
-              </Box>
-            </Box>
+            <Image
+              src="/images/Logo1.jpg"
+              alt="美加の台所 - MIKA NO DAIDOKORO"
+              height={isMobile ? "50px" : "60px"}
+              objectFit="contain"
+              _hover={{ transform: "scale(1.05)" }}
+              transition="transform 0.2s"
+            />
           </Link>
         </Flex>
 

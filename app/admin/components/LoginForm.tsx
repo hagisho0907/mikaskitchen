@@ -15,9 +15,11 @@ import {
   Text,
   useToast,
   Alert,
-  AlertIcon
+  AlertIcon,
+  HStack
 } from '@chakra-ui/react';
-import { ViewIcon, ViewOffIcon, LockIcon } from '@chakra-ui/icons';
+import { ViewIcon, ViewOffIcon, LockIcon, ArrowBackIcon } from '@chakra-ui/icons';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 interface LoginFormProps {
@@ -31,6 +33,11 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const toast = useToast();
+  const router = useRouter();
+
+  const handleBackToHome = () => {
+    router.push('/');
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,6 +93,18 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
   return (
     <Box minH="100vh" bg="gray.50" display="flex" alignItems="center" justifyContent="center">
       <Container maxW="md">
+        {/* 戻るボタン */}
+        <HStack justify="flex-start" mb={4}>
+          <Button
+            leftIcon={<ArrowBackIcon />}
+            colorScheme="gray"
+            variant="outline"
+            onClick={handleBackToHome}
+          >
+            ホームに戻る
+          </Button>
+        </HStack>
+        
         <Box
           bg="white"
           p={8}

@@ -145,6 +145,25 @@ export default function EventManager() {
     return typeConfig?.label || type;
   };
 
+  const getParticipantStatusColor = (status: string) => {
+    switch (status) {
+      case '予約受付中':
+        return 'blue';
+      case '空きあり':
+        return 'green';
+      case '残りわずか':
+        return 'orange';
+      case '満席':
+        return 'red';
+      case 'キャンセル待ち':
+        return 'purple';
+      case '開催終了':
+        return 'gray';
+      default:
+        return 'gray';
+    }
+  };
+
   return (
     <VStack gap={6} align="stretch">
       <Box>
@@ -180,7 +199,11 @@ export default function EventManager() {
                     {getTypeLabel(event.type)}
                   </Badge>
                 </Td>
-                <Td>{event.participants}</Td>
+                <Td>
+                  <Badge colorScheme={getParticipantStatusColor(event.participants)}>
+                    {event.participants}
+                  </Badge>
+                </Td>
                 <Td>
                   <HStack gap={2}>
                     <IconButton
@@ -247,11 +270,74 @@ export default function EventManager() {
 
               <FormControl isRequired>
                 <FormLabel>時間</FormLabel>
-                <Input
-                  value={currentEvent.time}
-                  onChange={(e) => setCurrentEvent({...currentEvent, time: e.target.value})}
-                  placeholder="10:00-12:00"
-                />
+                <HStack>
+                  <Select
+                    placeholder="開始時間"
+                    value={currentEvent.time.split('-')[0] || ''}
+                    onChange={(e) => {
+                      const startTime = e.target.value;
+                      const endTime = currentEvent.time.split('-')[1] || '';
+                      setCurrentEvent({...currentEvent, time: endTime ? `${startTime}-${endTime}` : startTime});
+                    }}
+                  >
+                    <option value="7:00">7:00</option>
+                    <option value="8:00">8:00</option>
+                    <option value="9:00">9:00</option>
+                    <option value="9:30">9:30</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                  </Select>
+                  <Box>〜</Box>
+                  <Select
+                    placeholder="終了時間"
+                    value={currentEvent.time.split('-')[1] || ''}
+                    onChange={(e) => {
+                      const startTime = currentEvent.time.split('-')[0] || '';
+                      const endTime = e.target.value;
+                      setCurrentEvent({...currentEvent, time: startTime ? `${startTime}-${endTime}` : endTime});
+                    }}
+                  >
+                    <option value="8:00">8:00</option>
+                    <option value="9:00">9:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="完売まで">完売まで</option>
+                  </Select>
+                </HStack>
               </FormControl>
 
               <FormControl>

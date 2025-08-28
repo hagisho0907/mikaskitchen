@@ -87,7 +87,7 @@ export default function AccessSection() {
               {/* Googleマップリンク */}
               <Box mt={6}>
                 <Link
-                  href="https://www.google.com/maps/place/テイクアウトカフェ+美加の台所/data=!4m2!3m1!1s0x0:0x86a87182887366cd?sa=X&ved=1t:2428&ictx=111"
+                  href="https://www.google.com/maps/place/%E3%83%86%E3%82%A4%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%82%AB%E3%83%95%E3%82%A7+%E7%BE%8E%E5%8A%A0%E3%81%AE%E5%8F%B0%E6%89%80/@35.6425076,140.1082017,17z/data=!3m1!4b1!4m6!3m5!1s0x60228531bbf15a39:0x86a87182887366cd!8m2!3d35.6425076!4d140.1082017!16s%2Fg%2F11qfkzkzz1"
                   target="_blank"
                   rel="noopener noreferrer"
                   bg="blue.500"
@@ -125,14 +125,14 @@ export default function AccessSection() {
                 shadow="md"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6234567890123!2d140.08765432109876!3d35.64321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228f123456789a%3A0x123456789abcdef0!2z44CSMjYzLTAwNTEg5Y2D6JGJ55yM5Y2D6JGJ5biC56iz55Sf5Yy66ZyT55Sf55S677yY77yY77yX4oiS77yU!5e0!3m2!1sja!2sjp!4v1640995200000!5m2!1sja!2sjp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.683464565809!2d140.10564917632845!3d35.64250757259374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228531bbf15a39%3A0x86a87182887366cd!2z44OG44Kk44Kv44Ki44Km44OI44Kr44OV44KnIOe+juWKoOOBruWPsOaJgA!5e0!3m2!1sja!2sjp!4v1703123456789!5m2!1sja!2sjp"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="美加の台所の地図 - 千葉県千葉市稲毛区園生町887-4"
+                  title="テイクアウトカフェ 美加の台所の地図"
                 />
               </Box>
             </Box>
@@ -163,7 +163,7 @@ export default function AccessSection() {
                 </VStack>
                 <VStack align="start" gap={2}>
                   <Text fontWeight="bold" color="gray.700">定休日</Text>
-                  <Text color="gray.600">不定休</Text>
+                  <Text color="gray.600">日曜日〜水曜日</Text>
                   <Text fontSize="sm" color="gray.500">
                     ※ イベント開催時は変更の場合があります
                   </Text>

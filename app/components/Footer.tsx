@@ -147,7 +147,7 @@ export default function Footer() {
                   ※時期によって異なるため、詳細はお問い合わせください
                 </Text>
                 <Text fontSize="xs" color="green.300" mt={2}>
-                  定休日：不定休<br />
+                  定休日：日曜日〜水曜日<br />
                   ※ イベント開催時は変更の場合があります
                 </Text>
               </VStack>

@@ -8,7 +8,7 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const images = [
   {
@@ -36,6 +36,14 @@ const images = [
 export default function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const isMobile = useBreakpointValue({ base: true, md: false });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);

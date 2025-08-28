@@ -14,7 +14,7 @@
     "date": "2024-01-25",
     "day": "木",
     "title": "子供お料理教室",
-    "time": "15:00-17:00", 
+    "time": "15:00-17:00",
     "description": "親子で楽しむ手作りパン教室",
     "type": "kids",
     "participants": "満席"
@@ -58,5 +58,15 @@
     "description": "手作りチョコレートスイーツ",
     "type": "special",
     "participants": "予約受付中"
+  },
+  {
+    "date": "2025-08-02",
+    "day": "土",
+    "title": "test",
+    "time": "9:30-10:30",
+    "description": "test",
+    "type": "class",
+    "participants": "空きあり",
+    "id": 7
   }
 ]

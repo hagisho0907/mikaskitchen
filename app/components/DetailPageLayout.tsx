@@ -11,9 +11,12 @@ import {
   CardBody, 
   Badge,
   Button,
+  HStack,
   useBreakpointValue 
 } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Header from './Header';
 import Navigation from './Navigation';
 import Footer from './Footer';
@@ -50,6 +53,11 @@ export default function DetailPageLayout({
   accentColor = "green"
 }: DetailPageProps) {
   const isMobile = useBreakpointValue({ base: true, md: false });
+  const router = useRouter();
+
+  const handleBackToTop = () => {
+    router.push('/');
+  };
 
   return (
     <Box minH="100vh" bg={backgroundColor}>
@@ -97,6 +105,22 @@ export default function DetailPageLayout({
           justifyContent="center"
         >
           <VStack spacing={4} textAlign="center" color="white">
+            {/* トップに戻るボタン */}
+            <HStack w="full" justify="flex-start" position="absolute" top={4} left={4}>
+              <Button
+                leftIcon={<ArrowBackIcon />}
+                colorScheme="whiteAlpha"
+                variant="solid"
+                size="sm"
+                onClick={handleBackToTop}
+                bg="whiteAlpha.200"
+                _hover={{ bg: "whiteAlpha.300" }}
+                color="white"
+              >
+                トップに戻る
+              </Button>
+            </HStack>
+
             <Heading 
               size={isMobile ? "xl" : "3xl"} 
               fontWeight="bold"

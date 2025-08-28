@@ -25,8 +25,8 @@ export default function ChiffonPage() {
         trial: "ミニシフォン3個セット：980円"
       }}
       images={[
-        "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-        "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "/images/Image5.jpg",
+        "/images/Image5.jpg"
       ]}
       accentColor="pink"
       backgroundColor="pink.50"

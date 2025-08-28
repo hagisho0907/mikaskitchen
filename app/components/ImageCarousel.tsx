@@ -69,7 +69,7 @@ export default function ImageCarousel() {
           {/* 画像表示 */}
           <Box 
             position="relative" 
-            h={isMobile ? "300px" : "400px"}
+            h={isMobile ? "400px" : "600px"}
             overflow="hidden"
             borderRadius="lg"
             shadow="xl"

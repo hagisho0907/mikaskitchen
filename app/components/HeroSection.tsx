@@ -76,7 +76,7 @@ export default function HeroSection() {
             textShadow="1px 1px 2px rgba(0,0,0,0.5)"
             lineHeight="1.6"
           >
-            千葉市稲毛区の古民家で、心と体に優しい自然食品をお届けします。
+            千葉県千葉市稲毛区園生町の古民家で、心と体に優しい自然食品をお届けします。
             腸活教室やお料理教室、手作りパンやお弁当で皆様の健康をサポートいたします。
           </Text>
         </VStack>

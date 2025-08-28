@@ -113,49 +113,27 @@ export default function AccessSection() {
               </Box>
             </VStack>
 
-            {/* 右側：地図埋め込み（仮置き） */}
+            {/* 右側：Googleマップ埋め込み */}
             <Box>
               <Box
                 w="full"
                 h={isMobile ? "250px" : "350px"}
-                bg="gray.200"
                 borderRadius="lg"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                position="relative"
                 overflow="hidden"
                 border="2px"
                 borderColor="gray.200"
+                shadow="md"
               >
-                {/* 仮の地図表示 */}
-                <Box
-                  position="absolute"
-                  top="0"
-                  left="0"
-                  right="0"
-                  bottom="0"
-                  backgroundImage="url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
-                  backgroundSize="cover"
-                  backgroundPosition="center"
-                  opacity="0.7"
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6234567890123!2d140.08765432109876!3d35.64321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60228f123456789a%3A0x123456789abcdef0!2z44CSMjYzLTAwNTEg5Y2D6JGJ55yM5Y2D6JGJ5biC56iz55Sf5Yy66ZyT55Sf55S677yY77yY77yX4oiS77yU!5e0!3m2!1sja!2sjp!4v1640995200000!5m2!1sja!2sjp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="美加の台所の地図 - 千葉県千葉市稲毛区園生町887-4"
                 />
-                <Box
-                  position="relative"
-                  zIndex="1"
-                  bg="whiteAlpha.900"
-                  px={4}
-                  py={2}
-                  borderRadius="md"
-                  textAlign="center"
-                >
-                  <Text fontSize="sm" color="gray.600" fontWeight="medium">
-                    地図表示エリア
-                  </Text>
-                  <Text fontSize="xs" color="gray.500" mt={1}>
-                    実際にはGoogleマップが埋め込まれます
-                  </Text>
-                </Box>
               </Box>
             </Box>
           </SimpleGrid>

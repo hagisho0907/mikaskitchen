@@ -15,7 +15,7 @@ export default function AboutSection() {
           
           <Box maxW="800px">
             <Text fontSize="lg" lineHeight="1.8" color="gray.700" mb={6}>
-              千葉市稲毛区の古民家を利用した、心と体に優しい自然食品を扱う飲食店です。
+              千葉県千葉市稲毛区園生町の古民家を利用した、心と体に優しい自然食品を扱う飲食店です。
             </Text>
             
             <Text fontSize="md" lineHeight="1.8" color="gray.600" mb={4}>

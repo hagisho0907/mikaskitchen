@@ -270,7 +270,7 @@ export default function EventManager() {
                 </Td>
               </Tr>
             ))}
-          </tbody>
+          </Tbody>
         </Table>
       </TableContainer>
 

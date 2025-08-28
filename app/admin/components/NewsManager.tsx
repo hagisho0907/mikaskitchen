@@ -239,7 +239,7 @@ export default function NewsManager() {
                 </Td>
               </Tr>
             ))}
-          </tbody>
+          </Tbody>
         </Table>
       </TableContainer>
 

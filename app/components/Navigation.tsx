@@ -26,6 +26,7 @@ const menuItems = [
   { name: 'シフォン販売', href: '/chiffon' },
   { name: '腸活弁当・のっけ弁当', href: '/bento' },
   { name: 'お庭ランチ', href: '/garden' },
+  { name: 'イベント', href: '/events' },
 ];
 
 export default function Navigation() {

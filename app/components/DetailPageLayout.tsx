@@ -67,7 +67,7 @@ export default function DetailPageLayout({
       {/* ヒーローセクション */}
       <Box
         position="relative"
-        h={isMobile ? "300px" : "400px"}
+        h={isMobile ? "400px" : "500px"}
         bg={`linear-gradient(135deg, ${accentColor}.100 0%, ${accentColor}.200 100%)`}
         overflow="hidden"
       >
@@ -79,7 +79,7 @@ export default function DetailPageLayout({
           right="0"
           bottom="0"
           backgroundImage={`url('${images[0]}')`}
-          backgroundSize="contain"
+          backgroundSize={isMobile ? "cover" : "contain"}
           backgroundPosition="center"
           opacity="0.3"
         />

@@ -66,7 +66,7 @@ export default function ChokkatsuPage() {
       {/* ヒーローセクション */}
       <Box
         position="relative"
-        h={isMobile ? "400px" : "600px"}
+        h={isMobile ? "500px" : "700px"}
         overflow="hidden"
       >        
         {/* 背景画像 */}
@@ -78,7 +78,7 @@ export default function ChokkatsuPage() {
           bottom="0"
           backgroundImage="url('/images/choukatsu/choukatsu1.jpg')"
           backgroundSize="cover"
-          backgroundPosition="center top"
+          backgroundPosition="center"
           opacity="0.7"
         />
 

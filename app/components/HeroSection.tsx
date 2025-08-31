@@ -64,13 +64,6 @@ export default function HeroSection() {
             filter="drop-shadow(2px 2px 4px rgba(0,0,0,0.5))"
           />
           
-          <Text 
-            fontSize={textSize} 
-            fontWeight="medium"
-            textShadow="1px 1px 2px rgba(0,0,0,0.5)"
-          >
-            MIKA NO DAIDOKORO
-          </Text>
           
           <Text 
             fontSize={useBreakpointValue({ base: 'sm', md: 'md' })} 

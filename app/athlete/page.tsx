@@ -264,20 +264,29 @@ export default function AthletePage() {
                   <VStack spacing={4} align="start">
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="red" px={3} py={1} borderRadius="full">開催頻度</Badge>
-                      <Text fontWeight="medium">月2回（第1・第3日曜日）</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
-                      <Badge colorScheme="red" px={3} py={1} borderRadius="full">時間</Badge>
-                      <Text fontWeight="medium">3時間</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
-                      <Badge colorScheme="red" px={3} py={1} borderRadius="full">開催時間</Badge>
-                      <Text fontWeight="medium">13:00〜16:00</Text>
+                      <Text fontWeight="medium">月1回（火曜日or日曜日）</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="red" px={3} py={1} borderRadius="full">定員</Badge>
-                      <Text fontWeight="medium">最大6名</Text>
+                      <Text fontWeight="medium">最大5名</Text>
                     </Flex>
+                    <Box
+                      p={4}
+                      bg="red.50"
+                      borderRadius="lg"
+                      border="2px"
+                      borderColor="red.200"
+                      w="full"
+                      mt={2}
+                    >
+                      <Badge colorScheme="red" mb={2} px={3} py={1} borderRadius="full">個人レッスン</Badge>
+                      <Text fontSize="sm" fontWeight="bold" color="red.700">
+                        個人レッスンも可
+                      </Text>
+                      <Text fontSize="xs" color="gray.600">
+                        ご相談ください
+                      </Text>
+                    </Box>
                   </VStack>
                 </VStack>
               </CardBody>
@@ -301,28 +310,12 @@ export default function AthletePage() {
                       borderColor="orange.200"
                       w="full"
                     >
-                      <Badge colorScheme="orange" mb={2} px={3} py={1} borderRadius="full">通常料金</Badge>
+                      <Badge colorScheme="orange" mb={2} px={3} py={1} borderRadius="full">料金</Badge>
                       <Text fontSize="xl" fontWeight="bold" color="orange.700">
-                        5,800円
+                        5,000円〜
                       </Text>
                       <Text fontSize="sm" color="gray.600">
                         材料費込み
-                      </Text>
-                    </Box>
-                    <Box
-                      p={4}
-                      bg="red.50"
-                      borderRadius="lg"
-                      border="2px"
-                      borderColor="red.200"
-                      w="full"
-                    >
-                      <Badge colorScheme="red" mb={2} px={3} py={1} borderRadius="full">初回限定</Badge>
-                      <Text fontSize="xl" fontWeight="bold" color="red.700">
-                        3,500円
-                      </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        お試し体験価格
                       </Text>
                     </Box>
                   </VStack>

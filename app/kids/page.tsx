@@ -425,10 +425,7 @@ export default function KidsPage() {
                     >
                       <Badge colorScheme="orange" mb={2} px={3} py={1} borderRadius="full">開催時期</Badge>
                       <Text fontSize="lg" fontWeight="bold" color="orange.700">
-                        夏休み・冬休み
-                      </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        年2回の特別開催
+                        夏休み、冬休み、春休み
                       </Text>
                     </Box>
                     <Flex align="center" gap={3}>
@@ -436,12 +433,8 @@ export default function KidsPage() {
                       <Text fontWeight="medium">小学生・中学生</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
-                      <Badge colorScheme="orange" px={3} py={1} borderRadius="full">時間</Badge>
-                      <Text fontWeight="medium">約2〜3時間</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
                       <Badge colorScheme="orange" px={3} py={1} borderRadius="full">定員</Badge>
-                      <Text fontWeight="medium">8〜12名程度</Text>
+                      <Text fontWeight="medium">最大5名</Text>
                     </Flex>
                   </VStack>
                 </VStack>
@@ -466,28 +459,12 @@ export default function KidsPage() {
                       borderColor="pink.200"
                       w="full"
                     >
-                      <Badge colorScheme="pink" mb={2} px={3} py={1} borderRadius="full">通常料金</Badge>
+                      <Badge colorScheme="pink" mb={2} px={3} py={1} borderRadius="full">料金</Badge>
                       <Text fontSize="xl" fontWeight="bold" color="pink.700">
-                        3,800円
+                        1,000円
                       </Text>
                       <Text fontSize="sm" color="gray.600">
-                        親子1組・材料費込み
-                      </Text>
-                    </Box>
-                    <Box
-                      p={4}
-                      bg="orange.50"
-                      borderRadius="lg"
-                      border="2px"
-                      borderColor="orange.200"
-                      w="full"
-                    >
-                      <Badge colorScheme="orange" mb={2} px={3} py={1} borderRadius="full">初回限定</Badge>
-                      <Text fontSize="xl" fontWeight="bold" color="orange.700">
-                        2,200円
-                      </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        お試し体験価格
+                        材料費込み
                       </Text>
                     </Box>
                   </VStack>

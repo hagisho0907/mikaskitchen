@@ -20,7 +20,7 @@ import {
   ListIcon
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import { FaDumbbell, FaClock, FaYenSign, FaCheckCircle, FaTarget, FaUsers, FaAppleAlt } from 'react-icons/fa';
+import { FaDumbbell, FaClock, FaYenSign, FaCheckCircle, FaBullseye, FaUsers, FaAppleAlt } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
@@ -240,7 +240,7 @@ export default function AthletePage() {
                     実習を通して「食べ方」を体得できます。
                   </Text>
                   <HStack spacing={3}>
-                    <Icon as={FaTarget} color="yellow.600" boxSize={6} />
+                    <Icon as={FaBullseye} color="yellow.600" boxSize={6} />
                     <Text fontSize="md" color="yellow.700" fontWeight="medium">
                       実習メニューは季節や参加者のレベルに合わせて変更いたします
                     </Text>

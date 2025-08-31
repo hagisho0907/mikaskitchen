@@ -37,33 +37,23 @@ export default function KidsPage() {
   const features = [
     {
       icon: FaUsers,
-      title: "年齢に合わせた安全な調理指導",
-      description: "4歳〜12歳まで、お子様の年齢に応じた安全で楽しい調理体験"
+      title: "安全で楽しい調理体験",
+      description: "子どもたち自身の手で、安全に配慮しながら楽しくお料理を作ります"
     },
     {
       icon: FaUtensils,
-      title: "食材の栄養や季節について学習",
-      description: "野菜の栄養や旬の食材について、遊びながら自然に学べます"
+      title: "栄養の知識を身につける",
+      description: "年齢に合わせて知っておきたい栄養と体の成長のひみつを学べます"
     },
     {
       icon: FaHeart,
-      title: "親子で協力して作る楽しいレシピ",
-      description: "家族の絆を深める親子クッキング体験"
+      title: "食べることの楽しさ",
+      description: "みんなで一緒に作って食べる喜びと、食の大切さを実感できます"
     },
     {
       icon: FaStar,
-      title: "手作りおやつや簡単パン作り",
-      description: "お子様でも作れる簡単で美味しいおやつとパン"
-    },
-    {
-      icon: FaHeart,
-      title: "食べ物への感謝の気持ちを育成",
-      description: "食材や作ってくれる人への感謝の心を育みます"
-    },
-    {
-      icon: FaUsers,
-      title: "アレルギー対応メニューも用意",
-      description: "事前にご相談いただければ、アレルギーに配慮したメニューもご用意"
+      title: "体を大切にする心",
+      description: "自分の体を大切にする気持ちと、健康な食生活の基礎を育みます"
     }
   ];
 
@@ -153,15 +143,16 @@ export default function KidsPage() {
               maxW="800px"
               lineHeight="1.6"
             >
-              楽しく学ぶ食の基本
+              「からだは食べ物からできている」
             </Text>
             
             <Text 
               fontSize={isMobile ? "sm" : "lg"} 
               opacity="0.9"
               textShadow="1px 1px 2px rgba(0,0,0,0.6)"
+              maxW="700px"
             >
-              親子で一緒に、料理の楽しさと食べ物の大切さを学びましょう
+              そんな大切なことを楽しく学びながら、実際に作って食べる体験をしてみませんか？
             </Text>
           </VStack>
         </Container>
@@ -172,16 +163,148 @@ export default function KidsPage() {
         <VStack spacing={12} align="stretch">
           {/* 概要セクション */}
           <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
-            <VStack spacing={6} textAlign="center">
-              <Heading size="xl" color="orange.700" letterSpacing="wide">
-                教室について
-              </Heading>
+            <VStack spacing={8} textAlign="center">
+              <VStack spacing={4}>
+                <Heading size="xl" color="orange.700" letterSpacing="wide">
+                  子どもお料理教室について
+                </Heading>
+                <Text fontSize="2xl" fontWeight="bold" color="orange.600" fontStyle="italic">
+                  「からだは食べ物からできている」
+                </Text>
+              </VStack>
+              
               <Text fontSize="lg" lineHeight="1.8" color="gray.700" maxW="800px">
-                お子様と一緒に参加できる親子料理教室です。包丁の使い方、食材の栄養、季節の食べ物など、
-                食に関する基本的な知識を楽しく学びながら、簡単で美味しい料理を作ります。
-                お子様の食育にもつながり、親子のコミュニケーションを深める貴重な時間となります。
-                安全で楽しい環境で、料理の楽しさを体験してください。
+                そんな大切なことを楽しく学びながら、実際に作って食べる体験をしてみませんか？
               </Text>
+              
+              <Text fontSize="lg" lineHeight="1.8" color="gray.700" maxW="800px">
+                このお料理教室では、年齢に合わせて知っておきたい栄養や体の成長のひみつをお話ししながら、
+                子どもたち自身の手でお料理を作ります。
+              </Text>
+              
+              <Box bg="orange.50" p={6} borderRadius="lg" border="2px" borderColor="orange.200" maxW="600px">
+                <VStack spacing={3}>
+                  <Badge colorScheme="orange" size="lg" px={4} py={1} borderRadius="full">
+                    対象年齢
+                  </Badge>
+                  <Text fontSize="lg" fontWeight="bold" color="orange.700">
+                    小学生、中学生
+                  </Text>
+                </VStack>
+              </Box>
+            </VStack>
+          </Box>
+
+          {/* 教室の内容セクション */}
+          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="green.100">
+            <VStack spacing={8}>
+              <VStack spacing={4}>
+                <Text fontSize="2xl" color="green.600">🥦</Text>
+                <Heading size="xl" color="green.700" textAlign="center" letterSpacing="wide">
+                  教室の内容
+                </Heading>
+              </VStack>
+              
+              <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} w="full">
+                <Card
+                  p={6}
+                  bg="green.50"
+                  borderRadius="xl"
+                  border="2px"
+                  borderColor="green.200"
+                  shadow="md"
+                  transition="all 0.3s"
+                  _hover={{
+                    borderColor: "green.300",
+                    shadow: "lg",
+                    transform: "translateY(-2px)"
+                  }}
+                >
+                  <VStack spacing={4} align="center" textAlign="center">
+                    <Box
+                      p={3}
+                      bg="green.100"
+                      borderRadius="full"
+                      border="2px"
+                      borderColor="green.300"
+                    >
+                      <Text fontSize="xl">📚</Text>
+                    </Box>
+                    <Heading size="sm" color="green.700">
+                      栄養のおはなし
+                    </Heading>
+                    <Text fontSize="sm" color="gray.700" lineHeight="1.6">
+                      年齢ごとのからだの成長に必要な栄養についてのおはなし
+                    </Text>
+                  </VStack>
+                </Card>
+
+                <Card
+                  p={6}
+                  bg="orange.50"
+                  borderRadius="xl"
+                  border="2px"
+                  borderColor="orange.200"
+                  shadow="md"
+                  transition="all 0.3s"
+                  _hover={{
+                    borderColor: "orange.300",
+                    shadow: "lg",
+                    transform: "translateY(-2px)"
+                  }}
+                >
+                  <VStack spacing={4} align="center" textAlign="center">
+                    <Box
+                      p={3}
+                      bg="orange.100"
+                      borderRadius="full"
+                      border="2px"
+                      borderColor="orange.300"
+                    >
+                      <Text fontSize="xl">👩‍🍳</Text>
+                    </Box>
+                    <Heading size="sm" color="orange.700">
+                      実際に作って食べる
+                    </Heading>
+                    <Text fontSize="sm" color="gray.700" lineHeight="1.6">
+                      体にやさしいごはんを自分の手で作って、みんなで美味しく食べよう
+                    </Text>
+                  </VStack>
+                </Card>
+
+                <Card
+                  p={6}
+                  bg="pink.50"
+                  borderRadius="xl"
+                  border="2px"
+                  borderColor="pink.200"
+                  shadow="md"
+                  transition="all 0.3s"
+                  _hover={{
+                    borderColor: "pink.300",
+                    shadow: "lg",
+                    transform: "translateY(-2px)"
+                  }}
+                >
+                  <VStack spacing={4} align="center" textAlign="center">
+                    <Box
+                      p={3}
+                      bg="pink.100"
+                      borderRadius="full"
+                      border="2px"
+                      borderColor="pink.300"
+                    >
+                      <Text fontSize="xl">💝</Text>
+                    </Box>
+                    <Heading size="sm" color="pink.700">
+                      心を育てる
+                    </Heading>
+                    <Text fontSize="sm" color="gray.700" lineHeight="1.6">
+                      食べることの楽しさを知り、自分の体を大切にする気持ちを育てます
+                    </Text>
+                  </VStack>
+                </Card>
+              </SimpleGrid>
             </VStack>
           </Box>
 
@@ -228,15 +351,15 @@ export default function KidsPage() {
             </VStack>
           </Box>
 
-          {/* 特徴・ポイント */}
-          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
+          {/* 教室の魅力 */}
+          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="purple.100">
             <VStack spacing={8}>
               <VStack spacing={4}>
-                <Heading size="xl" color="orange.700" textAlign="center" letterSpacing="wide">
-                  特徴・ポイント
+                <Heading size="xl" color="purple.700" textAlign="center" letterSpacing="wide">
+                  教室の魅力
                 </Heading>
                 <Text color="gray.600" textAlign="center" fontSize="lg">
-                  安心・安全で楽しい学びの時間
+                  子どもたちが楽しく学べる4つのポイント
                 </Text>
               </VStack>
               
@@ -245,14 +368,14 @@ export default function KidsPage() {
                   <Card
                     key={index}
                     p={6}
-                    bg="orange.50"
+                    bg="purple.50"
                     borderRadius="xl"
                     border="2px"
-                    borderColor="orange.200"
+                    borderColor="purple.200"
                     shadow="md"
                     transition="all 0.3s"
                     _hover={{
-                      borderColor: "orange.300",
+                      borderColor: "purple.300",
                       shadow: "lg",
                       transform: "translateY(-2px)"
                     }}
@@ -260,14 +383,14 @@ export default function KidsPage() {
                     <VStack spacing={4} align="center" textAlign="center">
                       <Box
                         p={3}
-                        bg="orange.100"
+                        bg="purple.100"
                         borderRadius="full"
                         border="2px"
-                        borderColor="orange.300"
+                        borderColor="purple.300"
                       >
-                        <Icon as={feature.icon} boxSize={6} color="orange.600" />
+                        <Icon as={feature.icon} boxSize={6} color="purple.600" />
                       </Box>
-                      <Heading size="sm" color="orange.700">
+                      <Heading size="sm" color="purple.700">
                         {feature.title}
                       </Heading>
                       <Text fontSize="sm" color="gray.700" lineHeight="1.6">
@@ -292,21 +415,33 @@ export default function KidsPage() {
                     </Heading>
                   </Box>
                   <VStack spacing={4} align="start">
+                    <Box
+                      p={4}
+                      bg="orange.50"
+                      borderRadius="lg"
+                      border="1px"
+                      borderColor="orange.200"
+                      w="full"
+                    >
+                      <Badge colorScheme="orange" mb={2} px={3} py={1} borderRadius="full">開催時期</Badge>
+                      <Text fontSize="lg" fontWeight="bold" color="orange.700">
+                        夏休み・冬休み
+                      </Text>
+                      <Text fontSize="sm" color="gray.600">
+                        年2回の特別開催
+                      </Text>
+                    </Box>
                     <Flex align="center" gap={3}>
-                      <Badge colorScheme="orange" px={3} py={1} borderRadius="full">開催頻度</Badge>
-                      <Text fontWeight="medium">月1回（第3土曜日）</Text>
+                      <Badge colorScheme="orange" px={3} py={1} borderRadius="full">対象</Badge>
+                      <Text fontWeight="medium">小学生・中学生</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="orange" px={3} py={1} borderRadius="full">時間</Badge>
-                      <Text fontWeight="medium">2時間</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
-                      <Badge colorScheme="orange" px={3} py={1} borderRadius="full">開催時間</Badge>
-                      <Text fontWeight="medium">14:00〜16:00</Text>
+                      <Text fontWeight="medium">約2〜3時間</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="orange" px={3} py={1} borderRadius="full">定員</Badge>
-                      <Text fontWeight="medium">親子6組（最大12名）</Text>
+                      <Text fontWeight="medium">8〜12名程度</Text>
                     </Flex>
                   </VStack>
                 </VStack>

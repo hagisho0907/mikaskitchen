@@ -17,7 +17,7 @@ import {
   Flex
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import { GiCakeSlice, GiBrokenEgg, GiCherry } from 'react-icons/gi';
+import { GiCakeSlice, GiEgg, GiCherry } from 'react-icons/gi';
 import { FaHeart, FaGift, FaHome, FaMagic } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -40,7 +40,7 @@ export default function ChiffonPage() {
       description: "計量からメレンゲ作り、焼き上げまで、一つひとつ心を込めて"
     },
     {
-      icon: GiBrokenEgg,
+      icon: GiEgg,
       title: "「とよんちのたまご」使用",
       description: "贅沢に使用し、コクと風味豊かに仕上げました"
     },
@@ -157,7 +157,7 @@ export default function ChiffonPage() {
               
               <Box bg="pink.50" p={6} borderRadius="xl" border="2px" borderColor="pink.200" maxW="700px">
                 <VStack spacing={3}>
-                  <Icon as={GiBrokenEgg} boxSize={8} color="pink.500" />
+                  <Icon as={GiEgg} boxSize={8} color="pink.500" />
                   <Text fontSize="xl" fontWeight="bold" color="pink.700">
                     「とよんちのたまご」を贅沢に使用
                   </Text>

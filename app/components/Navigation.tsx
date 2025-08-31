@@ -91,17 +91,19 @@ export default function Navigation() {
   return (
     <Box bg="green.50" py={3} borderTop="1px" borderColor="green.100">
       <Flex maxW="1200px" mx="auto" px={6}>
-        <HStack spacing={8} mx="auto" flexWrap="wrap" justify="center">
+        <HStack spacing={4} mx="auto" flexWrap="nowrap" justify="center" overflowX="auto">
           {menuItems.map((item, index) => (
             <Link key={index} href={item.href} style={{ textDecoration: 'none' }}>
               <Box
-                px={4}
+                px={3}
                 py={2}
                 rounded="md"
-                fontSize="sm"
+                fontSize="xs"
                 fontWeight="medium"
                 color="green.700"
                 cursor="pointer"
+                whiteSpace="nowrap"
+                minW="fit-content"
                 _hover={{
                   bg: "green.100",
                   color: "green.800",

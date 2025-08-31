@@ -83,7 +83,7 @@ export default function KidsPage() {
           bottom="0"
           backgroundImage="url('/images/child/child1.jpg')"
           backgroundSize="cover"
-          backgroundPosition="center"
+          backgroundPosition="center top"
           opacity="0.6"
         />
 

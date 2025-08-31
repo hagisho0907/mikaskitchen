@@ -12,7 +12,9 @@ import {
   Badge,
   Button,
   HStack,
-  useBreakpointValue 
+  useBreakpointValue,
+  Image,
+  AspectRatio 
 } from '@chakra-ui/react';
 import { ArrowBackIcon, CalendarIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
@@ -40,7 +42,8 @@ export default function EventsPage() {
         '少人数制でしっかりサポート',
         'パン作りの基礎から応用まで'
       ],
-      color: 'orange'
+      color: 'orange',
+      image: '/images/event/event1.jpg'
     },
     {
       title: '寄せ植え教室',
@@ -51,7 +54,8 @@ export default function EventsPage() {
         'お手入れ方法をしっかり説明',
         'おしゃれな鉢もご用意'
       ],
-      color: 'green'
+      color: 'green',
+      image: '/images/event/event2.jpg'
     },
     {
       title: 'シャビーナチュラル教室',
@@ -62,7 +66,8 @@ export default function EventsPage() {
         '世界に一つだけの作品作り',
         'インテリアコーディネートのコツ'
       ],
-      color: 'purple'
+      color: 'purple',
+      image: '/images/event/event3.jpg'
     }
   ];
 
@@ -74,10 +79,24 @@ export default function EventsPage() {
       {/* ヒーローセクション */}
       <Box
         position="relative"
-        h={isMobile ? "300px" : "400px"}
+        h={isMobile ? "400px" : "500px"}
         bg="linear-gradient(135deg, teal.100 0%, teal.200 100%)"
         overflow="hidden"
       >        
+        {/* 背景画像（3つのイベント画像をブレンド） */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          backgroundImage="linear-gradient(45deg, transparent 33%, transparent 66%), url('/images/event/event1.jpg'), url('/images/event/event2.jpg'), url('/images/event/event3.jpg')"
+          backgroundSize="cover, 33% 100%, 33% 100%, 33% 100%"
+          backgroundPosition="center, left, center, right"
+          backgroundRepeat="no-repeat"
+          opacity="0.4"
+        />
+
         {/* オーバーレイ */}
         <Box
           position="absolute"
@@ -85,7 +104,8 @@ export default function EventsPage() {
           left="0"
           right="0"
           bottom="0"
-          bg="blackAlpha.300"
+          bg="linear-gradient(135deg, teal.600 0%, teal.400 100%)"
+          opacity="0.8"
         />
 
         {/* コンテンツ */}
@@ -98,9 +118,9 @@ export default function EventsPage() {
           alignItems="center"
           justifyContent="center"
         >
-          <VStack spacing={4} textAlign="center" color="white">
+          <VStack spacing={6} textAlign="center" color="white">
             {/* トップに戻るボタン */}
-            <HStack w="full" justify="flex-start" position="absolute" top={4} left={4}>
+            <HStack w="full" justify="flex-start" position="absolute" top={6} left={6}>
               <Button
                 leftIcon={<ArrowBackIcon />}
                 colorScheme="whiteAlpha"
@@ -110,26 +130,38 @@ export default function EventsPage() {
                 bg="whiteAlpha.200"
                 _hover={{ bg: "whiteAlpha.300" }}
                 color="white"
+                backdropFilter="blur(10px)"
               >
                 トップに戻る
               </Button>
             </HStack>
 
-            <CalendarIcon boxSize={isMobile ? 12 : 16} />
+            <CalendarIcon boxSize={isMobile ? 16 : 20} />
             <Heading 
-              size={isMobile ? "xl" : "3xl"} 
+              size={isMobile ? "2xl" : "4xl"} 
               fontWeight="bold"
-              textShadow="2px 2px 4px rgba(0,0,0,0.5)"
+              textShadow="2px 2px 8px rgba(0,0,0,0.6)"
+              letterSpacing="wider"
             >
               イベント
             </Heading>
             
             <Text 
-              fontSize={isMobile ? "lg" : "xl"} 
+              fontSize={isMobile ? "lg" : "2xl"} 
               fontWeight="medium"
-              textShadow="1px 1px 2px rgba(0,0,0,0.5)"
+              textShadow="1px 1px 4px rgba(0,0,0,0.6)"
+              maxW="800px"
+              lineHeight="1.6"
             >
               パン教室・寄せ植え教室・シャビーナチュラル教室を不定期開催
+            </Text>
+            
+            <Text 
+              fontSize={isMobile ? "sm" : "lg"} 
+              opacity="0.9"
+              textShadow="1px 1px 2px rgba(0,0,0,0.6)"
+            >
+              手作りの温もりと自然の美しさを感じる特別な時間をお過ごしください
             </Text>
           </VStack>
         </Container>
@@ -154,34 +186,88 @@ export default function EventsPage() {
           </Box>
 
           {/* イベントタイプ */}
-          <Box bg="white" p={8} borderRadius="lg" shadow="md">
-            <VStack spacing={8}>
-              <Heading size="lg" color="teal.700" textAlign="center">
-                開催イベント
-              </Heading>
-              <SimpleGrid columns={{ base: 1, lg: 3 }} gap={6} w="full">
+          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="gray.100">
+            <VStack spacing={12}>
+              <VStack spacing={4}>
+                <Heading size="xl" color="teal.700" textAlign="center" letterSpacing="wide">
+                  開催イベント
+                </Heading>
+                <Text color="gray.600" textAlign="center" fontSize="lg">
+                  心を込めて開催する3つの特別な教室
+                </Text>
+              </VStack>
+              
+              <SimpleGrid columns={{ base: 1, lg: 3 }} gap={8} w="full">
                 {eventTypes.map((event, index) => (
-                  <Card key={index} shadow="md" border="1px" borderColor="gray.200">
-                    <CardBody>
-                      <VStack spacing={4} align="stretch">
+                  <Card 
+                    key={index} 
+                    shadow="xl" 
+                    border="1px" 
+                    borderColor="gray.200"
+                    borderRadius="xl"
+                    overflow="hidden"
+                    transition="all 0.3s"
+                    _hover={{
+                      transform: "translateY(-5px)",
+                      shadow: "2xl",
+                      borderColor: `${event.color}.200`
+                    }}
+                  >
+                    {/* 画像セクション */}
+                    <AspectRatio ratio={4/3}>
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        objectFit="cover"
+                        fallback={
+                          <Box bg={`${event.color}.100`} w="full" h="full" display="flex" alignItems="center" justifyContent="center">
+                            <Text color={`${event.color}.600`}>{event.title}</Text>
+                          </Box>
+                        }
+                      />
+                    </AspectRatio>
+                    
+                    <CardBody p={6}>
+                      <VStack spacing={5} align="stretch">
                         <Box textAlign="center">
-                          <Badge colorScheme={event.color} size="lg" px={3} py={1} mb={2}>
+                          <Badge 
+                            colorScheme={event.color} 
+                            size="lg" 
+                            px={4} 
+                            py={2} 
+                            borderRadius="full"
+                            fontSize="sm"
+                            fontWeight="bold"
+                            textTransform="none"
+                          >
                             {event.title}
                           </Badge>
                         </Box>
-                        <Text fontSize="sm" color="gray.700" lineHeight="1.6">
+                        
+                        <Text 
+                          fontSize="sm" 
+                          color="gray.700" 
+                          lineHeight="1.7"
+                          textAlign="center"
+                        >
                           {event.description}
                         </Text>
-                        <VStack spacing={2} align="start">
-                          <Text fontSize="xs" fontWeight="bold" color="gray.600" mb={1}>
-                            特徴・ポイント：
-                          </Text>
-                          {event.features.map((feature, featureIndex) => (
-                            <Text key={featureIndex} fontSize="xs" color="gray.600">
-                              • {feature}
+                        
+                        <Box bg={`${event.color}.50`} p={4} borderRadius="lg" border="1px" borderColor={`${event.color}.100`}>
+                          <VStack spacing={3} align="start">
+                            <Text fontSize="sm" fontWeight="bold" color={`${event.color}.700`}>
+                              ✨ 特徴・ポイント
                             </Text>
-                          ))}
-                        </VStack>
+                            {event.features.map((feature, featureIndex) => (
+                              <HStack key={featureIndex} spacing={2} align="start">
+                                <Text color={`${event.color}.500`} fontSize="xs" mt="2px">●</Text>
+                                <Text fontSize="xs" color="gray.700" lineHeight="1.5">
+                                  {feature}
+                                </Text>
+                              </HStack>
+                            ))}
+                          </VStack>
+                        </Box>
                       </VStack>
                     </CardBody>
                   </Card>

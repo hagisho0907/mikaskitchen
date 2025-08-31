@@ -326,22 +326,52 @@ export default function ChokkatsuPage() {
                       スケジュール
                     </Heading>
                   </Box>
-                  <VStack spacing={4} align="start">
-                    <Flex align="center" gap={3}>
-                      <Badge colorScheme="green" px={3} py={1} borderRadius="full">開催頻度</Badge>
-                      <Text fontWeight="medium">月2回（第2・第4土曜日）</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
-                      <Badge colorScheme="green" px={3} py={1} borderRadius="full">時間</Badge>
-                      <Text fontWeight="medium">2時間30分</Text>
-                    </Flex>
-                    <Flex align="center" gap={3}>
+                  <VStack spacing={5} align="start">
+                    <Box
+                      p={4}
+                      bg="green.50"
+                      borderRadius="lg"
+                      border="2px"
+                      borderColor="green.200"
+                      w="full"
+                    >
+                      <Badge colorScheme="green" mb={3} px={3} py={1} borderRadius="full">初めての方</Badge>
+                      <VStack spacing={2} align="start">
+                        <Text fontSize="sm" fontWeight="bold" color="green.700">
+                          6月・10月・11月に募集
+                        </Text>
+                        <Text fontSize="xs" color="gray.600">
+                          スケジュールをご確認ください
+                        </Text>
+                      </VStack>
+                    </Box>
+                    
+                    <Box
+                      p={4}
+                      bg="teal.50"
+                      borderRadius="lg"
+                      border="2px"
+                      borderColor="teal.200"
+                      w="full"
+                    >
+                      <Badge colorScheme="teal" mb={3} px={3} py={1} borderRadius="full">リピートの方</Badge>
+                      <VStack spacing={2} align="start">
+                        <Text fontSize="sm" fontWeight="bold" color="teal.700">
+                          随時受付
+                        </Text>
+                        <Text fontSize="xs" color="gray.600">
+                          日時ご相談
+                        </Text>
+                      </VStack>
+                    </Box>
+                    
+                    <Flex align="center" gap={3} mt={2}>
                       <Badge colorScheme="green" px={3} py={1} borderRadius="full">開催時間</Badge>
-                      <Text fontWeight="medium">10:00〜12:30</Text>
+                      <Text fontWeight="medium">10:00〜14:00</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="green" px={3} py={1} borderRadius="full">定員</Badge>
-                      <Text fontWeight="medium">最大8名</Text>
+                      <Text fontWeight="medium">最大5名</Text>
                     </Flex>
                   </VStack>
                 </VStack>
@@ -366,28 +396,12 @@ export default function ChokkatsuPage() {
                       borderColor="teal.200"
                       w="full"
                     >
-                      <Badge colorScheme="teal" mb={2} px={3} py={1} borderRadius="full">通常料金</Badge>
+                      <Badge colorScheme="teal" mb={2} px={3} py={1} borderRadius="full">料金</Badge>
                       <Text fontSize="xl" fontWeight="bold" color="teal.700">
                         4,500円
                       </Text>
                       <Text fontSize="sm" color="gray.600">
                         材料費込み
-                      </Text>
-                    </Box>
-                    <Box
-                      p={4}
-                      bg="green.50"
-                      borderRadius="lg"
-                      border="2px"
-                      borderColor="green.200"
-                      w="full"
-                    >
-                      <Badge colorScheme="green" mb={2} px={3} py={1} borderRadius="full">初回限定</Badge>
-                      <Text fontSize="xl" fontWeight="bold" color="green.700">
-                        2,500円
-                      </Text>
-                      <Text fontSize="sm" color="gray.600">
-                        お試し体験価格
                       </Text>
                     </Box>
                   </VStack>

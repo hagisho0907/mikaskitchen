@@ -78,5 +78,15 @@
     "type": "special",
     "participants": "満席",
     "id": 8
+  },
+  {
+    "date": "2025-08-02",
+    "day": "土",
+    "title": "aaa",
+    "time": "8:00-10:00",
+    "description": "aaaa",
+    "type": "class",
+    "participants": "予約受付中",
+    "id": 9
   }
 ]

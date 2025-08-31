@@ -121,11 +121,7 @@ export default function ChokkatsuPage() {
               </Button>
             </HStack>
 
-            <HStack spacing={4}>
-              <Text fontSize={isMobile ? "3xl" : "4xl"}>🍅</Text>
-              <Icon as={FaLeaf} boxSize={isMobile ? 12 : 16} />
-              <Text fontSize={isMobile ? "3xl" : "4xl"}>🥕</Text>
-            </HStack>
+            <Icon as={FaLeaf} boxSize={isMobile ? 12 : 16} />
             
             <Heading 
               size={isMobile ? "2xl" : "4xl"} 
@@ -190,11 +186,9 @@ export default function ChokkatsuPage() {
           <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="teal.100">
             <VStack spacing={8}>
               <VStack spacing={4}>
-                <Text fontSize="2xl">🔸</Text>
                 <Heading size="xl" color="teal.700" textAlign="center" letterSpacing="wide">
                   こんな方におすすめ
                 </Heading>
-                <Text fontSize="2xl">🔸</Text>
               </VStack>
               
               <SimpleGrid columns={{ base: 1, md: 2 }} gap={6} w="full">

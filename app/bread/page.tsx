@@ -17,7 +17,7 @@ import {
   Flex
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import { GiBread, GiWheat, GiSalt } from 'react-icons/gi';
+import { GiBread, GiWheat } from 'react-icons/gi';
 import { FaHeart, FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -42,7 +42,7 @@ export default function BreadPage() {
     },
     {
       name: "喜界島のきび砂糖",
-      icon: GiSalt,
+      icon: FaHeart,
       description: "優しい甘さで、からだにすっとなじむ味わい",
       color: "orange"
     },

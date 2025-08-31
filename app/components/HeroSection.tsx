@@ -54,13 +54,13 @@ export default function HeroSection() {
         justifyContent="center"
       >
         <VStack spacing={6} textAlign="center" color="white">
-          <Heading 
-            size={headingSize} 
-            fontWeight="bold"
-            textShadow="2px 2px 4px rgba(0,0,0,0.5)"
-          >
-            美加の台所
-          </Heading>
+          <Image
+            src="/images/Logo_trans.png"
+            alt="美加の台所 - MIKA NO DAIDOKORO"
+            height={isMobile ? "80px" : "120px"}
+            objectFit="contain"
+            filter="drop-shadow(2px 2px 4px rgba(0,0,0,0.5))"
+          />
           
           <Text 
             fontSize={textSize} 

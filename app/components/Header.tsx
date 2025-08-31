@@ -21,7 +21,7 @@ export default function Header() {
         <Flex flex="1" justify="center">
           <Link href="/" _hover={{ textDecoration: 'none' }}>
             <Image
-              src="/images/Logo1.jpg"
+              src="/images/Logo_trans.png"
               alt="美加の台所 - MIKA NO DAIDOKORO"
               height={isMobile ? "50px" : "60px"}
               objectFit="contain"

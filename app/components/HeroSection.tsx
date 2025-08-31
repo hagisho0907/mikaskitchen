@@ -13,6 +13,7 @@ import {
 export default function HeroSection() {
   const headingSize = useBreakpointValue({ base: '2xl', md: '4xl' });
   const textSize = useBreakpointValue({ base: 'md', md: 'lg' });
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Box

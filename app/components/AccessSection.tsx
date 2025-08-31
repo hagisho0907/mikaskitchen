@@ -158,7 +158,18 @@ export default function AccessSection() {
                   <Text color="gray.600">金曜日: 11:00 - 完売まで</Text>
                   <Text color="gray.600">土曜日: 7:00 - 完売まで</Text>
                   <Text fontSize="sm" color="gray.500" mt={1}>
-                    ※時期によって異なるため、詳細はお問い合わせください
+                    ※時期によって異なるため、詳細は
+                    <Link 
+                      href="https://www.instagram.com/mikanodaidokoro/"
+                      color="blue.600"
+                      textDecoration="underline"
+                      _hover={{ color: "blue.700" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      インスタグラム
+                    </Link>
+                    をご覧ください
                   </Text>
                 </VStack>
                 <VStack align="start" gap={2}>

@@ -108,29 +108,6 @@ export default function ContactSection() {
                 </Box>
               ))}
 
-              {/* 営業時間の詳細 */}
-              <Box
-                bg="green.50"
-                p={6}
-                borderRadius="lg"
-                border="1px"
-                borderColor="green.200"
-              >
-                <HStack gap={4} mb={3}>
-                  <Icon as={FaClock} color="green.600" w={5} h={5} />
-                  <Text fontWeight="bold" color="green.700">
-                    営業時間
-                  </Text>
-                </HStack>
-                <VStack align="start" gap={1} pl={9}>
-                  <Text color="gray.700">木曜日: 11:00 - 16:00</Text>
-                  <Text color="gray.700">金曜日: 11:00 - 完売まで</Text>
-                  <Text color="gray.700">土曜日: 7:00 - 完売まで</Text>
-                  <Text fontSize="sm" color="gray.600" mt={2}>
-                    ※ 時期によって異なるため、詳細はお問い合わせください
-                  </Text>
-                </VStack>
-              </Box>
             </VStack>
 
             {/* 右側：お問い合わせフォーム */}

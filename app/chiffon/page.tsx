@@ -74,7 +74,21 @@ export default function ChiffonPage() {
           left="0"
           right="0"
           bottom="0"
+          backgroundImage="url('/images/chiffon/chiffon.jpg')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          opacity="0.7"
+        />
+
+        {/* オーバーレイ */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
           bg="linear-gradient(135deg, pink.400 0%, purple.400 50%, pink.500 100%)"
+          opacity="0.8"
         />
 
         {/* コンテンツ */}

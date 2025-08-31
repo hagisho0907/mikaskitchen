@@ -79,7 +79,7 @@ export default function DetailPageLayout({
           right="0"
           bottom="0"
           backgroundImage={`url('${images[0]}')`}
-          backgroundSize="cover"
+          backgroundSize="contain"
           backgroundPosition="center"
           opacity="0.3"
         />

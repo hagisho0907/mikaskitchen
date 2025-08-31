@@ -25,8 +25,8 @@ export default function GardenPage() {
         trial: "お庭カフェセット：1,500円"
       }}
       images={[
-        "/images/Image1.jpg",
-        "/images/Image1.jpg"
+        "/images/lunch/lunch.jpg",
+        "/images/lunch/lunch.jpg"
       ]}
       accentColor="purple"
       backgroundColor="purple.50"

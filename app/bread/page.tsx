@@ -72,7 +72,21 @@ export default function BreadPage() {
           left="0"
           right="0"
           bottom="0"
+          backgroundImage="url('/images/bread/bread1.jpg')"
+          backgroundSize="cover"
+          backgroundPosition="center"
+          opacity="0.7"
+        />
+
+        {/* オーバーレイ */}
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
           bg="linear-gradient(135deg, yellow.500 0%, orange.500 50%, red.400 100%)"
+          opacity="0.8"
         />
 
         {/* コンテンツ */}
@@ -295,6 +309,85 @@ export default function BreadPage() {
               </CardBody>
             </Card>
           </SimpleGrid>
+
+          {/* パンの写真ギャラリー */}
+          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="yellow.100">
+            <VStack spacing={8}>
+              <VStack spacing={4}>
+                <Heading size="xl" color="yellow.700" textAlign="center" letterSpacing="wide">
+                  各種コッペパンサンド
+                </Heading>
+                <Text color="gray.600" textAlign="center" fontSize="lg">
+                  美味しさと栄養にこだわった手作りコッペパンサンド
+                </Text>
+              </VStack>
+              
+              <SimpleGrid columns={{ base: 1, md: 3 }} gap={6} w="full">
+                <Box
+                  borderRadius="xl"
+                  overflow="hidden"
+                  shadow="lg"
+                  transition="all 0.3s"
+                  _hover={{
+                    shadow: "xl",
+                    transform: "translateY(-5px)"
+                  }}
+                >
+                  <Box
+                    h="250px"
+                    backgroundImage="url('/images/bread/bread1.jpg')"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                  />
+                </Box>
+                
+                <Box
+                  borderRadius="xl"
+                  overflow="hidden"
+                  shadow="lg"
+                  transition="all 0.3s"
+                  _hover={{
+                    shadow: "xl",
+                    transform: "translateY(-5px)"
+                  }}
+                >
+                  <Box
+                    h="250px"
+                    backgroundImage="url('/images/bread/bread2.jpg')"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                  />
+                </Box>
+                
+                <Box
+                  borderRadius="xl"
+                  overflow="hidden"
+                  shadow="lg"
+                  transition="all 0.3s"
+                  _hover={{
+                    shadow: "xl",
+                    transform: "translateY(-5px)"
+                  }}
+                >
+                  <Box
+                    h="250px"
+                    backgroundImage="url('/images/bread/bread3.jpg')"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                  />
+                </Box>
+              </SimpleGrid>
+              
+              <Box bg="orange.50" p={6} borderRadius="lg" border="1px" borderColor="orange.200" maxW="600px">
+                <Text fontSize="md" color="orange.700" fontWeight="bold" textAlign="center">
+                  季節の食材と手作りの具材で、
+                </Text>
+                <Text fontSize="md" color="gray.700" textAlign="center" mt={1}>
+                  毎日違った美味しさをお楽しみいただけます
+                </Text>
+              </Box>
+            </VStack>
+          </Box>
 
           {/* お申し込み・お問い合わせ */}
           <Box 

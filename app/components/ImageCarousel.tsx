@@ -12,32 +12,48 @@ import { useState, useEffect } from 'react';
 
 const images = [
   {
-    src: "/images/Image1.jpg",
+    src: "/images/carousel/carousel1.jpg",
     alt: "美加の台所の様子1"
   },
   {
-    src: "/images/Image2.jpg",
+    src: "/images/carousel/carousel2.jpg",
     alt: "美加の台所の様子2"
   },
   {
-    src: "/images/Image3.jpg",
+    src: "/images/carousel/carousel3.jpg",
     alt: "美加の台所の様子3"
   },
   {
-    src: "/images/Image4.jpg",
+    src: "/images/carousel/carousel4.jpg",
     alt: "美加の台所の様子4"
   },
   {
-    src: "/images/Image5.jpg",
+    src: "/images/carousel/carousel5.jpg",
     alt: "美加の台所の様子5"
   },
   {
-    src: "/images/Image6.jpg",
+    src: "/images/carousel/carousel6.jpg",
     alt: "美加の台所の様子6"
   },
   {
-    src: "/images/Image7.jpg",
+    src: "/images/carousel/carousel7.jpg",
     alt: "美加の台所の様子7"
+  },
+  {
+    src: "/images/carousel/carousel8.jpg",
+    alt: "美加の台所の様子8"
+  },
+  {
+    src: "/images/carousel/carousel9.jpg",
+    alt: "美加の台所の様子9"
+  },
+  {
+    src: "/images/carousel/carousel10.jpg",
+    alt: "美加の台所の様子10"
+  },
+  {
+    src: "/images/carousel/carousel11.jpg",
+    alt: "美加の台所の様子11"
   }
 ];
 

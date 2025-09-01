@@ -65,12 +65,22 @@ export default function HeroSection() {
           />
           
           
-          <Text 
-            fontSize={useBreakpointValue({ base: 'sm', md: 'md' })} 
-            maxW="600px"
-            textShadow="1px 1px 2px rgba(0,0,0,0.5)"
-            lineHeight="1.6"
+          <Box
+            bg="whiteAlpha.900"
+            p={6}
+            borderRadius="xl"
+            backdropFilter="blur(10px)"
+            border="1px"
+            borderColor="whiteAlpha.400"
+            maxW="650px"
+            shadow="lg"
           >
+            <Text 
+              fontSize={useBreakpointValue({ base: 'sm', md: 'md' })} 
+              color="gray.800"
+              lineHeight="1.7"
+              textAlign="center"
+            >
             美加の台所は、住宅街にある小さなお店です。
             なるべくシンプルで厳選された食材を選び手作りで販売しています。
             数席ですが、お庭で座って召し上がれるスペースもご用意してあります。
@@ -78,7 +88,8 @@ export default function HeroSection() {
             お散歩がてら是非覗きに来てください。
             
             腸活講座などの各種講座も開催しております。
-          </Text>
+            </Text>
+          </Box>
         </VStack>
       </Container>
     </Box>

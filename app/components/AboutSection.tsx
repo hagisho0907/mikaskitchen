@@ -12,6 +12,7 @@ import {
   CardBody,
   Badge,
   Icon,
+  Image,
   useBreakpointValue 
 } from '@chakra-ui/react';
 import { FaClock, FaUtensils } from 'react-icons/fa';
@@ -24,21 +25,24 @@ export default function AboutSection() {
       day: "木",
       service: "シフォンケーキ",
       time: "11:00〜16:00",
-      color: "orange"
+      color: "orange",
+      image: "/images/chiffon/chiffon.jpg"
     },
     {
       day: "金",
       service: "腸活弁当",
       time: "11:00〜売り切れまで",
       specialTime: "6月から9月は\nのっけ弁当 11:00〜13:00\nおばんざい 15:30〜売り切れまで",
-      color: "blue"
+      color: "blue",
+      image: "/images/chounokke/chounokke.jpg"
     },
     {
       day: "土",
       service: "コッペパンサンド",
       time: "9:00〜売り切れまで",
       specialTime: "6月から9月はサマータイム 7:00〜売り切れまで",
-      color: "red"
+      color: "red",
+      image: "/images/bread/bread1.jpg"
     }
   ];
 
@@ -92,6 +96,25 @@ export default function AboutSection() {
                       >
                         {day.day}
                       </Box>
+                      {day.image && (
+                        <Box
+                          w="60px"
+                          h="60px"
+                          borderRadius="lg"
+                          overflow="hidden"
+                          border="2px"
+                          borderColor={`${day.color}.300`}
+                          shadow="md"
+                        >
+                          <Image
+                            src={day.image}
+                            alt={day.service}
+                            objectFit="cover"
+                            w="full"
+                            h="full"
+                          />
+                        </Box>
+                      )}
                     </HStack>
                     
                     <VStack spacing={3}>

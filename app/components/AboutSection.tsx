@@ -1,37 +1,145 @@
 'use client';
 
-import { Box, Container, Heading, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
+import { 
+  Box, 
+  Container, 
+  Heading, 
+  Text, 
+  VStack, 
+  HStack,
+  SimpleGrid,
+  Card,
+  CardBody,
+  Badge,
+  Icon,
+  useBreakpointValue 
+} from '@chakra-ui/react';
+import { FaClock, FaUtensils } from 'react-icons/fa';
 
 export default function AboutSection() {
-  const headingSize = useBreakpointValue({ base: 'lg', md: 'xl' });
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
+  const businessDays = [
+    {
+      day: "木",
+      service: "シフォンケーキ",
+      time: "11:00〜16:00",
+      items: ["抹茶ほうじ茶ケーキ", "玉子三ミホール"],
+      color: "orange"
+    },
+    {
+      day: "金",
+      service: "腸活弁当",
+      time: "11:00〜売り切れまで",
+      specialTime: "6月から9月は のっけ弁当 & おばんざい 11:00〜13:00 15:30〜売り切れまで",
+      color: "blue"
+    },
+    {
+      day: "土",
+      service: "コッペパンサンド",
+      time: "9:00〜売り切れまで",
+      specialTime: "6月から9月はサマータイム 7:00〜売り切れまで",
+      items: ["いちりがっこコロッケ", "コッペパンサンド"],
+      color: "red"
+    }
+  ];
 
   return (
     <Box py={16} bg="white">
       <Container maxW="1200px">
-        <VStack spacing={8} textAlign="center">
-          <Heading size="lg" color="green.700" fontWeight="bold">
-            美加の台所について
-          </Heading>
+        <VStack spacing={10} textAlign="center">
+          <VStack spacing={4}>
+            <Heading size="lg" color="green.700" fontWeight="bold">
+              美加の台所について
+            </Heading>
+            <Text fontSize="lg" color="gray.600" maxW="600px">
+              木・金・土曜日営業
+            </Text>
+            <Text fontSize="md" color="red.600" fontWeight="bold">
+              祝日定休日
+            </Text>
+          </VStack>
           
-          <Box maxW="800px">
-            <Text fontSize="lg" lineHeight="1.8" color="gray.700" mb={6}>
-              千葉県千葉市稲毛区園生町の古民家を利用した、心と体に優しい自然食品を扱う飲食店です。
-            </Text>
-            
-            <Text fontSize="md" lineHeight="1.8" color="gray.600" mb={4}>
-              店主の想いは、食を通じて皆様の健康と幸せをサポートすることです。
-              腸活に特化した教室やアスリート向けの料理教室、お子様向けの料理教室など、
-              様々な年代の方に食の大切さと楽しさをお伝えしています。
-            </Text>
-            
-            <Text fontSize="md" lineHeight="1.8" color="gray.600" mb={4}>
-              手作りのパンやシフォンケーキ、栄養バランスを考えた腸活弁当・のっけ弁当の販売、
-              そして季節を感じられるお庭でのランチタイムもご提供しております。
-            </Text>
-            
-            <Text fontSize="md" lineHeight="1.8" color="gray.600">
-              古民家の温かい雰囲気の中で、食を通じた豊かな時間をお過ごしください。
-              皆様のご来店を心よりお待ちしております。
+          <SimpleGrid columns={{ base: 1, lg: 3 }} gap={6} w="full">
+            {businessDays.map((day, index) => (
+              <Card
+                key={index}
+                shadow="lg"
+                borderRadius="xl"
+                border="2px"
+                borderColor={`${day.color}.200`}
+                bg={`${day.color}.50`}
+                transition="all 0.3s"
+                _hover={{
+                  transform: "translateY(-5px)",
+                  shadow: "xl"
+                }}
+              >
+                <CardBody p={6}>
+                  <VStack spacing={4} align="stretch">
+                    <HStack justify="center" spacing={3}>
+                      <Box
+                        w="50px"
+                        h="50px"
+                        borderRadius="lg"
+                        bg={`${day.color}.500`}
+                        color="white"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        fontSize="xl"
+                        fontWeight="bold"
+                        border="3px"
+                        borderColor={`${day.color}.600`}
+                      >
+                        {day.day}
+                      </Box>
+                    </HStack>
+                    
+                    <VStack spacing={3}>
+                      <Heading size="md" color={`${day.color}.700`}>
+                        {day.service}
+                      </Heading>
+                      
+                      <Badge colorScheme={day.color} fontSize="sm" p={2} borderRadius="md">
+                        <Icon as={FaClock} mr={2} />
+                        {day.time}
+                      </Badge>
+                      
+                      {day.specialTime && (
+                        <Box bg={`${day.color}.100`} p={3} borderRadius="md" border="1px" borderColor={`${day.color}.300`}>
+                          <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold">
+                            {day.specialTime}
+                          </Text>
+                        </Box>
+                      )}
+                      
+                      {day.items && (
+                        <VStack spacing={2}>
+                          {day.items.map((item, itemIndex) => (
+                            <Badge key={itemIndex} variant="outline" colorScheme={day.color} fontSize="xs">
+                              {item}
+                            </Badge>
+                          ))}
+                        </VStack>
+                      )}
+                    </VStack>
+                  </VStack>
+                </CardBody>
+              </Card>
+            ))}
+          </SimpleGrid>
+          
+          <Box 
+            bg="red.50" 
+            p={4} 
+            borderRadius="lg" 
+            border="2px" 
+            borderColor="red.200"
+            maxW="600px"
+          >
+            <Text fontSize="md" color="red.700" fontWeight="bold" textAlign="center">
+              売り切れの場合は閉店時間が早まります。ご了承ください。
             </Text>
           </Box>
         </VStack>

@@ -81,11 +81,11 @@ export default function ImageCarousel() {
     <Box py={16} bg="gray.50">
       <Container maxW="1200px">
 
-        <Box position="relative" maxW="800px" mx="auto">
+        <Box position="relative" maxW="1000px" mx="auto">
           {/* 画像表示 */}
           <Box 
             position="relative" 
-            h={isMobile ? "400px" : "600px"}
+            h={isMobile ? "500px" : "700px"}
             overflow="hidden"
             borderRadius="lg"
             shadow="xl"

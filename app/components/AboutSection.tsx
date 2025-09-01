@@ -96,25 +96,6 @@ export default function AboutSection() {
                       >
                         {day.day}
                       </Box>
-                      {day.image && (
-                        <Box
-                          w="60px"
-                          h="60px"
-                          borderRadius="lg"
-                          overflow="hidden"
-                          border="2px"
-                          borderColor={`${day.color}.300`}
-                          shadow="md"
-                        >
-                          <Image
-                            src={day.image}
-                            alt={day.service}
-                            objectFit="cover"
-                            w="full"
-                            h="full"
-                          />
-                        </Box>
-                      )}
                     </HStack>
                     
                     <VStack spacing={3}>
@@ -132,6 +113,28 @@ export default function AboutSection() {
                           <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold" whiteSpace="pre-line">
                             {day.specialTime}
                           </Text>
+                        </Box>
+                      )}
+                      
+                      {day.image && (
+                        <Box
+                          w="80px"
+                          h="80px"
+                          borderRadius="lg"
+                          overflow="hidden"
+                          border="2px"
+                          borderColor={`${day.color}.300`}
+                          shadow="md"
+                          mx="auto"
+                          mt={2}
+                        >
+                          <Image
+                            src={day.image}
+                            alt={day.service}
+                            objectFit="cover"
+                            w="full"
+                            h="full"
+                          />
                         </Box>
                       )}
                       

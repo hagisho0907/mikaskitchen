@@ -66,7 +66,7 @@ export default function HeroSection() {
           
           
           <Box
-            bg="whiteAlpha.900"
+            bg="whiteAlpha.700"
             p={6}
             borderRadius="xl"
             backdropFilter="blur(10px)"

@@ -16,6 +16,7 @@ import {
   useBreakpointValue 
 } from '@chakra-ui/react';
 import { FaClock, FaUtensils } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function AboutSection() {
   const isMobile = useBreakpointValue({ base: true, md: false });
@@ -26,7 +27,8 @@ export default function AboutSection() {
       service: "シフォンケーキ",
       time: "11:00〜16:00",
       color: "orange",
-      image: "/images/chiffon/chiffon.jpg"
+      image: "/images/chiffon/chiffon.jpg",
+      link: "/chiffon"
     },
     {
       day: "金",
@@ -34,7 +36,8 @@ export default function AboutSection() {
       time: "11:00〜売り切れまで",
       specialTime: "6月から9月は\nのっけ弁当 11:00〜13:00\nおばんざい 15:30〜売り切れまで",
       color: "blue",
-      image: "/images/chounokke/chounokke.jpg"
+      image: "/images/chounokke/chounokke.jpg",
+      link: "/bento"
     },
     {
       day: "土",
@@ -42,7 +45,8 @@ export default function AboutSection() {
       time: "9:00〜売り切れまで",
       specialTime: "6月から9月はサマータイム 7:00〜売り切れまで",
       color: "red",
-      image: "/images/bread/bread1.jpg"
+      image: "/images/bread/bread1.jpg",
+      link: "/bread"
     }
   ];
 
@@ -64,19 +68,21 @@ export default function AboutSection() {
           
           <SimpleGrid columns={{ base: 1, lg: 3 }} gap={6} w="full">
             {businessDays.map((day, index) => (
-              <Card
-                key={index}
-                shadow="lg"
-                borderRadius="xl"
-                border="2px"
-                borderColor={`${day.color}.200`}
-                bg={`${day.color}.50`}
-                transition="all 0.3s"
-                _hover={{
-                  transform: "translateY(-5px)",
-                  shadow: "xl"
-                }}
-              >
+              <Link key={index} href={day.link} style={{ textDecoration: 'none' }}>
+                <Card
+                  shadow="lg"
+                  borderRadius="xl"
+                  border="2px"
+                  borderColor={`${day.color}.200`}
+                  bg={`${day.color}.50`}
+                  transition="all 0.3s"
+                  cursor="pointer"
+                  _hover={{
+                    transform: "translateY(-5px)",
+                    shadow: "xl",
+                    borderColor: `${day.color}.300`
+                  }}
+                >
                 <CardBody p={6}>
                   <VStack spacing={4} align="stretch">
                     <HStack justify="center" spacing={3}>
@@ -141,7 +147,8 @@ export default function AboutSection() {
                     </VStack>
                   </VStack>
                 </CardBody>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </SimpleGrid>
           

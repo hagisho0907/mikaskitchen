@@ -179,7 +179,7 @@ export default function KidsPage() {
               
               <Text fontSize="lg" lineHeight="1.8" color="gray.700" maxW="800px">
                 このお料理教室では、年齢に合わせて知っておきたい栄養や体の成長のひみつをお話ししながら、
-                子どもたち自身の手でお料理を作ります。お子様だけでのご参加となります。
+                子どもたち自身の手でお料理を作ります。子どもたちが主役となって、特別な体験をしていただきます。
               </Text>
               
               <Box bg="orange.50" p={6} borderRadius="lg" border="2px" borderColor="orange.200" maxW="600px">
@@ -485,11 +485,11 @@ export default function KidsPage() {
             <VStack spacing={6}>
               <Icon as={FaHeart} boxSize={12} color="orange.500" />
               <Heading size="lg" color="orange.700">
-                子供だけで楽しい時間を過ごしませんか？
+                お子様の特別な成長体験をお手伝いします
               </Heading>
               <Text color="gray.700" fontSize="lg" maxW="600px">
-                お子様の「できた！」という笑顔と、自立した料理体験を
-                お手伝いさせていただきます
+                お子様の「できた！」という笑顔と、自分の力で作る喜びを
+                大切にした料理教室です
               </Text>
               <VStack spacing={4}>
                 <Link href="/contact" style={{ textDecoration: 'none' }}>

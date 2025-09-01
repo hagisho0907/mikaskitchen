@@ -25,8 +25,8 @@ export default function BentoPage() {
         trial: "お試し2食セット：1,200円"
       }}
       images={[
-        "/images/Image7.jpg",
-        "/images/Image7.jpg"
+        "/images/chounokke/chounokke.jpg",
+        "/images/chounokke/chounokke.jpg"
       ]}
       accentColor="teal"
       backgroundColor="teal.50"

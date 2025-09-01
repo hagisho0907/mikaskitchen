@@ -170,7 +170,7 @@ export default function Footer() {
           {/* コピーライト */}
           <VStack gap={2} textAlign="center">
             <Text fontSize="xs" color="green.300">
-              古民家を利用した心と体に優しい自然食品の飲食店
+              住宅街の中の小さな憩いの場
             </Text>
             <Text fontSize="xs" color="green.400">
               © {currentYear} 美加の台所 (MIKA NO DAIDOKORO). All rights reserved.

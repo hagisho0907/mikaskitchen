@@ -68,7 +68,7 @@ export default function AboutSection() {
           
           <SimpleGrid columns={{ base: 1, lg: 3 }} gap={6} w="full">
             {businessDays.map((day, index) => (
-              <Link key={index} href={day.link} style={{ textDecoration: 'none' }}>
+              <Link key={index} href={day.link} style={{ textDecoration: 'none', height: '100%' }}>
                 <Card
                   shadow="lg"
                   borderRadius="xl"
@@ -77,74 +77,79 @@ export default function AboutSection() {
                   bg={`${day.color}.50`}
                   transition="all 0.3s"
                   cursor="pointer"
+                  h="full"
                   _hover={{
                     transform: "translateY(-5px)",
                     shadow: "xl",
                     borderColor: `${day.color}.300`
                   }}
                 >
-                <CardBody p={6}>
-                  <VStack spacing={4} align="stretch">
-                    <HStack justify="center" spacing={3}>
-                      <Box
-                        w="50px"
-                        h="50px"
-                        borderRadius="lg"
-                        bg={`${day.color}.500`}
-                        color="white"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                        fontSize="xl"
-                        fontWeight="bold"
-                        border="3px"
-                        borderColor={`${day.color}.600`}
-                      >
-                        {day.day}
-                      </Box>
-                    </HStack>
-                    
-                    <VStack spacing={3}>
-                      <Heading size="md" color={`${day.color}.700`}>
-                        {day.service}
-                      </Heading>
-                      
-                      <Badge colorScheme={day.color} fontSize="sm" p={2} borderRadius="md">
-                        <Icon as={FaClock} mr={2} />
-                        {day.time}
-                      </Badge>
-                      
-                      {day.specialTime && (
-                        <Box bg={`${day.color}.100`} p={3} borderRadius="md" border="1px" borderColor={`${day.color}.300`}>
-                          <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold" whiteSpace="pre-line">
-                            {day.specialTime}
-                          </Text>
-                        </Box>
-                      )}
-                      
-                      {day.image && (
+                <CardBody p={6} display="flex" flexDirection="column" h="full">
+                  <VStack spacing={4} align="stretch" flex="1" justify="space-between">
+                    <VStack spacing={4}>
+                      <HStack justify="center" spacing={3}>
                         <Box
-                          w="120px"
-                          h="120px"
+                          w="50px"
+                          h="50px"
                           borderRadius="lg"
-                          overflow="hidden"
-                          border="2px"
-                          borderColor={`${day.color}.300`}
-                          shadow="md"
-                          mx="auto"
-                          mt={2}
+                          bg={`${day.color}.500`}
+                          color="white"
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center"
+                          fontSize="xl"
+                          fontWeight="bold"
+                          border="3px"
+                          borderColor={`${day.color}.600`}
                         >
-                          <Image
-                            src={day.image}
-                            alt={day.service}
-                            objectFit="cover"
-                            w="full"
-                            h="full"
-                          />
+                          {day.day}
                         </Box>
-                      )}
+                      </HStack>
                       
+                      <VStack spacing={3}>
+                        <Heading size="md" color={`${day.color}.700`}>
+                          {day.service}
+                        </Heading>
+                        
+                        <Badge colorScheme={day.color} fontSize="sm" p={2} borderRadius="md">
+                          <Icon as={FaClock} mr={2} />
+                          {day.time}
+                        </Badge>
+                        
+                        <Box minH="80px" w="full" display="flex" alignItems="center" justifyContent="center">
+                          {day.specialTime && (
+                            <Box bg={`${day.color}.100`} p={3} borderRadius="md" border="1px" borderColor={`${day.color}.300`}>
+                              <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold" whiteSpace="pre-line">
+                                {day.specialTime}
+                              </Text>
+                            </Box>
+                          )}
+                        </Box>
+                      </VStack>
                     </VStack>
+                    
+                    {day.image && (
+                      <Box
+                        w="120px"
+                        h="120px"
+                        borderRadius="lg"
+                        overflow="hidden"
+                        border="2px"
+                        borderColor={`${day.color}.300`}
+                        shadow="md"
+                        mx="auto"
+                        mt="auto"
+                      >
+                        <Image
+                          src={day.image}
+                          alt={day.service}
+                          objectFit="cover"
+                          w="full"
+                          h="full"
+                        />
+                      </Box>
+                    )}
+                    
                   </VStack>
                 </CardBody>
                 </Card>

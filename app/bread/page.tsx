@@ -383,7 +383,7 @@ export default function BreadPage() {
                   季節の食材と手作りの具材で、
                 </Text>
                 <Text fontSize="md" color="gray.700" textAlign="center" mt={1}>
-                  毎日違った美味しさをお楽しみいただけます
+                  いつでも新鮮な美味しさをお楽しみいただけます
                 </Text>
               </Box>
             </VStack>

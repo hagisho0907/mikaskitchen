@@ -59,7 +59,7 @@ export default function KidsPage() {
 
   const galleryImages = [
     { src: "/images/child/child1.jpg", alt: "子供たちが楽しくお料理している様子" },
-    { src: "/images/child/child2.jpg", alt: "親子で一緒に調理を楽しむ様子" },
+    { src: "/images/child/child2.jpg", alt: "子供たちが一緒に調理を楽しむ様子" },
     { src: "/images/child/child3.jpg", alt: "完成した料理を嬉しそうに見せる子供たち" }
   ];
 
@@ -179,7 +179,7 @@ export default function KidsPage() {
               
               <Text fontSize="lg" lineHeight="1.8" color="gray.700" maxW="800px">
                 このお料理教室では、年齢に合わせて知っておきたい栄養や体の成長のひみつをお話ししながら、
-                子どもたち自身の手でお料理を作ります。
+                子どもたち自身の手でお料理を作ります。お子様だけでのご参加となります。
               </Text>
               
               <Box bg="orange.50" p={6} borderRadius="lg" border="2px" borderColor="orange.200" maxW="600px">
@@ -485,10 +485,10 @@ export default function KidsPage() {
             <VStack spacing={6}>
               <Icon as={FaHeart} boxSize={12} color="orange.500" />
               <Heading size="lg" color="orange.700">
-                親子で楽しい時間を過ごしませんか？
+                子供だけで楽しい時間を過ごしませんか？
               </Heading>
               <Text color="gray.700" fontSize="lg" maxW="600px">
-                お子様の「できた！」という笑顔と、親子の素敵な思い出作りを
+                お子様の「できた！」という笑顔と、自立した料理体験を
                 お手伝いさせていただきます
               </Text>
               <VStack spacing={4}>

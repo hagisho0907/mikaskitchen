@@ -30,7 +30,7 @@ export default function AboutSection() {
       day: "金",
       service: "腸活弁当",
       time: "11:00〜売り切れまで",
-      specialTime: "6月から9月は のっけ弁当 & おばんざい 11:00〜13:00 15:30〜売り切れまで",
+      specialTime: "6月から9月は\nのっけ弁当 11:00〜13:00\nおばんざい 15:30〜売り切れまで",
       color: "blue"
     },
     {
@@ -106,7 +106,7 @@ export default function AboutSection() {
                       
                       {day.specialTime && (
                         <Box bg={`${day.color}.100`} p={3} borderRadius="md" border="1px" borderColor={`${day.color}.300`}>
-                          <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold">
+                          <Text fontSize="xs" color={`${day.color}.800`} fontWeight="bold" whiteSpace="pre-line">
                             {day.specialTime}
                           </Text>
                         </Box>

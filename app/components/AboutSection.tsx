@@ -24,7 +24,6 @@ export default function AboutSection() {
       day: "木",
       service: "シフォンケーキ",
       time: "11:00〜16:00",
-      items: ["抹茶ほうじ茶ケーキ", "玉子三ミホール"],
       color: "orange"
     },
     {
@@ -39,7 +38,6 @@ export default function AboutSection() {
       service: "コッペパンサンド",
       time: "9:00〜売り切れまで",
       specialTime: "6月から9月はサマータイム 7:00〜売り切れまで",
-      items: ["いちりがっこコロッケ", "コッペパンサンド"],
       color: "red"
     }
   ];
@@ -114,15 +112,6 @@ export default function AboutSection() {
                         </Box>
                       )}
                       
-                      {day.items && (
-                        <VStack spacing={2}>
-                          {day.items.map((item, itemIndex) => (
-                            <Badge key={itemIndex} variant="outline" colorScheme={day.color} fontSize="xs">
-                              {item}
-                            </Badge>
-                          ))}
-                        </VStack>
-                      )}
                     </VStack>
                   </VStack>
                 </CardBody>

@@ -118,8 +118,8 @@ export default function AboutSection() {
                       
                       {day.image && (
                         <Box
-                          w="80px"
-                          h="80px"
+                          w="120px"
+                          h="120px"
                           borderRadius="lg"
                           overflow="hidden"
                           border="2px"

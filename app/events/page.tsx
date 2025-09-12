@@ -35,9 +35,8 @@ export default function EventsPage() {
   const eventTypes = [
     {
       title: 'パン教室',
-      description: '天然酵母を使った本格的なパン作りを学べます。初心者の方でも安心してご参加いただけるよう、丁寧に指導いたします。',
+      description: '国産小麦粉と喜界島のきび砂糖を使った本格的なパン作りを学べます。初心者の方でも安心してご参加いただけるよう、丁寧に指導いたします。',
       features: [
-        '天然酵母の扱い方を学べる',
         '家庭でも作れる実用的なレシピ',
         '少人数制でしっかりサポート',
         'パン作りの基礎から応用まで'
@@ -178,7 +177,7 @@ export default function EventsPage() {
               </Heading>
               <Text fontSize="lg" lineHeight="1.8" color="gray.700">
                 美加の台所では、季節に合わせて様々なイベント・教室を開催しています。
-                パン教室では天然酵母を使った本格的なパン作りを、寄せ植え教室では季節の植物を使った美しい寄せ植えを、
+                パン教室では国産小麦粉と喜界島のきび砂糖を使った本格的なパン作りを、寄せ植え教室では季節の植物を使った美しい寄せ植えを、
                 シャビーナチュラル教室では自然素材を活かしたクラフト作りをお楽しみいただけます。
                 各教室とも少人数制で、初心者の方でも安心してご参加いただけます。
               </Text>
@@ -304,11 +303,11 @@ export default function EventsPage() {
                     </Box>
                     <Box>
                       <Badge colorScheme="teal" mb={2}>開催時期</Badge>
-                      <Text fontSize="sm">不定期開催（カレンダーにてお知らせ）</Text>
+                      <Text fontSize="sm">不定期開催 <br />（Instagram,イベントカレンダーにてお知らせ）</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="teal" mb={2}>定員</Badge>
-                      <Text fontSize="sm">各教室4〜8名程度の少人数制</Text>
+                      <Text fontSize="sm">少人数制（開催時にお知らせします）</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="teal" mb={2}>持参品</Badge>
@@ -328,7 +327,7 @@ export default function EventsPage() {
                   <VStack spacing={3} align="start">
                     <Box>
                       <Badge colorScheme="orange" mb={2}>キャンセル</Badge>
-                      <Text fontSize="sm">前日までにご連絡ください</Text>
+                      <Text fontSize="sm">キャンセルポリシーあり<br />お申し込み時にご確認ください</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="orange" mb={2}>材料費</Badge>

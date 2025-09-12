@@ -120,7 +120,7 @@ export default function GardenPage() {
                 概要・詳細
               </Heading>
               <Text fontSize="lg" lineHeight="1.8" color="gray.700">
-                築80年の古民家の美しい庭園を眺めながら、季節の食材をふんだんに使った特別なランチをお楽しみいただけます。静かで落ち着いた空間で、ゆっくりとした時間をお過ごしください。1日1組限定の完全予約制で、プライベートな時間をご提供します。記念日や特別な日のお食事にもおすすめです。
+                美加の台所のお庭ランチは1日1組だけのプライベートランチですので閉店までゆっくりお過ごし下さい。コッペパンサンドはもちろん、腸が喜ぶランチプレートをご用意させて頂きます。お誘い合わせの上是非お越し下さい。
               </Text>
             </VStack>
           </Box>
@@ -140,7 +140,7 @@ export default function GardenPage() {
                   borderColor="purple.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
-                    甘酒スムージーなどフリードリンク付き
+                    フリードリンク （甘酒スムージーも1杯お飲みいただけます）
                   </Text>
                 </Box>
                 <Box
@@ -151,7 +151,7 @@ export default function GardenPage() {
                   borderColor="purple.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
-                    旬の食材を使った季節のランチコース
+                    季節の食材を活かしたランチコース
                   </Text>
                 </Box>
                 <Box
@@ -162,7 +162,7 @@ export default function GardenPage() {
                   borderColor="purple.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
-                    完全予約制のプライベート空間
+                    完全予約制のプライベート感
                   </Text>
                 </Box>
                 <Box
@@ -190,16 +190,16 @@ export default function GardenPage() {
                   </Heading>
                   <VStack spacing={3} align="start">
                     <Box>
-                      <Badge colorScheme="purple" mb={2}>曜日</Badge>
-                      <Text>週末・祝日限定</Text>
+                      <Badge colorScheme="purple" mb={2}>開催日</Badge>
+                      <Text>4~6月,10~12月の第一土曜日</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="purple" mb={2}>時間</Badge>
-                      <Text>ランチタイム 11:30〜15:00（90分制）</Text>
+                      <Text>ランチタイム 11:30〜15:00</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="purple" mb={2}>定員</Badge>
-                      <Text>1日4組限定</Text>
+                      <Text>1日1組限定 最大6名様</Text>
                     </Box>
                   </VStack>
                 </VStack>
@@ -215,11 +215,7 @@ export default function GardenPage() {
                   <VStack spacing={3} align="start">
                     <Box>
                       <Badge colorScheme="purple" mb={2}>通常料金</Badge>
-                      <Text fontSize="xl" fontWeight="bold">季節のランチコース：¥2,800</Text>
-                    </Box>
-                    <Box>
-                      <Badge colorScheme="orange" mb={2}>体験料金</Badge>
-                      <Text fontSize="lg" fontWeight="medium">お庭カフェセット：¥1,500</Text>
+                      <Text fontSize="xl" fontWeight="bold">季節のランチコース：¥2,500</Text>
                     </Box>
                   </VStack>
                 </VStack>

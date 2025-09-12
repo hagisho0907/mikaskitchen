@@ -205,7 +205,7 @@ export default function BentoPage() {
                       <Text>毎週金曜日</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>時間</Badge>
+                      <Badge colorScheme="teal" mb={2}>販売時間</Badge>
                       <Text>11:00〜売り切れ次第終了</Text>
                     </Box>
                     <Box>

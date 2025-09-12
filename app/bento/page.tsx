@@ -201,20 +201,20 @@ export default function BentoPage() {
                   </Heading>
                   <VStack spacing={3} align="start">
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>曜日</Badge>
+                      <Badge colorScheme="teal" mb={2}>販売日</Badge>
                       <Text>毎週金曜日</Text>
-                    </Box>
-                    <Box>
-                      <Badge colorScheme="teal" mb={2}>販売</Badge>
-                      <Text>テイクアウト・宅配 /r ※15個以上の注文の場合、配達致します /r ※金曜日以外にお弁当ご予約（15以上）承ります</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="teal" mb={2}>時間</Badge>
                       <Text>11:00〜売り切れ次第終了</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>定員</Badge>
-                      <Text>1日限定30食</Text>
+                      <Badge colorScheme="teal" mb={2}>販売方法</Badge>
+                      <Text>
+                        テイクアウト・宅配<br />
+                        ※15個以上の注文の場合、配達致します<br />
+                        ※金曜日以外にお弁当ご予約（15以上）承ります
+                      </Text>
                     </Box>
                   </VStack>
                 </VStack>

@@ -91,7 +91,7 @@ export default function BentoPage() {
               </Button>
             </HStack>
 
-            <Text fontSize={isMobile ? "4xl" : "6xl"} mb={2}>
+            <Text fontSize={isMobile ? "4xl" : "6xl"} mb={2} color="white" filter="grayscale(100%) brightness(200%)">
               🍱
             </Text>
             <Heading 

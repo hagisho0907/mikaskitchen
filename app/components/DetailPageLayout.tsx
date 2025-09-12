@@ -30,7 +30,7 @@ interface DetailPageProps {
     frequency: string;
     duration: string;
     time: string;
-    capacity: string;
+    capacity?: string;
   };
   pricing?: {
     regular: string;
@@ -191,15 +191,15 @@ export default function DetailPageLayout({
                     </Heading>
                     <VStack spacing={3} align="start">
                       <Box>
-                        <Badge colorScheme={accentColor} mb={2}>開催頻度</Badge>
+                        <Badge colorScheme={accentColor} mb={2}>曜日</Badge>
                         <Text>{schedule.frequency}</Text>
                       </Box>
                       <Box>
-                        <Badge colorScheme={accentColor} mb={2}>時間</Badge>
+                        <Badge colorScheme={accentColor} mb={2}>販売</Badge>
                         <Text>{schedule.duration}</Text>
                       </Box>
                       <Box>
-                        <Badge colorScheme={accentColor} mb={2}>開催時間</Badge>
+                        <Badge colorScheme={accentColor} mb={2}>時間</Badge>
                         <Text>{schedule.time}</Text>
                       </Box>
                       <Box>

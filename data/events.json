@@ -8,5 +8,15 @@
     "type": "class",
     "participants": "予約受付中",
     "id": 1
+  },
+  {
+    "date": "2025-11-16",
+    "day": "日",
+    "title": "腸活お料理教室",
+    "time": "10:00-14:00",
+    "description": "",
+    "type": "class",
+    "participants": "予約受付中",
+    "id": 2
   }
 ]

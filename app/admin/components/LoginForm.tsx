@@ -48,6 +48,7 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
       // API経由でログイン認証を行う
       const response = await fetch('/api/admin/login', {
         method: 'POST',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -58,7 +59,6 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
 
       if (response.ok && data.success) {
         // ログイン成功時
-        localStorage.setItem('adminLoggedIn', 'true');
         toast({
           title: 'ログイン成功',
           description: '管理画面にアクセスします',

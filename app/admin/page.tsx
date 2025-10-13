@@ -27,19 +27,46 @@ export default function AdminPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // ローカルストレージからログイン状態をチェック
-    const loggedIn = localStorage.getItem('adminLoggedIn') === 'true';
-    setIsLoggedIn(loggedIn);
-    setIsLoading(false);
+    // サーバーサイドで認証状態をチェック
+    checkAuth();
   }, []);
+
+  const checkAuth = async () => {
+    try {
+      const response = await fetch('/api/admin/check-auth', {
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
+      }
+    } catch (error) {
+      console.error('認証チェックエラー:', error);
+      setIsLoggedIn(false);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem('adminLoggedIn');
-    setIsLoggedIn(false);
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('/api/admin/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        setIsLoggedIn(false);
+      }
+    } catch (error) {
+      console.error('ログアウトエラー:', error);
+    }
   };
 
   const handleBackToMain = () => {

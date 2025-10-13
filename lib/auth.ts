@@ -1,13 +1,12 @@
-import { SignJWT, jwtVerify } from 'jose';
+import { SignJWT, jwtVerify, JWTPayload as JoseJWTPayload } from 'jose';
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-jwt-secret-key';
 const secret = new TextEncoder().encode(JWT_SECRET);
 
-export interface JWTPayload {
+export interface CustomJWTPayload extends JoseJWTPayload {
   username: string;
-  exp: number;
 }
 
 // JWTトークンの生成
@@ -21,10 +20,14 @@ export async function generateToken(username: string): Promise<string> {
 }
 
 // JWTトークンの検証
-export async function verifyToken(token: string): Promise<JWTPayload | null> {
+export async function verifyToken(token: string): Promise<CustomJWTPayload | null> {
   try {
     const { payload } = await jwtVerify(token, secret);
-    return payload as JWTPayload;
+    // usernameが存在するかチェック
+    if (payload && typeof payload === 'object' && 'username' in payload) {
+      return payload as CustomJWTPayload;
+    }
+    return null;
   } catch (error) {
     return null;
   }

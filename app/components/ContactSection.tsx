@@ -72,12 +72,12 @@ export default function ContactSection() {
     setIsSubmitting(true);
 
     // Google Forms configuration
-    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScqkfuGtEiThzlThsj1EpFJl7N6re1k0YDBvjhR70zWKz4-qQ/formResponse';
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSd2ezcMkj6jv3_bAxKLufCdlSfQ_m1x3c426ujRAmjNmn_0pA/formResponse';
     const ENTRY_IDS = {
-      name: 'entry.1539981445',
-      email: 'entry.457495621',
-      phone: 'entry.539533479',
-      message: 'entry.1508470762'
+      name: 'entry.2062181345',
+      email: 'entry.18758225',
+      phone: 'entry.495145787',
+      message: 'entry.2066477936'
     };
 
     try {

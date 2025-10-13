@@ -15,9 +15,11 @@ import {
   FormLabel,
   Input,
   Textarea,
-  useBreakpointValue
+  useBreakpointValue,
+  useToast
 } from '@chakra-ui/react';
 import { FaPhone, FaEnvelope, FaClock, FaInstagram } from 'react-icons/fa';
+import { useState } from 'react';
 
 const contactMethods = [
   {
@@ -48,6 +50,81 @@ const contactMethods = [
 
 export default function ContactSection() {
   const isMobile = useBreakpointValue({ base: true, lg: false });
+  const toast = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Google Forms configuration
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScqkfuGtEiThzlThsj1EpFJl7N6re1k0YDBvjhR70zWKz4-qQ/formResponse';
+    const ENTRY_IDS = {
+      name: 'entry.1539981445',
+      email: 'entry.457495621',
+      phone: 'entry.539533479',
+      message: 'entry.1508470762'
+    };
+
+    try {
+      // Create form data for Google Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append(ENTRY_IDS.name, formData.name);
+      formDataToSend.append(ENTRY_IDS.email, formData.email);
+      formDataToSend.append(ENTRY_IDS.phone, formData.phone);
+      formDataToSend.append(ENTRY_IDS.message, formData.message);
+
+      // Submit to Google Forms using fetch with no-cors mode
+      await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formDataToSend
+      });
+
+      // Show success message
+      toast({
+        title: '送信完了',
+        description: 'お問い合わせありがとうございます。確認後、ご連絡させていただきます。',
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+        position: 'top'
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      toast({
+        title: '送信エラー',
+        description: 'フォームの送信に失敗しました。お手数ですが、電話またはメールでお問い合わせください。',
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+        position: 'top'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Box py={16} bg="gray.50" id="contact">
@@ -119,100 +196,120 @@ export default function ContactSection() {
               border="1px"
               borderColor="gray.100"
             >
-              <VStack gap={6} align="stretch">
-                <Heading size="md" color="gray.800" textAlign="center">
-                  お問い合わせフォーム
-                </Heading>
+              <form onSubmit={handleSubmit}>
+                <VStack gap={6} align="stretch">
+                  <Heading size="md" color="gray.800" textAlign="center">
+                    お問い合わせフォーム
+                  </Heading>
 
-                <VStack gap={4} align="stretch">
-                  <FormControl>
-                    <FormLabel color="gray.700" fontWeight="medium">
-                      お名前 <Text as="span" color="red.500">*</Text>
-                    </FormLabel>
-                    <Input
-                      placeholder="山田太郎"
-                      bg="gray.50"
-                      border="1px"
-                      borderColor="gray.200"
-                      _focus={{
-                        borderColor: "green.400",
-                        boxShadow: "0 0 0 1px #68D391"
+                  <VStack gap={4} align="stretch">
+                    <FormControl isRequired>
+                      <FormLabel color="gray.700" fontWeight="medium">
+                        お名前 <Text as="span" color="red.500">*</Text>
+                      </FormLabel>
+                      <Input
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="山田太郎"
+                        bg="gray.50"
+                        border="1px"
+                        borderColor="gray.200"
+                        _focus={{
+                          borderColor: "green.400",
+                          boxShadow: "0 0 0 1px #68D391"
+                        }}
+                        isDisabled={isSubmitting}
+                      />
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel color="gray.700" fontWeight="medium">
+                        メールアドレス <Text as="span" color="red.500">*</Text>
+                      </FormLabel>
+                      <Input
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="example@email.com"
+                        bg="gray.50"
+                        border="1px"
+                        borderColor="gray.200"
+                        _focus={{
+                          borderColor: "green.400",
+                          boxShadow: "0 0 0 1px #68D391"
+                        }}
+                        isDisabled={isSubmitting}
+                      />
+                    </FormControl>
+
+                    <FormControl>
+                      <FormLabel color="gray.700" fontWeight="medium">
+                        電話番号
+                      </FormLabel>
+                      <Input
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="090-1234-5678"
+                        bg="gray.50"
+                        border="1px"
+                        borderColor="gray.200"
+                        _focus={{
+                          borderColor: "green.400",
+                          boxShadow: "0 0 0 1px #68D391"
+                        }}
+                        isDisabled={isSubmitting}
+                      />
+                    </FormControl>
+
+                    <FormControl isRequired>
+                      <FormLabel color="gray.700" fontWeight="medium">
+                        お問い合わせ内容 <Text as="span" color="red.500">*</Text>
+                      </FormLabel>
+                      <Textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="教室の詳細について教えてください..."
+                        rows={5}
+                        bg="gray.50"
+                        border="1px"
+                        borderColor="gray.200"
+                        _focus={{
+                          borderColor: "green.400",
+                          boxShadow: "0 0 0 1px #68D391"
+                        }}
+                        resize="vertical"
+                        isDisabled={isSubmitting}
+                      />
+                    </FormControl>
+
+                    <Button
+                      type="submit"
+                      colorScheme="green"
+                      size="lg"
+                      w="full"
+                      mt={4}
+                      isLoading={isSubmitting}
+                      loadingText="送信中..."
+                      _hover={{
+                        transform: "translateY(-1px)",
+                        shadow: "lg"
                       }}
-                    />
-                  </FormControl>
+                      transition="all 0.2s"
+                    >
+                      送信する
+                    </Button>
 
-                  <FormControl>
-                    <FormLabel color="gray.700" fontWeight="medium">
-                      メールアドレス <Text as="span" color="red.500">*</Text>
-                    </FormLabel>
-                    <Input
-                      type="email"
-                      placeholder="example@email.com"
-                      bg="gray.50"
-                      border="1px"
-                      borderColor="gray.200"
-                      _focus={{
-                        borderColor: "green.400",
-                        boxShadow: "0 0 0 1px #68D391"
-                      }}
-                    />
-                  </FormControl>
-
-                  <FormControl>
-                    <FormLabel color="gray.700" fontWeight="medium">
-                      電話番号
-                    </FormLabel>
-                    <Input
-                      type="tel"
-                      placeholder="090-1234-5678"
-                      bg="gray.50"
-                      border="1px"
-                      borderColor="gray.200"
-                      _focus={{
-                        borderColor: "green.400",
-                        boxShadow: "0 0 0 1px #68D391"
-                      }}
-                    />
-                  </FormControl>
-
-                  <FormControl>
-                    <FormLabel color="gray.700" fontWeight="medium">
-                      お問い合わせ内容 <Text as="span" color="red.500">*</Text>
-                    </FormLabel>
-                    <Textarea
-                      placeholder="教室の詳細について教えてください..."
-                      rows={5}
-                      bg="gray.50"
-                      border="1px"
-                      borderColor="gray.200"
-                      _focus={{
-                        borderColor: "green.400",
-                        boxShadow: "0 0 0 1px #68D391"
-                      }}
-                      resize="vertical"
-                    />
-                  </FormControl>
-
-                  <Button
-                    colorScheme="green"
-                    size="lg"
-                    w="full"
-                    mt={4}
-                    _hover={{
-                      transform: "translateY(-1px)",
-                      shadow: "lg"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    送信する
-                  </Button>
-
-                  <Text fontSize="xs" color="gray.500" textAlign="center" mt={2}>
-                    ※ 現在フォーム機能は実装されていません。<br />
-                    実際のお問い合わせは電話またはメールでお願いします。
-                  </Text>
+                    <Text fontSize="xs" color="gray.500" textAlign="center" mt={2}>
+                      ※ 送信されたお問い合わせは管理者に通知されます。
+                    </Text>
+                  </VStack>
                 </VStack>
-              </VStack>
+              </form>
             </Box>
           </SimpleGrid>
 

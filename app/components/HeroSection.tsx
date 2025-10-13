@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <Box
       position="relative"
-      h={useBreakpointValue({ base: '60vh', md: '70vh' })}
+      h={useBreakpointValue({ base: '45vh', md: '70vh' })}
       bg="linear-gradient(135deg, rgba(56, 161, 105, 0.1) 0%, rgba(68, 202, 99, 0.1) 100%)"
       overflow="hidden"
     >
@@ -55,11 +55,11 @@ export default function HeroSection() {
         alignItems="center"
         justifyContent="center"
       >
-        <VStack spacing={6} textAlign="center" color="white">
+        <VStack spacing={useBreakpointValue({ base: 4, md: 6 })} textAlign="center" color="white">
           <Image
             src="/images/Logo_trans.png"
             alt="美加の台所 - MIKA NO DAIDOKORO"
-            height={isMobile ? "80px" : "120px"}
+            height={isMobile ? "60px" : "120px"}
             objectFit="contain"
             filter="drop-shadow(2px 2px 4px rgba(0,0,0,0.5))"
           />
@@ -67,7 +67,7 @@ export default function HeroSection() {
           
           <Box
             bg="whiteAlpha.300"
-            p={6}
+            p={useBreakpointValue({ base: 4, md: 6 })}
             borderRadius="xl"
             backdropFilter="blur(10px)"
             border="1px"
@@ -76,9 +76,9 @@ export default function HeroSection() {
             shadow="lg"
           >
             <Text 
-              fontSize={useBreakpointValue({ base: 'sm', md: 'md' })} 
+              fontSize={useBreakpointValue({ base: 'xs', md: 'md' })} 
               color="gray.800"
-              lineHeight="1.7"
+              lineHeight="1.6"
               textAlign="center"
             >
             美加の台所は、住宅街にある小さなお店です。

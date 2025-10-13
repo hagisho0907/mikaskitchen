@@ -4,7 +4,7 @@ import { clearSession } from '@/lib/auth';
 export async function POST() {
   try {
     // セッションをクリア
-    clearSession();
+    await clearSession();
     
     return NextResponse.json({ 
       success: true, 

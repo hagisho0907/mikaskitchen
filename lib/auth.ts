@@ -36,7 +36,7 @@ export async function verifyToken(token: string): Promise<CustomJWTPayload | nul
 // セッショントークンの設定
 export async function setSession(username: string) {
   const token = await generateToken(username);
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   
   cookieStore.set('admin-session', token, {
     httpOnly: true,
@@ -48,14 +48,14 @@ export async function setSession(username: string) {
 }
 
 // セッショントークンの削除
-export function clearSession() {
-  const cookieStore = cookies();
+export async function clearSession() {
+  const cookieStore = await cookies();
   cookieStore.delete('admin-session');
 }
 
 // セッションの検証
 export async function getSession(request?: NextRequest) {
-  const cookieStore = request ? request.cookies : cookies();
+  const cookieStore = request ? request.cookies : await cookies();
   const token = cookieStore.get('admin-session')?.value;
   
   if (!token) {

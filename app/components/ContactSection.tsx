@@ -205,7 +205,7 @@ export default function ContactSection() {
                   <VStack gap={4} align="stretch">
                     <FormControl isRequired>
                       <FormLabel color="gray.700" fontWeight="medium">
-                        お名前 <Text as="span" color="red.500">*</Text>
+                        お名前
                       </FormLabel>
                       <Input
                         name="name"
@@ -225,7 +225,7 @@ export default function ContactSection() {
 
                     <FormControl isRequired>
                       <FormLabel color="gray.700" fontWeight="medium">
-                        メールアドレス <Text as="span" color="red.500">*</Text>
+                        メールアドレス
                       </FormLabel>
                       <Input
                         name="email"
@@ -267,7 +267,7 @@ export default function ContactSection() {
 
                     <FormControl isRequired>
                       <FormLabel color="gray.700" fontWeight="medium">
-                        お問い合わせ内容 <Text as="span" color="red.500">*</Text>
+                        お問い合わせ内容
                       </FormLabel>
                       <Textarea
                         name="message"

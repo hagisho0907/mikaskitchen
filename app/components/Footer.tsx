@@ -170,7 +170,7 @@ export default function Footer() {
           {/* コピーライト */}
           <VStack gap={2} textAlign="center">
             <Text fontSize="xs" color="green.300">
-              住宅街の中の小さな憩いの場
+              腸から始まる健康生活、食でつながる小さな輪
             </Text>
             <Text fontSize="xs" color="green.400">
               © {currentYear} 美加の台所 (MIKA NO DAIDOKORO). All rights reserved.

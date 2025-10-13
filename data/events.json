@@ -28,5 +28,15 @@
     "type": "class",
     "participants": "予約受付中",
     "id": 3
+  },
+  {
+    "date": "2025-12-04",
+    "day": "木",
+    "title": "test",
+    "time": "8:00-9:00",
+    "description": "",
+    "type": "class",
+    "participants": "予約受付中",
+    "id": 4
   }
 ]

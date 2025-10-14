@@ -245,15 +245,15 @@ export default function BreadPage() {
                   <VStack spacing={4} align="start">
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">販売日</Badge>
-                      <Text fontWeight="medium">毎週水曜・土曜日</Text>
+                      <Text fontWeight="medium">金曜日</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
-                      <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">販売時間</Badge>
-                      <Text fontWeight="medium">10:00〜売り切れまで</Text>
+                      <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">時間</Badge>
+                      <Text fontWeight="medium">9時〜売り切れまで</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">予約</Badge>
-                      <Text fontWeight="medium">予約優先（推奨）</Text>
+                      <Text fontWeight="medium">予約、お取り置きいたします。</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">種類</Badge>

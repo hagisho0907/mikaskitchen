@@ -230,66 +230,43 @@ export default function ChokkatsuPage() {
           </Box>
 
           {/* 腸活教室の流れ */}
-          <VStack spacing={8}>
-            {/* 座談会とお料理 */}
-            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
-              <VStack spacing={6}>
-                <Box textAlign="center">
-                  <Icon as={FaUsers} boxSize={10} color="orange.500" mb={4} />
-                  <Heading size="lg" color="orange.700" mb={4}>
-                    座談会からお料理まで
-                  </Heading>
-                </Box>
-                <Box bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200">
+          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
+            <VStack spacing={8}>
+              <VStack spacing={4}>
+                <Icon as={FaUsers} boxSize={12} color="orange.500" />
+                <Heading size="xl" color="orange.700" textAlign="center" letterSpacing="wide">
+                  腸活教室の流れ
+                </Heading>
+              </VStack>
+
+              <VStack spacing={6} maxW="800px" mx="auto">
+                <Box bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200" w="full">
                   <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
                     初めての参加の方には1時間ほど腸の大切さと腸活のお話しをしながらみんなで楽しく座談会です。
                     初めましての方たちももう『腸活仲間』になっちゃいます。
                   </Text>
                 </Box>
-                <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200">
-                  <VStack spacing={4}>
-                    <Heading size="md" color="green.700" textAlign="center">
-                      そのあとはお料理タイム
-                    </Heading>
-                    <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
-                      腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや『醤油麹や塩麹』他いろいろな麹調味料を一緒に作ります。
-                    </Text>
-                  </VStack>
-                </Box>
-              </VStack>
-            </Box>
 
-            {/* お庭でランチ */}
-            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="green.100">
-              <VStack spacing={6}>
-                <Box textAlign="center">
-                  <Icon as={FaLeaf} boxSize={10} color="green.500" mb={4} />
-                  <Heading size="lg" color="green.700" mb={4}>
-                    お庭でランチタイム
-                  </Heading>
+                <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200" w="full">
+                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                    そのあとはお料理タイム。腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや『醤油麹や塩麹』他いろいろな麹調味料を一緒に作ります。
+                  </Text>
                 </Box>
-                <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200">
-                  <Text fontSize="lg" color="green.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
+
+                <Box bg="teal.50" p={6} borderRadius="xl" border="2px" borderColor="teal.200" w="full">
+                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
                     そのあとはお庭でランチです。
                   </Text>
                 </Box>
-              </VStack>
-            </Box>
 
-            {/* 非日常の時間 */}
-            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="purple.100">
-              <VStack spacing={6}>
-                <Box textAlign="center">
-                  <Icon as={FaStar} boxSize={10} color="purple.500" mb={4} />
-                </Box>
-                <Box bg="purple.50" p={6} borderRadius="xl" border="2px" borderColor="purple.200">
-                  <Text fontSize="lg" color="purple.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
+                <Box bg="purple.50" p={6} borderRadius="xl" border="2px" borderColor="purple.200" w="full">
+                  <Text fontSize="md" color="purple.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
                     少し非日常の時間を一緒に楽しみませんか。
                   </Text>
                 </Box>
               </VStack>
-            </Box>
-          </VStack>
+            </VStack>
+          </Box>
 
           {/* スケジュール・料金情報 */}
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>

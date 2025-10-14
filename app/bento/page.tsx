@@ -233,7 +233,7 @@ export default function BentoPage() {
                   <VStack spacing={3} align="start">
                     <Box>
                       <Badge colorScheme="teal" mb={2}>通常料金</Badge>
-                      <Text fontSize="xl" fontWeight="bold">腸活弁当：1150円 / のっけ弁当：650円</Text>
+                      <Text fontSize="xl" fontWeight="bold">腸活弁当：1100円 / のっけ弁当：650円</Text>
                     </Box>
                   </VStack>
                 </VStack>
@@ -243,31 +243,23 @@ export default function BentoPage() {
 
           {/* お申し込み・お問い合わせ */}
           <Box bg="teal.50" p={8} borderRadius="lg" textAlign="center">
-            <VStack spacing={6}>
-              <Heading size="md" color="teal.700">
-                お申し込み・お問い合わせ
-              </Heading>
-              <Text color="gray.700">
-                ご興味をお持ちの方は、お気軽にお問い合わせください。
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="teal" 
+                  size="lg"
+                  _hover={{
+                    transform: "translateY(-1px)",
+                    shadow: "lg"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="teal" 
-                    size="lg"
-                    _hover={{
-                      transform: "translateY(-1px)",
-                      shadow: "lg"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お問い合わせフォームへ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

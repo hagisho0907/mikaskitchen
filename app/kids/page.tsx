@@ -482,35 +482,25 @@ export default function KidsPage() {
             border="1px"
             borderColor="orange.200"
           >
-            <VStack spacing={6}>
-              <Icon as={FaHeart} boxSize={12} color="orange.500" />
-              <Heading size="lg" color="orange.700">
-                お子様の特別な成長体験をお手伝いします
-              </Heading>
-              <Text color="gray.700" fontSize="lg" maxW="600px">
-                お子様の「できた！」という笑顔と、自分の力で作る喜びを
-                大切にした料理教室です
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="orange" 
+                  size="lg"
+                  borderRadius="full"
+                  px={8}
+                  _hover={{
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お申し込み・お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="orange" 
-                    size="lg"
-                    borderRadius="full"
-                    px={8}
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      shadow: "xl"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お申し込み・お問い合わせ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

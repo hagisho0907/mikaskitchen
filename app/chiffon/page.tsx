@@ -40,11 +40,6 @@ export default function ChiffonPage() {
       description: "計量からメレンゲ作り、焼き上げまで、一つひとつ心を込めて"
     },
     {
-      icon: FaHeart,
-      title: "「とよんちのたまご」使用",
-      description: "贅沢に使用し、コクと風味豊かに仕上げました"
-    },
-    {
       icon: GiCherry,
       title: "季節限定フレーバー",
       description: "毎月、季節を感じる限定フレーバーをご用意"
@@ -169,17 +164,6 @@ export default function ChiffonPage() {
                 ふんわりしっとりとした食感のシフォンケーキは、素材本来の美味しさを大切にしています。
               </Text>
               
-              <Box bg="pink.50" p={6} borderRadius="xl" border="2px" borderColor="pink.200" maxW="700px">
-                <VStack spacing={3}>
-                  <Icon as={FaHeart} boxSize={8} color="pink.500" />
-                  <Text fontSize="xl" fontWeight="bold" color="pink.700">
-                    「とよんちのたまご」を贅沢に使用
-                  </Text>
-                  <Text fontSize="lg" color="gray.700">
-                    コクと風味豊かに仕上げました
-                  </Text>
-                </VStack>
-              </Box>
             </VStack>
           </Box>
 
@@ -234,37 +218,6 @@ export default function ChiffonPage() {
             </VStack>
           </Box>
 
-          {/* 季節のフレーバー */}
-          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
-            <VStack spacing={8}>
-              <VStack spacing={4}>
-                <Icon as={GiCherry} boxSize={10} color="orange.500" />
-                <Heading size="xl" color="orange.700" textAlign="center" letterSpacing="wide">
-                  季節限定フレーバー
-                </Heading>
-                <Text color="gray.600" textAlign="center" fontSize="lg">
-                  毎月変わる特別な味わい
-                </Text>
-              </VStack>
-              
-              <Box bg="orange.50" p={8} borderRadius="xl" border="2px" borderColor="orange.200" maxW="700px" mx="auto">
-                <VStack spacing={4}>
-                  <Text fontSize="xl" fontWeight="bold" color="orange.700" textAlign="center">
-                    ひと口ごとに季節の移ろいを感じられる
-                  </Text>
-                  <Text fontSize="lg" color="gray.700" textAlign="center">
-                    特別なシフォンケーキです
-                  </Text>
-                  <HStack spacing={2} justify="center" flexWrap="wrap">
-                    <Badge colorScheme="orange" px={3} py={1}>春：桜</Badge>
-                    <Badge colorScheme="green" px={3} py={1}>夏：レモン</Badge>
-                    <Badge colorScheme="red" px={3} py={1}>秋：栗</Badge>
-                    <Badge colorScheme="blue" px={3} py={1}>冬：チョコ</Badge>
-                  </HStack>
-                </VStack>
-              </Box>
-            </VStack>
-          </Box>
 
           {/* 用途 */}
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
@@ -331,21 +284,21 @@ export default function ChiffonPage() {
                   <VStack spacing={4} align="start">
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">販売日</Badge>
-                      <Text fontWeight="medium">毎週金曜・日曜日</Text>
+                      <Text fontWeight="medium">木曜日</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
-                      <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">販売時間</Badge>
-                      <Text fontWeight="medium">11:00〜17:00</Text>
+                      <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">時間</Badge>
+                      <Text fontWeight="medium">11時〜16時</Text>
                     </Flex>
                   </VStack>
                   <VStack spacing={4} align="start">
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="pink" px={3} py={1} borderRadius="full">予約</Badge>
-                      <Text fontWeight="medium">要予約（3日前まで）</Text>
+                      <Text fontWeight="medium">予約、お取り置き承ります</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="purple" px={3} py={1} borderRadius="full">価格</Badge>
-                      <Text fontWeight="medium">ホール1,800円〜 / カット350円〜</Text>
+                      <Text fontWeight="medium">ミニホール 1100円〜 / カット 400円〜</Text>
                     </Flex>
                   </VStack>
                 </SimpleGrid>
@@ -362,35 +315,25 @@ export default function ChiffonPage() {
             border="1px"
             borderColor="pink.200"
           >
-            <VStack spacing={6}>
-              <Icon as={GiCakeSlice} boxSize={12} color="pink.500" />
-              <Heading size="lg" color="pink.700">
-                季節の味わいをお楽しみください
-              </Heading>
-              <Text color="gray.700" fontSize="lg" maxW="600px">
-                ひと口ごとに季節の移ろいを感じられる、特別なシフォンケーキ。
-                ご自宅用にも、大切な方への贈り物にもどうぞ。
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="pink" 
+                  size="lg"
+                  borderRadius="full"
+                  px={8}
+                  _hover={{
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
+                  }}
+                  transition="all 0.2s"
+                >
+                  ご予約・お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="pink" 
-                    size="lg"
-                    borderRadius="full"
-                    px={8}
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      shadow: "xl"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    ご予約・お問い合わせ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

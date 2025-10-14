@@ -232,7 +232,6 @@ export default function BreadPage() {
           </Box>
 
           {/* 販売情報 */}
-          <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
             <Card shadow="xl" borderRadius="xl" border="1px" borderColor="yellow.200">
               <CardBody p={8}>
                 <VStack spacing={6} align="stretch">
@@ -263,52 +262,6 @@ export default function BreadPage() {
                 </VStack>
               </CardBody>
             </Card>
-
-            <Card shadow="xl" borderRadius="xl" border="1px" borderColor="orange.200">
-              <CardBody p={8}>
-                <VStack spacing={6} align="stretch">
-                  <Box textAlign="center">
-                    <Icon as={FaHeart} boxSize={8} color="orange.500" mb={4} />
-                    <Heading size="lg" color="orange.700">
-                      こだわり
-                    </Heading>
-                  </Box>
-                  <VStack spacing={4} align="start">
-                    <Box
-                      p={4}
-                      bg="orange.50"
-                      borderRadius="lg"
-                      border="1px"
-                      borderColor="orange.200"
-                      w="full"
-                    >
-                      <Text fontSize="sm" fontWeight="bold" color="orange.700" mb={2}>
-                        手作りの具材
-                      </Text>
-                      <Text fontSize="xs" color="gray.700">
-                        麹や厳選した調味料を使用した自家製具材
-                      </Text>
-                    </Box>
-                    <Box
-                      p={4}
-                      bg="yellow.50"
-                      borderRadius="lg"
-                      border="1px"
-                      borderColor="yellow.200"
-                      w="full"
-                    >
-                      <Text fontSize="sm" fontWeight="bold" color="yellow.700" mb={2}>
-                        素材本来の味
-                      </Text>
-                      <Text fontSize="xs" color="gray.700">
-                        シンプルだけど素材そのものを感じる味わい
-                      </Text>
-                    </Box>
-                  </VStack>
-                </VStack>
-              </CardBody>
-            </Card>
-          </SimpleGrid>
 
           {/* パンの写真ギャラリー */}
           <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="yellow.100">
@@ -378,14 +331,6 @@ export default function BreadPage() {
                 </Box>
               </SimpleGrid>
               
-              <Box bg="orange.50" p={6} borderRadius="lg" border="1px" borderColor="orange.200" maxW="600px">
-                <Text fontSize="md" color="orange.700" fontWeight="bold" textAlign="center">
-                  季節の食材と手作りの具材で、
-                </Text>
-                <Text fontSize="md" color="gray.700" textAlign="center" mt={1}>
-                  いつでも新鮮な美味しさをお楽しみいただけます
-                </Text>
-              </Box>
             </VStack>
           </Box>
 
@@ -398,34 +343,25 @@ export default function BreadPage() {
             border="1px"
             borderColor="yellow.200"
           >
-            <VStack spacing={6}>
-              <Icon as={GiBread} boxSize={12} color="yellow.600" />
-              <Heading size="lg" color="yellow.700">
-                からだにやさしいパンをお試しください
-              </Heading>
-              <Text color="gray.700" fontSize="lg" maxW="600px">
-                厳選した材料と心を込めた手作りで、毎日の食卓を豊かにします
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="yellow" 
+                  size="lg"
+                  borderRadius="full"
+                  px={8}
+                  _hover={{
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
+                  }}
+                  transition="all 0.2s"
+                >
+                  ご予約・お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="yellow" 
-                    size="lg"
-                    borderRadius="full"
-                    px={8}
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      shadow: "xl"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    ご予約・お問い合わせ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

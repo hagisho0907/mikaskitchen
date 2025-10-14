@@ -228,31 +228,23 @@ export default function GardenPage() {
 
           {/* お申し込み・お問い合わせ */}
           <Box bg="purple.50" p={8} borderRadius="lg" textAlign="center">
-            <VStack spacing={6}>
-              <Heading size="md" color="purple.700">
-                お申し込み・お問い合わせ
-              </Heading>
-              <Text color="gray.700">
-                ご興味をお持ちの方は、お気軽にお問い合わせください。
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="purple" 
+                  size="lg"
+                  _hover={{
+                    transform: "translateY(-1px)",
+                    shadow: "lg"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="purple" 
-                    size="lg"
-                    _hover={{
-                      transform: "translateY(-1px)",
-                      shadow: "lg"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お問い合わせフォームへ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

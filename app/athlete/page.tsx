@@ -333,34 +333,25 @@ export default function AthletePage() {
             border="1px"
             borderColor="red.200"
           >
-            <VStack spacing={6}>
-              <Icon as={FaDumbbell} boxSize={12} color="red.500" />
-              <Heading size="lg" color="red.700">
-                アスリートの可能性を最大限に引き出しませんか？
-              </Heading>
-              <Text color="gray.700" fontSize="lg" maxW="600px">
-                正しい栄養知識で、競技力向上と健康な身体づくりをサポートいたします
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="red" 
+                  size="lg"
+                  borderRadius="full"
+                  px={8}
+                  _hover={{
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お申し込み・お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="red" 
-                    size="lg"
-                    borderRadius="full"
-                    px={8}
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      shadow: "xl"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お申し込み・お問い合わせ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

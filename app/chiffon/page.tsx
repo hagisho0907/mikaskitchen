@@ -40,6 +40,11 @@ export default function ChiffonPage() {
       description: "計量からメレンゲ作り、焼き上げまで、一つひとつ心を込めて"
     },
     {
+      icon: FaHeart,
+      title: "「とよんちのたまご」使用",
+      description: "贅沢に使用し、コクと風味豊かに仕上げました"
+    },
+    {
       icon: GiCherry,
       title: "季節限定フレーバー",
       description: "毎月、季節を感じる限定フレーバーをご用意"

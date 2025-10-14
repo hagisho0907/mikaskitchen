@@ -349,32 +349,23 @@ export default function EventsPage() {
 
           {/* お申し込み・お問い合わせ */}
           <Box bg="teal.50" p={8} borderRadius="lg" textAlign="center">
-            <VStack spacing={6}>
-              <Heading size="md" color="teal.700">
-                イベントのお申し込み・お問い合わせ
-              </Heading>
-              <Text color="gray.700">
-                各イベントへの参加をご希望の方は、お気軽にお問い合わせください。<br />
-                開催日程や詳細についてもお答えいたします。
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="teal" 
+                  size="lg"
+                  _hover={{
+                    transform: "translateY(-1px)",
+                    shadow: "lg"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="teal" 
-                    size="lg"
-                    _hover={{
-                      transform: "translateY(-1px)",
-                      shadow: "lg"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お問い合わせフォームへ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

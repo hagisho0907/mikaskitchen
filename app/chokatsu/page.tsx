@@ -23,7 +23,7 @@ import {
   ListIcon
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import { FaLeaf, FaSeedling, FaHeart, FaClock, FaYenSign, FaUsers, FaCheckCircle } from 'react-icons/fa';
+import { FaLeaf, FaSeedling, FaHeart, FaClock, FaYenSign, FaUsers, FaCheckCircle, FaStar } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
@@ -229,91 +229,67 @@ export default function ChokkatsuPage() {
             </VStack>
           </Box>
 
-          {/* メニュー例 */}
-          <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
-            <VStack spacing={10}>
-              <VStack spacing={4}>
-                <Heading size="xl" color="orange.700" textAlign="center" letterSpacing="wide">
-                  メニュー（例）
-                </Heading>
-                <Text color="gray.600" textAlign="center" fontSize="lg">
-                  季節に合わせた腸活レシピをご紹介
-                </Text>
-              </VStack>
-
-              {/* 味噌料理 */}
-              <Card bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200" w="full">
-                <VStack spacing={4}>
-                  <Badge colorScheme="orange" size="lg" px={4} py={2} borderRadius="full">
-                    味噌を使ったお料理
-                  </Badge>
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} w="full">
-                    {misoMenus.map((menu, index) => (
-                      <Box key={index} bg="white" p={4} borderRadius="lg" shadow="sm">
-                        <HStack spacing={3}>
-                          <Text fontSize="lg">🍽️</Text>
-                          <Text fontSize="md" fontWeight="medium" color="gray.700">
-                            {menu}
-                          </Text>
-                        </HStack>
-                      </Box>
-                    ))}
-                  </SimpleGrid>
-                </VStack>
-              </Card>
-
-              {/* 麹料理 */}
-              <Card bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200" w="full">
-                <VStack spacing={6}>
-                  <Badge colorScheme="green" size="lg" px={4} py={2} borderRadius="full">
-                    麹で調味料作り & お料理
-                  </Badge>
-                  <Text fontSize="sm" color="gray.600" textAlign="center">
-                    塩麹、醤油麹、ピーマン味噌、レモン麹、玉ねぎ麹などを作り、それらを使ったお料理
+          {/* 腸活教室の流れ */}
+          <VStack spacing={8}>
+            {/* 座談会とお料理 */}
+            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
+              <VStack spacing={6}>
+                <Box textAlign="center">
+                  <Icon as={FaUsers} boxSize={10} color="orange.500" mb={4} />
+                  <Heading size="lg" color="orange.700" mb={4}>
+                    座談会からお料理まで
+                  </Heading>
+                </Box>
+                <Box bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200">
+                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                    初めての参加の方には1時間ほど腸の大切さと腸活のお話しをしながらみんなで楽しく座談会です。
+                    初めましての方たちももう『腸活仲間』になっちゃいます。
                   </Text>
-                  
-                  <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} w="full">
-                    {kojiMenus.map((item, index) => (
-                      <Box key={index} bg="white" p={4} borderRadius="lg" shadow="sm">
-                        <VStack spacing={2} align="start">
-                          <HStack spacing={2}>
-                            <Text fontSize="sm" color="green.600" fontWeight="bold">
-                              {item.koji}
-                            </Text>
-                            <Text fontSize="xs" color="gray.500">→</Text>
-                          </HStack>
-                          <HStack spacing={3}>
-                            <Text fontSize="lg">🍽️</Text>
-                            <Text fontSize="sm" fontWeight="medium" color="gray.700">
-                              {item.dish}
-                            </Text>
-                          </HStack>
-                        </VStack>
-                      </Box>
-                    ))}
-                  </SimpleGrid>
-                </VStack>
-              </Card>
-
-              {/* 人気メニュー */}
-              <Card bg="purple.50" p={6} borderRadius="xl" border="2px" borderColor="purple.200" w="full">
-                <VStack spacing={4}>
-                  <Badge colorScheme="purple" size="lg" px={4} py={2} borderRadius="full">
-                    美加の台所の人気メニュー伝授
-                  </Badge>
-                  <Text fontSize="sm" color="gray.600" textAlign="center">
-                    定期的にご参加いただいている方への特別レシピ
-                  </Text>
-                  <HStack spacing={3}>
-                    <Icon as={FaSeedling} color="purple.500" boxSize={6} />
-                    <Text fontSize="md" color="purple.700" fontWeight="medium">
-                      季節ごとに変わる特別メニューをお楽しみに
+                </Box>
+                <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200">
+                  <VStack spacing={4}>
+                    <Heading size="md" color="green.700" textAlign="center">
+                      そのあとはお料理タイム
+                    </Heading>
+                    <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                      腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや『醤油麹や塩麹』他いろいろな麹調味料を一緒に作ります。
                     </Text>
-                  </HStack>
-                </VStack>
-              </Card>
-            </VStack>
-          </Box>
+                  </VStack>
+                </Box>
+              </VStack>
+            </Box>
+
+            {/* お庭でランチ */}
+            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="green.100">
+              <VStack spacing={6}>
+                <Box textAlign="center">
+                  <Icon as={FaLeaf} boxSize={10} color="green.500" mb={4} />
+                  <Heading size="lg" color="green.700" mb={4}>
+                    お庭でランチタイム
+                  </Heading>
+                </Box>
+                <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200">
+                  <Text fontSize="lg" color="green.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
+                    そのあとはお庭でランチです。
+                  </Text>
+                </Box>
+              </VStack>
+            </Box>
+
+            {/* 非日常の時間 */}
+            <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="purple.100">
+              <VStack spacing={6}>
+                <Box textAlign="center">
+                  <Icon as={FaStar} boxSize={10} color="purple.500" mb={4} />
+                </Box>
+                <Box bg="purple.50" p={6} borderRadius="xl" border="2px" borderColor="purple.200">
+                  <Text fontSize="lg" color="purple.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
+                    少し非日常の時間を一緒に楽しみませんか。
+                  </Text>
+                </Box>
+              </VStack>
+            </Box>
+          </VStack>
 
           {/* スケジュール・料金情報 */}
           <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
@@ -419,34 +395,25 @@ export default function ChokkatsuPage() {
             border="1px"
             borderColor="green.200"
           >
-            <VStack spacing={6}>
-              <Icon as={FaLeaf} boxSize={12} color="green.500" />
-              <Heading size="lg" color="green.700">
-                腸から健康な毎日を始めませんか？
-              </Heading>
-              <Text color="gray.700" fontSize="lg" maxW="600px">
-                発酵食品と食物繊維の力で、体の内側から輝く健康を手に入れましょう
+            <VStack spacing={4}>
+              <Link href="/contact" style={{ textDecoration: 'none' }}>
+                <Button 
+                  colorScheme="green" 
+                  size="lg"
+                  borderRadius="full"
+                  px={8}
+                  _hover={{
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
+                  }}
+                  transition="all 0.2s"
+                >
+                  お申し込み・お問い合わせ
+                </Button>
+              </Link>
+              <Text fontSize="sm" color="gray.600">
+                電話：080-6011-7498 / メール：senka08760102@gmail.com
               </Text>
-              <VStack spacing={4}>
-                <Link href="/contact" style={{ textDecoration: 'none' }}>
-                  <Button 
-                    colorScheme="green" 
-                    size="lg"
-                    borderRadius="full"
-                    px={8}
-                    _hover={{
-                      transform: "translateY(-2px)",
-                      shadow: "xl"
-                    }}
-                    transition="all 0.2s"
-                  >
-                    お申し込み・お問い合わせ
-                  </Button>
-                </Link>
-                <Text fontSize="sm" color="gray.600">
-                  電話：080-6011-7498 / メール：senka08760102@gmail.com
-                </Text>
-              </VStack>
             </VStack>
           </Box>
 

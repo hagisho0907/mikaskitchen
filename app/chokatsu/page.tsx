@@ -242,14 +242,14 @@ export default function ChokkatsuPage() {
               <VStack spacing={6} maxW="800px" mx="auto">
                 <Box bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200" w="full">
                   <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
-                    初めての参加の方には1時間ほど腸の大切さと腸活のお話しをしながらみんなで楽しく座談会です。
-                    初めましての方たちももう『腸活仲間』になっちゃいます。
+                    初めての参加の方には、1時間ほど腸の大切さと腸活のお話をしながら、みんなで楽しく座談会です。
+                    初めましての方たちも、もう『腸活仲間』になっちゃいます。
                   </Text>
                 </Box>
 
                 <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200" w="full">
                   <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
-                    そのあとはお料理タイム。腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや『醤油麹や塩麹』他いろいろな麹調味料を一緒に作ります。
+                    そのあとはお料理タイム。腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや、『醤油麹や塩麹』ほか、いろいろな麹調味料を一緒に作ります。
                   </Text>
                 </Box>
 

@@ -131,7 +131,7 @@ export default function AthletePage() {
                 lineHeight="1.8"
                 fontStyle="italic"
               >
-                『何を食べさせてあげて良いのかなわからないと悩む母、私もそうでした。<br />
+                『何を食べさせてあげて良いのか分からないと悩む母、私もそうでした。<br />
                 実際に一緒に作って食べてみましょう』
               </Text>
             </Box>

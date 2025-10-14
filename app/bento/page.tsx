@@ -176,7 +176,7 @@ export default function BentoPage() {
                   borderColor="teal.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
-                    お肉料理、魚料理を両方入れているので、しっかりタンパク質も摂れます
+                    お肉料理と魚料理を両方入れているので、しっかりタンパク質も摂れます
                   </Text>
                 </Box>
                 <Box
@@ -216,7 +216,7 @@ export default function BentoPage() {
                       <Text>
                         テイクアウト・宅配<br />
                         ※15個以上の注文の場合、配達致します<br />
-                        ※金曜日以外にお弁当ご予約（15以上）承ります
+                        ※金曜日以外にお弁当ご予約（15個以上）承ります
                       </Text>
                     </Box>
                   </VStack>

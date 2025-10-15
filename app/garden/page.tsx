@@ -218,8 +218,6 @@ export default function GardenPage() {
           <Box 
             p={8} 
             borderRadius="xl" 
-            border="2px"
-            borderColor="purple.400"
             textAlign="center"
           >
             <VStack spacing={4}>

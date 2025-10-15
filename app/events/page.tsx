@@ -339,8 +339,6 @@ export default function EventsPage() {
           <Box 
             p={8} 
             borderRadius="xl" 
-            border="2px"
-            borderColor="blue.400"
             textAlign="center"
           >
             <VStack spacing={4}>

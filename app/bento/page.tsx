@@ -236,8 +236,6 @@ export default function BentoPage() {
           <Box 
             p={8} 
             borderRadius="xl" 
-            border="2px"
-            borderColor="amber.400"
             textAlign="center"
           >
             <VStack spacing={4}>

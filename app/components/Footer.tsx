@@ -141,7 +141,7 @@ export default function Footer() {
                   金曜日：11:00 - 完売まで
                 </Text>
                 <Text fontSize="sm" color="green.200">
-                  土曜日：7:00 - 完売まで
+                  土曜日：9:00 - 完売まで
                 </Text>
                 <Text fontSize="xs" color="green.300" mt={1}>
                   ※時期によって異なるため、詳細はお問い合わせください

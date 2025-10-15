@@ -156,7 +156,7 @@ export default function AccessSection() {
                   <Text fontWeight="bold" color="gray.700">営業時間</Text>
                   <Text color="gray.600">木曜日: 11:00 - 16:00</Text>
                   <Text color="gray.600">金曜日: 11:00 - 完売まで</Text>
-                  <Text color="gray.600">土曜日: 7:00 - 完売まで</Text>
+                  <Text color="gray.600">土曜日: 9:00 - 完売まで</Text>
                   <Text fontSize="sm" color="gray.500" mt={1}>
                     ※時期によって異なるため、詳細は
                     <Link 

@@ -194,7 +194,7 @@ export default function GardenPage() {
                   <VStack spacing={3} align="start">
                     <Box>
                       <Badge colorScheme="purple" mb={2}>開催日</Badge>
-                      <Text>4~6月,10~12月の第一土曜日</Text>
+                      <Text>4~6月,10~12月の毎週土曜日</Text>
                     </Box>
                     <Box>
                       <Badge colorScheme="purple" mb={2}>時間</Badge>

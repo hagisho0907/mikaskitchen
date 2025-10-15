@@ -35,7 +35,7 @@ export default function GardenPage() {
       {/* ヒーローセクション */}
       <Box
         position="relative"
-        h={isMobile ? "400px" : "500px"}
+        h={isMobile ? "500px" : "700px"}
         bg="linear-gradient(135deg, purple.100 0%, purple.200 100%)"
         overflow="hidden"
       >
@@ -231,9 +231,11 @@ export default function GardenPage() {
                 <Button 
                   colorScheme="purple" 
                   size="lg"
+                  borderRadius="full"
+                  px={8}
                   _hover={{
-                    transform: "translateY(-1px)",
-                    shadow: "lg"
+                    transform: "translateY(-2px)",
+                    shadow: "xl"
                   }}
                   transition="all 0.2s"
                 >
@@ -254,7 +256,7 @@ export default function GardenPage() {
           {/* ホームに戻る */}
           <Box textAlign="center" pt={8}>
             <Link href="/" style={{ textDecoration: 'none' }}>
-              <Button variant="outline" colorScheme="purple">
+              <Button variant="outline" colorScheme="purple" size="lg" borderRadius="full">
                 ← ホームに戻る
               </Button>
             </Link>

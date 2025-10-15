@@ -65,7 +65,7 @@ export default function DetailPageLayout({
       {/* ヒーローセクション */}
       <Box
         position="relative"
-        h={isMobile ? "400px" : "500px"}
+        h={isMobile ? "500px" : "700px"}
         bg={`linear-gradient(135deg, ${accentColor}.100 0%, ${accentColor}.200 100%)`}
         overflow="hidden"
       >
@@ -249,9 +249,11 @@ export default function DetailPageLayout({
                   <Button 
                     colorScheme={accentColor} 
                     size="lg"
+                    borderRadius="full"
+                    px={8}
                     _hover={{
-                      transform: "translateY(-1px)",
-                      shadow: "lg"
+                      transform: "translateY(-2px)",
+                      shadow: "xl"
                     }}
                     transition="all 0.2s"
                   >
@@ -273,7 +275,7 @@ export default function DetailPageLayout({
           {/* ホームに戻る */}
           <Box textAlign="center" pt={8}>
             <Link href="/" style={{ textDecoration: 'none' }}>
-              <Button variant="outline" colorScheme={accentColor}>
+              <Button variant="outline" colorScheme={accentColor} size="lg" borderRadius="full">
                 ← ホームに戻る
               </Button>
             </Link>

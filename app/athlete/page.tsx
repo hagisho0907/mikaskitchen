@@ -112,8 +112,16 @@ export default function AthletePage() {
               fontWeight="bold"
               textShadow="2px 2px 8px rgba(0,0,0,0.6)"
               letterSpacing="wider"
+              textAlign="center"
             >
-              アスリートのための栄養・料理教室
+              {isMobile ? (
+                <>
+                  アスリートのための<br />
+                  栄養・料理教室
+                </>
+              ) : (
+                "アスリートのための栄養・料理教室"
+              )}
             </Heading>
             
             <Box
@@ -216,7 +224,7 @@ export default function AthletePage() {
                           <Text fontSize="sm" fontWeight="bold" color="orange.600">
                             {item.category}
                           </Text>
-                          <Text fontSize="xs" color="gray.700" lineHeight="1.5">
+                          <Text fontSize="sm" color="gray.700" lineHeight="1.6">
                             {item.description}
                           </Text>
                         </VStack>

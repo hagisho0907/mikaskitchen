@@ -186,7 +186,7 @@ export default function BentoPage() {
                   borderLeft="4px"
                   borderColor="teal.400"
                 >
-                  <Text fontWeight="medium" color="gray.700">
+                  <Text fontWeight="medium" color="gray.700" fontSize={{ base: "sm", md: "md" }}>
                     季節の食材を使った日替わりメニュー
                   </Text>
                 </Box>
@@ -233,7 +233,10 @@ export default function BentoPage() {
                   <VStack spacing={3} align="start">
                     <Box>
                       <Badge colorScheme="teal" mb={2}>通常料金</Badge>
-                      <Text fontSize="xl" fontWeight="bold">腸活弁当：1100円 / のっけ弁当：650円</Text>
+                      <VStack spacing={1} align="start">
+                        <Text fontSize="xl" fontWeight="bold">腸活弁当：1100円</Text>
+                        <Text fontSize="xl" fontWeight="bold">のっけ弁当：650円</Text>
+                      </VStack>
                     </Box>
                   </VStack>
                 </VStack>

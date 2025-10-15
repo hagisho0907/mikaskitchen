@@ -133,7 +133,7 @@ export default function EventsPage() {
               </Button>
             </HStack>
 
-            <CalendarIcon boxSize={isMobile ? 16 : 20} />
+            <CalendarIcon boxSize={isMobile ? 12 : 16} />
             <Heading 
               size={isMobile ? "2xl" : "4xl"} 
               fontWeight="bold"
@@ -346,7 +346,14 @@ export default function EventsPage() {
           </SimpleGrid>
 
           {/* お申し込み・お問い合わせ */}
-          <Box bg="teal.50" p={8} borderRadius="lg" textAlign="center">
+          <Box 
+            bg="white" 
+            p={8} 
+            borderRadius="xl" 
+            border="1px" 
+            borderColor="teal.200" 
+            textAlign="center"
+          >
             <VStack spacing={4}>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Button 

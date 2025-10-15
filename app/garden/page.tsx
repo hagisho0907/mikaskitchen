@@ -12,9 +12,11 @@ import {
   Badge,
   Button,
   HStack,
-  useBreakpointValue 
+  useBreakpointValue,
+  Icon 
 } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
+import { FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
@@ -89,9 +91,7 @@ export default function GardenPage() {
               </Button>
             </HStack>
 
-            <Text fontSize={isMobile ? "4xl" : "6xl"} mb={2} color="white" filter="grayscale(100%) brightness(200%)">
-              🌸
-            </Text>
+            <Icon as={FaLeaf} boxSize={isMobile ? 12 : 16} />
             <Heading 
               size={isMobile ? "xl" : "3xl"} 
               fontWeight="bold"
@@ -225,7 +225,14 @@ export default function GardenPage() {
           </SimpleGrid>
 
           {/* お申し込み・お問い合わせ */}
-          <Box bg="purple.50" p={8} borderRadius="lg" textAlign="center">
+          <Box 
+            bg="white" 
+            p={8} 
+            borderRadius="xl" 
+            border="1px" 
+            borderColor="purple.200" 
+            textAlign="center"
+          >
             <VStack spacing={4}>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Button 

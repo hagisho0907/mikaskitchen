@@ -124,7 +124,7 @@ export default function KidsPage() {
               </Button>
             </HStack>
 
-            <Icon as={FaHeart} boxSize={isMobile ? 16 : 20} />
+            <Icon as={FaHeart} boxSize={isMobile ? 12 : 16} />
             <Heading 
               size={isMobile ? "2xl" : "4xl"} 
               fontWeight="bold"

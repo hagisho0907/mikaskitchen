@@ -224,13 +224,10 @@ export default function GardenPage() {
             </Card>
           </SimpleGrid>
 
-          {/* お申し込み・お問い合わせ */}
+          {/* 予約・お問い合わせ */}
           <Box 
-            bg="white" 
             p={8} 
             borderRadius="xl" 
-            border="1px" 
-            borderColor="purple.200" 
             textAlign="center"
           >
             <VStack spacing={4}>
@@ -246,7 +243,7 @@ export default function GardenPage() {
                   }}
                   transition="all 0.2s"
                 >
-                  お問い合わせ
+                  予約・お問い合わせ
                 </Button>
               </Link>
               <VStack spacing={1}>

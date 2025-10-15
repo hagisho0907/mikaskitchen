@@ -335,10 +335,12 @@ export default function EventsPage() {
             </Card>
           </SimpleGrid>
 
-          {/* 予約・お問い合わせ */}
+          {/* ご予約・お問い合わせ */}
           <Box 
             p={8} 
             borderRadius="xl" 
+            border="2px"
+            borderColor="blue.400"
             textAlign="center"
           >
             <VStack spacing={4}>
@@ -354,7 +356,7 @@ export default function EventsPage() {
                   }}
                   transition="all 0.2s"
                 >
-                  予約・お問い合わせ
+                  ご予約・お問い合わせ
                 </Button>
               </Link>
               <VStack spacing={1}>

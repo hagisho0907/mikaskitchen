@@ -232,10 +232,12 @@ export default function BentoPage() {
             </Card>
           </SimpleGrid>
 
-          {/* 予約・お問い合わせ */}
+          {/* ご予約・お問い合わせ */}
           <Box 
             p={8} 
             borderRadius="xl" 
+            border="2px"
+            borderColor="amber.400"
             textAlign="center"
           >
             <VStack spacing={4}>
@@ -251,7 +253,7 @@ export default function BentoPage() {
                   }}
                   transition="all 0.2s"
                 >
-                  予約・お問い合わせ
+                  ご予約・お問い合わせ
                 </Button>
               </Link>
               <VStack spacing={1}>

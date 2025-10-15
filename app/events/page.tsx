@@ -94,16 +94,6 @@ export default function EventsPage() {
           opacity="0.4"
         />
 
-        {/* オーバーレイ */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="linear-gradient(135deg, blue.600 0%, blue.400 100%)"
-          opacity="0.8"
-        />
 
         {/* コンテンツ */}
         <Container 

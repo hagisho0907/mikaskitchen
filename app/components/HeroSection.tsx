@@ -34,16 +34,6 @@ export default function HeroSection() {
         backgroundPosition="center"
         opacity="0.3"
       />
-      
-      {/* オーバーレイ */}
-      <Box
-        position="absolute"
-        top="0"
-        left="0"
-        right="0"
-        bottom="0"
-        bg="blackAlpha.300"
-      />
 
       {/* コンテンツ */}
       <Container 

@@ -80,16 +80,6 @@ export default function ChokkatsuPage() {
           opacity="0.7"
         />
 
-        {/* オーバーレイ */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="linear-gradient(135deg, green.500 0%, teal.500 50%, emerald.500 100%)"
-          opacity="0.8"
-        />
 
         {/* コンテンツ */}
         <Container 

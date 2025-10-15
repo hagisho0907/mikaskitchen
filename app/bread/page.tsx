@@ -76,16 +76,6 @@ export default function BreadPage() {
           opacity="0.7"
         />
 
-        {/* オーバーレイ */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="linear-gradient(135deg, yellow.500 0%, orange.500 50%, red.400 100%)"
-          opacity="0.8"
-        />
 
         {/* コンテンツ */}
         <Container 

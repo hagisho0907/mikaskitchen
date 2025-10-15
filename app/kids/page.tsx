@@ -85,16 +85,6 @@ export default function KidsPage() {
           opacity="0.6"
         />
 
-        {/* オーバーレイ */}
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          right="0"
-          bottom="0"
-          bg="linear-gradient(135deg, orange.400 0%, red.400 50%, pink.400 100%)"
-          opacity="0.85"
-        />
 
         {/* コンテンツ */}
         <Container 

@@ -118,7 +118,7 @@ export default function BreadPage() {
             <Icon as={GiBread} boxSize={isMobile ? 12 : 16} />
             
             <Heading 
-              size={isMobile ? "xl" : "4xl"} 
+              size={isMobile ? "lg" : "4xl"} 
               fontWeight="bold"
               textShadow="2px 2px 8px rgba(0,0,0,0.6)"
               letterSpacing="wider"

@@ -77,7 +77,7 @@ export default function EventsPage() {
       <Box
         position="relative"
         h={isMobile ? "500px" : "700px"}
-        bg="linear-gradient(135deg, teal.100 0%, teal.200 100%)"
+        bg="linear-gradient(135deg, blue.100 0%, blue.200 100%)"
         overflow="hidden"
       >        
         {/* 背景画像（3つのイベント画像をブレンド） */}
@@ -101,7 +101,7 @@ export default function EventsPage() {
           left="0"
           right="0"
           bottom="0"
-          bg="linear-gradient(135deg, teal.600 0%, teal.400 100%)"
+          bg="linear-gradient(135deg, blue.600 0%, blue.400 100%)"
           opacity="0.8"
         />
 
@@ -170,7 +170,7 @@ export default function EventsPage() {
           {/* 概要セクション */}
           <Box bg="white" p={8} borderRadius="lg" shadow="md">
             <VStack spacing={6} textAlign="center">
-              <Heading size="lg" color="teal.700">
+              <Heading size="lg" color="blue.700">
                 イベント情報
               </Heading>
               <Text fontSize="lg" lineHeight="1.8" color="gray.700">
@@ -186,7 +186,7 @@ export default function EventsPage() {
           <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="gray.100">
             <VStack spacing={12}>
               <VStack spacing={4}>
-                <Heading size="xl" color="teal.700" textAlign="center" letterSpacing="wide">
+                <Heading size="xl" color="blue.700" textAlign="center" letterSpacing="wide">
                   開催イベント
                 </Heading>
                 <Text color="gray.600" textAlign="center" fontSize="lg">
@@ -276,7 +276,7 @@ export default function EventsPage() {
           {/* イベントカレンダー */}
           <Box bg="white" p={8} borderRadius="lg" shadow="md">
             <VStack spacing={6}>
-              <Heading size="lg" color="teal.700" textAlign="center">
+              <Heading size="lg" color="blue.700" textAlign="center">
                 イベントカレンダー
               </Heading>
               <Text textAlign="center" color="gray.600" mb={4}>
@@ -291,24 +291,24 @@ export default function EventsPage() {
             <Card shadow="md">
               <CardBody>
                 <VStack spacing={4} align="stretch">
-                  <Heading size="md" color="teal.700" textAlign="center">
+                  <Heading size="md" color="blue.700" textAlign="center">
                     参加方法
                   </Heading>
                   <VStack spacing={3} align="start">
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>予約方法</Badge>
+                      <Badge colorScheme="blue" mb={2}>予約方法</Badge>
                       <Text fontSize="sm">お電話またはお問い合わせフォームにてご予約ください</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>開催時期</Badge>
+                      <Badge colorScheme="blue" mb={2}>開催時期</Badge>
                       <Text fontSize="sm">不定期開催 <br />（Instagram,イベントカレンダーにてお知らせ）</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>定員</Badge>
+                      <Badge colorScheme="blue" mb={2}>定員</Badge>
                       <Text fontSize="sm">少人数制（開催時にお知らせします）</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>持参品</Badge>
+                      <Badge colorScheme="blue" mb={2}>持参品</Badge>
                       <Text fontSize="sm">エプロン、手拭きタオル（詳細は予約時にご案内）</Text>
                     </Box>
                   </VStack>
@@ -319,7 +319,7 @@ export default function EventsPage() {
             <Card shadow="md">
               <CardBody>
                 <VStack spacing={4} align="stretch">
-                  <Heading size="md" color="teal.700" textAlign="center">
+                  <Heading size="md" color="blue.700" textAlign="center">
                     注意事項
                   </Heading>
                   <VStack spacing={3} align="start">
@@ -351,13 +351,13 @@ export default function EventsPage() {
             p={8} 
             borderRadius="xl" 
             border="1px" 
-            borderColor="teal.200" 
+            borderColor="blue.200" 
             textAlign="center"
           >
             <VStack spacing={4}>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Button 
-                  colorScheme="teal" 
+                  colorScheme="blue" 
                   size="lg"
                   borderRadius="full"
                   px={8}
@@ -384,7 +384,7 @@ export default function EventsPage() {
           {/* ホームに戻る */}
           <Box textAlign="center" pt={8}>
             <Link href="/" style={{ textDecoration: 'none' }}>
-              <Button variant="outline" colorScheme="teal" size="lg" borderRadius="full">
+              <Button variant="outline" colorScheme="blue" size="lg" borderRadius="full">
                 ← ホームに戻る
               </Button>
             </Link>

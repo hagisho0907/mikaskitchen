@@ -48,6 +48,20 @@ export default function Header() {
         justify="space-between"
         h="80px"
       >
+        {/* Hamburger Menu - 左上 (PC版以外) */}
+        {!isLarge && (
+          <Box>
+            <IconButton
+              aria-label="メニューを開く"
+              variant="ghost"
+              colorScheme="green"
+              onClick={onOpen}
+            >
+              <HamburgerIcon />
+            </IconButton>
+          </Box>
+        )}
+
         {/* Logo - 中央寄せ */}
         <Flex flex="1" justify="center">
           <Link href="/" _hover={{ textDecoration: 'none' }}>
@@ -63,7 +77,7 @@ export default function Header() {
         </Flex>
 
         {/* Instagram Icon - 右寄せ */}
-        <Box position="absolute" right="6">
+        <Box>
           <IconButton
             as={Link}
             href="https://www.instagram.com/mikanodaidokoro/"
@@ -84,8 +98,8 @@ export default function Header() {
         </Box>
       </Flex>
 
-      {/* Navigation Section */}
-      {isLarge ? (
+      {/* Navigation Section - PC版のみ */}
+      {isLarge && (
         <Box bg="green.50" py={3} borderTop="1px" borderColor="green.100">
           <Flex maxW="1200px" mx="auto" px={6}>
             <HStack spacing={4} mx="auto" flexWrap="nowrap" justify="center" overflowX="auto">
@@ -113,19 +127,6 @@ export default function Header() {
                 </Link>
               ))}
             </HStack>
-          </Flex>
-        </Box>
-      ) : (
-        <Box bg="green.50" py={2}>
-          <Flex maxW="1200px" mx="auto" px={6} justify="flex-end">
-            <IconButton
-              aria-label="メニューを開く"
-              variant="ghost"
-              colorScheme="green"
-              onClick={onOpen}
-            >
-              <HamburgerIcon />
-            </IconButton>
           </Flex>
         </Box>
       )}

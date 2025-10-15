@@ -2,7 +2,6 @@
 
 import { Box } from '@chakra-ui/react';
 import Header from './components/Header';
-import Navigation from './components/Navigation';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ImageCarousel from './components/ImageCarousel';
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <Box minH="100vh" bg="gray.50">
       <Header />
-      <Navigation />
       <HeroSection />
       <AboutSection />
       <ImageCarousel />

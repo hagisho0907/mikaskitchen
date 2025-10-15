@@ -244,10 +244,14 @@ export default function BentoPage() {
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Button 
                   colorScheme="amber" 
+                  variant="solid"
                   size="lg"
                   borderRadius="full"
                   px={8}
+                  bg="amber.500"
+                  color="white"
                   _hover={{
+                    bg: "amber.600",
                     transform: "translateY(-2px)",
                     shadow: "xl"
                   }}

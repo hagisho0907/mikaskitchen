@@ -498,9 +498,14 @@ export default function KidsPage() {
                   お申し込み・お問い合わせ
                 </Button>
               </Link>
-              <Text fontSize="sm" color="gray.600">
-                電話：080-6011-7498 / メール：senka08760102@gmail.com
-              </Text>
+              <VStack spacing={1}>
+                <Text fontSize="sm" color="gray.600">
+                  電話：080-6011-7498
+                </Text>
+                <Text fontSize="sm" color="gray.600">
+                  メール：senka08760102@gmail.com
+                </Text>
+              </VStack>
             </VStack>
           </Box>
 

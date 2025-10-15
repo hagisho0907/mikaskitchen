@@ -48,19 +48,20 @@ export default function Header() {
         justify="space-between"
         h="80px"
       >
-        {/* Hamburger Menu - 左上 (PC版以外) */}
-        {!isLarge && (
-          <Box>
+        {/* Left Side - Hamburger Menu or Spacer */}
+        <Box w="48px" display="flex" justifyContent="flex-start">
+          {!isLarge && (
             <IconButton
               aria-label="メニューを開く"
               variant="ghost"
               colorScheme="green"
               onClick={onOpen}
+              size={isMobile ? "md" : "lg"}
             >
               <HamburgerIcon />
             </IconButton>
-          </Box>
-        )}
+          )}
+        </Box>
 
         {/* Logo - 中央寄せ */}
         <Flex flex="1" justify="center">
@@ -76,8 +77,8 @@ export default function Header() {
           </Link>
         </Flex>
 
-        {/* Instagram Icon - 右寄せ */}
-        <Box>
+        {/* Right Side - Instagram Icon */}
+        <Box w="48px" display="flex" justifyContent="flex-end">
           <IconButton
             as={Link}
             href="https://www.instagram.com/mikanodaidokoro/"

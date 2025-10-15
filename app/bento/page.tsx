@@ -234,8 +234,11 @@ export default function BentoPage() {
 
           {/* ご予約・お問い合わせ */}
           <Box 
+            bg="linear-gradient(135deg, amber.100 0%, amber.50 100%)"
             p={8} 
             borderRadius="xl" 
+            border="1px"
+            borderColor="amber.200"
             textAlign="center"
           >
             <VStack spacing={4}>

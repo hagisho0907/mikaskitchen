@@ -216,8 +216,11 @@ export default function GardenPage() {
 
           {/* ご予約・お問い合わせ */}
           <Box 
+            bg="linear-gradient(135deg, purple.100 0%, purple.50 100%)"
             p={8} 
             borderRadius="xl" 
+            border="1px"
+            borderColor="purple.200"
             textAlign="center"
           >
             <VStack spacing={4}>

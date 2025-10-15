@@ -337,8 +337,11 @@ export default function EventsPage() {
 
           {/* ご予約・お問い合わせ */}
           <Box 
+            bg="linear-gradient(135deg, blue.100 0%, blue.50 100%)"
             p={8} 
             borderRadius="xl" 
+            border="1px"
+            borderColor="blue.200"
             textAlign="center"
           >
             <VStack spacing={4}>

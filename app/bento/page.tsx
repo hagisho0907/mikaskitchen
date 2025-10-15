@@ -31,14 +31,14 @@ export default function BentoPage() {
   };
 
   return (
-    <Box minH="100vh" bg="teal.50">
+    <Box minH="100vh" bg="amber.50">
       <Header />
       
       {/* ヒーローセクション */}
       <Box
         position="relative"
         h={isMobile ? "500px" : "700px"}
-        bg="linear-gradient(135deg, teal.100 0%, teal.200 100%)"
+        bg="linear-gradient(135deg, amber.100 0%, amber.200 100%)"
         overflow="hidden"
       >
         {/* 背景画像 */}
@@ -107,7 +107,7 @@ export default function BentoPage() {
           {/* 概要セクション */}
           <Box bg="white" p={8} borderRadius="lg" shadow="md">
             <VStack spacing={6} textAlign="center">
-              <Heading size="lg" color="teal.700">
+              <Heading size="lg" color="amber.700">
                 概要・詳細
               </Heading>
               <Text fontSize="lg" lineHeight="1.8" color="gray.700">
@@ -119,16 +119,16 @@ export default function BentoPage() {
           {/* 特徴・ポイント */}
           <Box bg="white" p={8} borderRadius="lg" shadow="md">
             <VStack spacing={6}>
-              <Heading size="lg" color="teal.700" textAlign="center">
+              <Heading size="lg" color="amber.700" textAlign="center">
                 特徴・ポイント
               </Heading>
               <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} w="full">
                 <Box
                   p={4}
-                  bg="teal.50"
+                  bg="amber.50"
                   borderRadius="md"
                   borderLeft="4px"
-                  borderColor="teal.400"
+                  borderColor="amber.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
                     発酵食品（味噌・醤油・酢・麹）を積極活用
@@ -136,10 +136,10 @@ export default function BentoPage() {
                 </Box>
                 <Box
                   p={4}
-                  bg="teal.50"
+                  bg="amber.50"
                   borderRadius="md"
                   borderLeft="4px"
-                  borderColor="teal.400"
+                  borderColor="amber.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
                     食物繊維豊富な野菜中心のメニュー
@@ -147,10 +147,10 @@ export default function BentoPage() {
                 </Box>
                 <Box
                   p={4}
-                  bg="teal.50"
+                  bg="amber.50"
                   borderRadius="md"
                   borderLeft="4px"
-                  borderColor="teal.400"
+                  borderColor="amber.400"
                 >
                   <Text fontWeight="medium" color="gray.700">
                     玄米・雑穀米で栄養価アップ
@@ -158,10 +158,10 @@ export default function BentoPage() {
                 </Box>
                 <Box
                   p={4}
-                  bg="teal.50"
+                  bg="amber.50"
                   borderRadius="md"
                   borderLeft="4px"
-                  borderColor="teal.400"
+                  borderColor="amber.400"
                 >
                   <Text fontWeight="medium" color="gray.700" fontSize={{ base: "sm", md: "md" }}>
                     お肉料理と魚料理を両方入れているので、しっかりタンパク質も摂れます
@@ -169,10 +169,10 @@ export default function BentoPage() {
                 </Box>
                 <Box
                   p={4}
-                  bg="teal.50"
+                  bg="amber.50"
                   borderRadius="md"
                   borderLeft="4px"
-                  borderColor="teal.400"
+                  borderColor="amber.400"
                 >
                   <Text fontWeight="medium" color="gray.700" fontSize={{ base: "sm", md: "md" }}>
                     季節の食材を使った日替わりメニュー
@@ -187,20 +187,20 @@ export default function BentoPage() {
             <Card shadow="md">
               <CardBody>
                 <VStack spacing={4} align="stretch">
-                  <Heading size="md" color="teal.700" textAlign="center">
+                  <Heading size="md" color="amber.700" textAlign="center">
                     スケジュール
                   </Heading>
                   <VStack spacing={3} align="start">
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>販売日</Badge>
+                      <Badge colorScheme="amber" mb={2}>販売日</Badge>
                       <Text>毎週金曜日</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>販売時間</Badge>
+                      <Badge colorScheme="amber" mb={2}>販売時間</Badge>
                       <Text>11:00〜売り切れ次第終了</Text>
                     </Box>
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>販売方法</Badge>
+                      <Badge colorScheme="amber" mb={2}>販売方法</Badge>
                       <Text>
                         テイクアウト・宅配<br />
                         ※15個以上の注文の場合、配達致します<br />
@@ -215,12 +215,12 @@ export default function BentoPage() {
             <Card shadow="md">
               <CardBody>
                 <VStack spacing={4} align="stretch">
-                  <Heading size="md" color="teal.700" textAlign="center">
+                  <Heading size="md" color="amber.700" textAlign="center">
                     料金
                   </Heading>
                   <VStack spacing={3} align="start">
                     <Box>
-                      <Badge colorScheme="teal" mb={2}>通常料金</Badge>
+                      <Badge colorScheme="amber" mb={2}>通常料金</Badge>
                       <VStack spacing={1} align="start">
                         <Text fontSize="xl" fontWeight="bold">腸活弁当：1100円</Text>
                         <Text fontSize="xl" fontWeight="bold">のっけ弁当：650円</Text>
@@ -241,7 +241,7 @@ export default function BentoPage() {
             <VStack spacing={4}>
               <Link href="/contact" style={{ textDecoration: 'none' }}>
                 <Button 
-                  colorScheme="teal" 
+                  colorScheme="amber" 
                   size="lg"
                   borderRadius="full"
                   px={8}
@@ -268,7 +268,7 @@ export default function BentoPage() {
           {/* ホームに戻る */}
           <Box textAlign="center" pt={8}>
             <Link href="/" style={{ textDecoration: 'none' }}>
-              <Button variant="outline" colorScheme="teal" size="lg" borderRadius="full">
+              <Button variant="outline" colorScheme="amber" size="lg" borderRadius="full">
                 ← ホームに戻る
               </Button>
             </Link>

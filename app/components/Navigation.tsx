@@ -30,62 +30,12 @@ const menuItems = [
 ];
 
 export default function Navigation() {
-  const isMobile = useBreakpointValue({ base: true, lg: false });
+  const isLarge = useBreakpointValue({ base: false, lg: true });
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  if (isMobile) {
-    return (
-      <>
-        <Box bg="green.50" py={2}>
-          <Flex maxW="1200px" mx="auto" px={6} justify="flex-end">
-            <IconButton
-              aria-label="メニューを開く"
-              variant="ghost"
-              colorScheme="green"
-              onClick={onOpen}
-            >
-              <HamburgerIcon />
-            </IconButton>
-          </Flex>
-        </Box>
-
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose} size="sm">
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerHeader bg="green.50" color="green.800">メニュー</DrawerHeader>
-            <DrawerBody p={0}>
-              <VStack spacing={0} align="stretch">
-                {menuItems.map((item, index) => (
-                  <Box
-                    key={index}
-                    borderBottom="1px"
-                    borderColor="gray.100"
-                  >
-                    <Link href={item.href} style={{ textDecoration: 'none' }}>
-                      <Box
-                        onClick={onClose}
-                        px={6}
-                        py={4}
-                        display="block"
-                        cursor="pointer"
-                        _hover={{
-                          bg: "green.50",
-                          color: "green.700"
-                        }}
-                        transition="all 0.2s"
-                      >
-                        {item.name}
-                      </Box>
-                    </Link>
-                  </Box>
-                ))}
-              </VStack>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
-      </>
-    );
+  // スマホ・タブレットでは何も表示しない
+  if (!isLarge) {
+    return null;
   }
 
   return (

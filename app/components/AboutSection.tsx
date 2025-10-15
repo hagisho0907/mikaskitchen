@@ -58,10 +58,10 @@ export default function AboutSection() {
             <Heading size="lg" color="green.700" fontWeight="bold">
               美加の台所について
             </Heading>
-            <Text fontSize="lg" color="gray.600" maxW="600px">
+            <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" maxW="600px">
               木・金・土曜日営業
             </Text>
-            <Text fontSize="md" color="red.600" fontWeight="bold">
+            <Text fontSize={{ base: "sm", md: "md" }} color="red.600" fontWeight="bold">
               祝日定休日
             </Text>
           </VStack>

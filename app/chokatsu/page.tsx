@@ -164,14 +164,14 @@ export default function ChokkatsuPage() {
                 <Heading size="xl" color="green.700" letterSpacing="wide">
                   腸活お料理教室について
                 </Heading>
-                <Text fontSize="lg" lineHeight="1.8" color="gray.700" maxW="800px">
+                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.8" color="gray.700" maxW="800px">
                   麹を使ったやさしい味わいのお料理や、野菜の食物繊維を活かしたメニューをご紹介します。
                 </Text>
               </VStack>
               
               <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200">
                 <VStack spacing={4}>
-                  <Text fontSize="xl" fontWeight="bold" color="green.700">
+                  <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="bold" color="green.700">
                     作ったあとは、みんなで試食タイム♪
                   </Text>
                   <Text color="gray.700">
@@ -210,7 +210,7 @@ export default function ChokkatsuPage() {
                   >
                     <HStack spacing={4} align="start">
                       <Icon as={FaCheckCircle} color="teal.500" boxSize={6} mt={1} />
-                      <Text fontSize="md" color="gray.700" fontWeight="medium" lineHeight="1.6">
+                      <Text fontSize={{ base: "sm", md: "md" }} color="gray.700" fontWeight="medium" lineHeight="1.6">
                         {item}
                       </Text>
                     </HStack>
@@ -219,10 +219,10 @@ export default function ChokkatsuPage() {
               </SimpleGrid>
               
               <Box bg="emerald.50" p={6} borderRadius="lg" border="1px" borderColor="emerald.200" maxW="600px">
-                <Text fontSize="lg" color="emerald.700" fontWeight="bold" textAlign="center">
+                <Text fontSize={{ base: "md", md: "lg" }} color="emerald.700" fontWeight="bold" textAlign="center">
                   リピーターの方も多くいらっしゃいます
                 </Text>
-                <Text fontSize="md" color="gray.700" textAlign="center" mt={2}>
+                <Text fontSize={{ base: "sm", md: "md" }} color="gray.700" textAlign="center" mt={2}>
                   毎回違うメニューでお待ちしています
                 </Text>
               </Box>
@@ -241,26 +241,26 @@ export default function ChokkatsuPage() {
 
               <VStack spacing={6} maxW="800px" mx="auto">
                 <Box bg="orange.50" p={6} borderRadius="xl" border="2px" borderColor="orange.200" w="full">
-                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="gray.700" lineHeight="1.8" textAlign="center">
                     初めての参加の方には、1時間ほど腸の大切さと腸活のお話をしながら、みんなで楽しく座談会です。
                     初めましての方たちも、もう『腸活仲間』になっちゃいます。
                   </Text>
                 </Box>
 
                 <Box bg="green.50" p={6} borderRadius="xl" border="2px" borderColor="green.200" w="full">
-                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="gray.700" lineHeight="1.8" textAlign="center">
                     そのあとはお料理タイム。腸活の第一歩はお味噌汁と考えています。毎日１杯のお味噌汁を手軽に続けられる味噌玉作りからはじまり、『ゆずの酢のネギぬた』『味噌炒め』『魚の味噌漬け』などの味噌を使ったメニューや、『醤油麹や塩麹』ほか、いろいろな麹調味料を一緒に作ります。
                   </Text>
                 </Box>
 
                 <Box bg="teal.50" p={6} borderRadius="xl" border="2px" borderColor="teal.200" w="full">
-                  <Text fontSize="md" color="gray.700" lineHeight="1.8" textAlign="center">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="gray.700" lineHeight="1.8" textAlign="center">
                     そのあとはお庭でランチです。
                   </Text>
                 </Box>
 
                 <Box bg="purple.50" p={6} borderRadius="xl" border="2px" borderColor="purple.200" w="full">
-                  <Text fontSize="md" color="purple.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
+                  <Text fontSize={{ base: "sm", md: "md" }} color="purple.700" lineHeight="1.8" textAlign="center" fontWeight="medium">
                     少し非日常の時間を一緒に楽しみませんか。
                   </Text>
                 </Box>

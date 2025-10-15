@@ -108,7 +108,7 @@ export default function AthletePage() {
             <Icon as={FaDumbbell} boxSize={isMobile ? 12 : 16} />
             
             <Heading 
-              size={isMobile ? "2xl" : "4xl"} 
+              size={isMobile ? "xl" : "4xl"} 
               fontWeight="bold"
               textShadow="2px 2px 8px rgba(0,0,0,0.6)"
               letterSpacing="wider"

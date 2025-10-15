@@ -70,13 +70,13 @@ export default function AccessSection() {
                       <Link 
                         href={info.link} 
                         color="blue.600" 
-                        fontSize="lg"
+                        fontSize={{ base: "md", md: "lg" }}
                         _hover={{ color: 'blue.700', textDecoration: 'underline' }}
                       >
                         {info.value}
                       </Link>
                     ) : (
-                      <Text fontSize="lg" color="gray.800">
+                      <Text fontSize={{ base: "md", md: "lg" }} color="gray.800">
                         {info.value}
                       </Text>
                     )}

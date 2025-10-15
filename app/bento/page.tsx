@@ -175,7 +175,7 @@ export default function BentoPage() {
                   borderLeft="4px"
                   borderColor="teal.400"
                 >
-                  <Text fontWeight="medium" color="gray.700">
+                  <Text fontWeight="medium" color="gray.700" fontSize={{ base: "sm", md: "md" }}>
                     お肉料理と魚料理を両方入れているので、しっかりタンパク質も摂れます
                   </Text>
                 </Box>

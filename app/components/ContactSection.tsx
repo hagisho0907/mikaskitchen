@@ -273,7 +273,7 @@ export default function ContactSection() {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        placeholder="教室の詳細について教えてください..."
+                        placeholder="お問い合わせ内容をご記入ください"
                         rows={5}
                         bg="gray.50"
                         border="1px"

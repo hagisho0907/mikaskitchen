@@ -24,7 +24,6 @@ import { FaDumbbell, FaClock, FaYenSign, FaCheckCircle, FaBullseye, FaUsers, FaA
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AthletePage() {
@@ -59,7 +58,6 @@ export default function AthletePage() {
   return (
     <Box minH="100vh" bg="red.25">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

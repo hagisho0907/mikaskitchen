@@ -18,7 +18,6 @@ import { ArrowBackIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function BentoPage() {
@@ -32,7 +31,6 @@ export default function BentoPage() {
   return (
     <Box minH="100vh" bg="teal.50">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

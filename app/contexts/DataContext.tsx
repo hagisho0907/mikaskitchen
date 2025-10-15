@@ -38,7 +38,7 @@ const initialEvents: Event[] = [
     id: 1,
     date: '2024-01-20',
     day: '土',
-    title: '腸活教室',
+    title: '腸活お料理教室',
     time: '10:00-12:00',
     description: '発酵食品を使った健康レシピをご紹介',
     type: 'class',
@@ -101,8 +101,8 @@ const initialNews: NewsItem[] = [
     id: 1,
     date: '2024-01-15',
     category: '教室',
-    title: '新春腸活教室開催のお知らせ',
-    content: '新年最初の腸活教室を1月20日(土)に開催いたします。発酵食品を使った体に優しいメニューをご紹介します。',
+    title: '新春腸活お料理教室開催のお知らせ',
+    content: '新年最初の腸活お料理教室を1柧20日(土)に開催いたします。発酵食品を使った体に優しいメニューをご紹介します。',
     isNew: true
   },
   {

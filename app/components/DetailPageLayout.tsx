@@ -18,7 +18,6 @@ import { ArrowBackIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from './Header';
-import Navigation from './Navigation';
 import Footer from './Footer';
 
 interface DetailPageProps {
@@ -62,7 +61,6 @@ export default function DetailPageLayout({
   return (
     <Box minH="100vh" bg={backgroundColor}>
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

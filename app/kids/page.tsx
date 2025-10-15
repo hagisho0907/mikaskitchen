@@ -23,7 +23,6 @@ import { FaHeart, FaUtensils, FaUsers, FaClock, FaYenSign, FaStar } from 'react-
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function KidsPage() {
@@ -66,7 +65,6 @@ export default function KidsPage() {
   return (
     <Box minH="100vh" bg="orange.25">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

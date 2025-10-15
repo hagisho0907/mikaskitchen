@@ -24,7 +24,7 @@ const quickLinks = [
 ];
 
 const menuLinks = [
-  { name: '腸活教室', href: '/chokatsu' },
+  { name: '腸活お料理教室', href: '/chokatsu' },
   { name: 'アスリートお料理教室', href: '/athlete' },
   { name: '子供お料理教室', href: '/kids' },
   { name: 'パン販売', href: '/bread' },

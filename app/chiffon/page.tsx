@@ -22,7 +22,6 @@ import { FaHeart, FaGift, FaHome, FaMagic } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function ChiffonPage() {
@@ -59,7 +58,6 @@ export default function ChiffonPage() {
   return (
     <Box minH="100vh" bg="pink.25">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

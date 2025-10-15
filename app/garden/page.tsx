@@ -18,7 +18,6 @@ import { ArrowBackIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function GardenPage() {
@@ -32,7 +31,6 @@ export default function GardenPage() {
   return (
     <Box minH="100vh" bg="purple.50">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

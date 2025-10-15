@@ -27,7 +27,6 @@ import { FaLeaf, FaSeedling, FaHeart, FaClock, FaYenSign, FaUsers, FaCheckCircle
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function ChokkatsuPage() {
@@ -61,7 +60,6 @@ export default function ChokkatsuPage() {
   return (
     <Box minH="100vh" bg="green.25">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box
@@ -229,13 +227,13 @@ export default function ChokkatsuPage() {
             </VStack>
           </Box>
 
-          {/* 腸活教室の流れ */}
+          {/* 腸活お料理教室の流れ */}
           <Box bg="white" p={8} borderRadius="xl" shadow="xl" border="1px" borderColor="orange.100">
             <VStack spacing={8}>
               <VStack spacing={4}>
                 <Icon as={FaUsers} boxSize={12} color="orange.500" />
                 <Heading size="xl" color="orange.700" textAlign="center" letterSpacing="wide">
-                  腸活教室の流れ
+                  腸活お料理教室の流れ
                 </Heading>
               </VStack>
 

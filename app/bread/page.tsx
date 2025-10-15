@@ -22,7 +22,6 @@ import { FaHeart, FaLeaf } from 'react-icons/fa';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function BreadPage() {
@@ -57,7 +56,6 @@ export default function BreadPage() {
   return (
     <Box minH="100vh" bg="yellow.25">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

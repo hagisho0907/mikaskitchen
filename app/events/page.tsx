@@ -20,7 +20,6 @@ import { ArrowBackIcon, CalendarIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
-import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import EventCalendar from '../components/EventCalendar';
 
@@ -73,7 +72,6 @@ export default function EventsPage() {
   return (
     <Box minH="100vh" bg="gray.50">
       <Header />
-      <Navigation />
       
       {/* ヒーローセクション */}
       <Box

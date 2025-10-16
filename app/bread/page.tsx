@@ -232,7 +232,7 @@ export default function BreadPage() {
                   <VStack spacing={4} align="start">
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">販売日</Badge>
-                      <Text fontWeight="medium">金曜日</Text>
+                      <Text fontWeight="medium">土曜日</Text>
                     </Flex>
                     <Flex align="center" gap={3}>
                       <Badge colorScheme="yellow" px={3} py={1} borderRadius="full">時間</Badge>
